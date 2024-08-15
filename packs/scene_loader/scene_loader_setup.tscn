@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnv74n1a73aty"]
+
+[ext_resource type="Script" path="res://packs/scene_loader/scene_loader_setup.gd" id="1_fkrdx"]
+[ext_resource type="PackedScene" uid="uid://1ulkknuxcuie" path="res://packs/scene_loader/menu_container.tscn" id="2_hi6o2"]
+
+[node name="SceneLoaderSetup" type="Node" node_paths=PackedStringArray("_scene_container", "_menu")]
+script = ExtResource("1_fkrdx")
+_scene_container = NodePath("GameSceneContainer")
+_menu = NodePath("Menu")
+_menu_container_template = ExtResource("2_hi6o2")
+
+[node name="Menu" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="GameSceneContainer" type="Node" parent="."]
