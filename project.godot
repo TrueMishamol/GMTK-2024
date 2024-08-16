@@ -34,7 +34,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AutoExportVersion/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg", "res://addons/zylann.atmosphere/tools/plugin.cfg")
+enabled=PackedStringArray("res://addons/AutoExportVersion/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg")
 
 [file_customization]
 
@@ -114,7 +114,6 @@ fullscreen={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
-
 environment/defaults/default_clear_color=Color(0.305806, 0.529549, 0.242786, 1)
 
 [shader_globals]
