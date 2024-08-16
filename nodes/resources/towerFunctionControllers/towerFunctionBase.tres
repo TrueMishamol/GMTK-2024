@@ -1,9 +1,13 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://weoambgvd06y"]
+[gd_resource type="Resource" script_class="towerFunction" load_steps=2 format=3 uid="uid://weoambgvd06y"]
 
 [ext_resource type="Script" path="res://nodes/resources/towerFunctionControllers/tower_function_base.gd" id="1_bj26t"]
 
 [resource]
 script = ExtResource("1_bj26t")
-pieceName = ""
+partName = ""
 partLevel = 0
+maxPartLevel = 3
 upkeepPrice = 0
+defenseLevel = 0
+maxDefenselevel = 5
+unlockedAtBeginning = true
