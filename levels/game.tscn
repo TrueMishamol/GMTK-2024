@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0ftc30gdfrve"]
+
+[ext_resource type="PackedScene" uid="uid://f6kk4whontcp" path="res://nodes/Sky/main.tscn" id="1_m753q"]
+
+[node name="Game" type="Node3D"]
+
+[node name="Main" parent="." instance=ExtResource("1_m753q")]
+script = null
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.965926, 0.12941, -0.224144, 0, 0.866025, 0.5, 0.258819, -0.482963, 0.836516, -2, 2, 3)
+fov = 90.0269
+
+[node name="Enviroment" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviroment"]
