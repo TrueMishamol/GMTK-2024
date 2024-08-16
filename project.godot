@@ -12,15 +12,17 @@ config_version=5
 
 config/name="GMTK-2024"
 config/description="Crafted by Cool Cyan Donut team!s"
-run/main_scene="res://levels/node_2d.tscn"
+run/main_scene="res://levels/main_scene.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-boot_splash/bg_color=Color(0.87451, 0.439216, 0.219608, 1)
+boot_splash/bg_color=Color(0.305806, 0.529549, 0.242786, 1)
 boot_splash/show_image=false
 config/icon="res://assets/app_icons/appicon.png"
 
 [autoload]
 
 ApplicationControls="*res://scripts/application_controls.gd"
+SceneLoader="*res://packs/scene_loader/scene_loader.gd"
+SessionStorage="*res://scripts/session_storage.gd"
 
 [display]
 
@@ -109,5 +111,6 @@ fullscreen={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
-environment/defaults/default_clear_color=Color(0.545098, 0.545098, 0.611765, 1)
+environment/defaults/default_clear_color=Color(0.305806, 0.529549, 0.242786, 1)
