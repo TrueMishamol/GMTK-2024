@@ -1,0 +1,103 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://dd5rl8w6bxi0p"]
+
+[ext_resource type="StyleBox" uid="uid://cavp0c160mdas" path="res://visuals/puffed_bun_ui_theme/style_boxes/button_normal_style_box.tres" id="1_g3upc"]
+[ext_resource type="StyleBox" uid="uid://25jmwrl552bp" path="res://visuals/puffed_bun_ui_theme/style_boxes/button_play_style_box.tres" id="2_uqmle"]
+[ext_resource type="FontFile" uid="uid://bh0lb4bidjaa" path="res://visuals/puffed_bun_ui_theme/MishamolPuffedBun2-Regular.otf" id="5_bkxf4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ho28w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qvwh5"]
+content_margin_left = 70.0
+content_margin_right = 70.0
+content_margin_bottom = 5.0
+bg_color = Color(0.51783, 0.651194, 0.3019, 1)
+corner_radius_top_left = 256
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hgc0h"]
+content_margin_left = 70.0
+content_margin_right = 70.0
+content_margin_bottom = 5.0
+bg_color = Color(0.933547, 0.862715, 0.329259, 1)
+corner_radius_top_left = 256
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvmoy"]
+content_margin_left = 128.0
+content_margin_top = 20.0
+content_margin_right = 128.0
+content_margin_bottom = 28.0
+bg_color = Color(0.698085, 0.768917, 0.309712, 1)
+border_width_left = 14
+border_width_top = 14
+border_width_right = 14
+border_width_bottom = 14
+border_color = Color(0.933547, 0.862715, 0.329259, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 256
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 256
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yx8ud"]
+content_margin_left = 128.0
+content_margin_top = 20.0
+content_margin_right = 128.0
+content_margin_bottom = 28.0
+bg_color = Color(0.933547, 0.862715, 0.329259, 1)
+border_width_left = 14
+border_width_top = 14
+border_width_right = 14
+border_width_bottom = 14
+border_color = Color(0.933547, 0.862715, 0.329259, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 256
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 256
+corner_detail = 20
+
+[sub_resource type="FontVariation" id="FontVariation_57uud"]
+base_font = ExtResource("5_bkxf4")
+variation_embolden = 0.5
+spacing_glyph = 6
+
+[sub_resource type="FontVariation" id="FontVariation_dti0c"]
+base_font = ExtResource("5_bkxf4")
+variation_embolden = 0.5
+
+[resource]
+default_font = ExtResource("5_bkxf4")
+default_font_size = 50
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_ho28w")
+Button/styles/hover = SubResource("StyleBoxFlat_qvwh5")
+Button/styles/normal = ExtResource("1_g3upc")
+Button/styles/pressed = SubResource("StyleBoxFlat_hgc0h")
+Button_Play/base_type = &"Button"
+Button_Play/font_sizes/font_size = 90
+Button_Play/styles/hover = SubResource("StyleBoxFlat_jvmoy")
+Button_Play/styles/normal = ExtResource("2_uqmle")
+Button_Play/styles/pressed = SubResource("StyleBoxFlat_yx8ud")
+Label_GameTitle/base_type = &"Label"
+Label_GameTitle/colors/font_color = Color(0.698039, 0.243137, 0.407843, 1)
+Label_GameTitle/colors/font_outline_color = Color(0.996078, 0.945098, 0.894118, 1)
+Label_GameTitle/constants/outline_size = 40
+Label_GameTitle/font_sizes/font_size = 150
+Label_GameTitle/fonts/font = SubResource("FontVariation_57uud")
+Label_GameVersion/base_type = &"Label"
+Label_GameVersion/colors/font_color = Color(0.698039, 0.243137, 0.407843, 1)
+Label_GameVersion/colors/font_outline_color = Color(0.996078, 0.945098, 0.894118, 1)
+Label_GameVersion/constants/outline_size = 30
+Label_GameVersion/font_sizes/font_size = 90
+Label_GameVersion/fonts/font = SubResource("FontVariation_dti0c")
+LinkButton/colors/font_color = Color(0.25098, 0.227451, 0.313726, 1)
+LinkButton/colors/font_focus_color = Color(0.25098, 0.227451, 0.313726, 1)
+LinkButton/colors/font_hover_color = Color(0.25098, 0.227451, 0.313726, 1)
+LinkButton/colors/font_outline_color = Color(0.25098, 0.227451, 0.313726, 1)
+LinkButton/colors/font_pressed_color = Color(0.25098, 0.227451, 0.313726, 1)
+VBoxContainer/constants/separation = 34

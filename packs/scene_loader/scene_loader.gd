@@ -10,7 +10,7 @@ const EMPTY_SCENE = "res://levels/empty_scene.tscn"
 
 ## Tree Scenes
 ## Name ends with _scene, load with load_tree()
-const BOOT_SCENE = "res://levels/tree/boot_splash/boot_splash_1.tscn"
+const BOOT_SCENE = "res://levels/tree/boot_splash/boot_splash_2.tscn"
 const BASE_GAME_SETUP = "res://levels/tree/base_game_setup/base_game_setup.tscn"
 
 ## Game Scenes
@@ -20,8 +20,8 @@ const BASE_GAME_SETUP = "res://levels/tree/base_game_setup/base_game_setup.tscn"
 ## Menu Scenes
 ## Name ends with _menu, load with load_menu()
 const MAIN_MENU = "res://levels/menu/main_menu/main_menu.tscn"
-#const OPTIONS_MENU = "res://levels/menu/options_menu/options_menu.tscn"
-#const ABOUT_MENU = "res://levels/menu/about_menu/about_menu.tscn"
+const OPTIONS_MENU = "res://levels/menu/options_menu/options_menu.tscn"
+const ABOUT_MENU = "res://levels/menu/about_menu/about_menu.tscn"
 
 ## Menu Overlay Scenes
 ## Name ends with _overlay, load with load_menu()
@@ -83,6 +83,3 @@ func load_previous_menu():
 	load_menu(_menu_memory[1])
 	_menu_memory.remove_at(0)
 	_menu_memory.remove_at(0)
-
-
-

@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctdsb6bqdj87w"]
+
+[ext_resource type="Script" path="res://levels/tree/boot_splash/boot_splash_transition.gd" id="1_wik84"]
+[ext_resource type="Texture2D" uid="uid://b5ddik8ghmsei" path="res://assets/app_icons/boot_splash_cool_cyan_donut.png" id="2_ubat3"]
+
+[sub_resource type="Animation" id="Animation_8l6c2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_dit0h"]
+resource_name = "fade_out"
+length = 1.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 1.25, 1.5),
+"transitions": PackedFloat32Array(0.5, 1, 1, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5, 0.6, 1.05, 1.2, 1.25, 1.5),
+"transitions": PackedFloat32Array(1, 0.392292, 1, 1, 1, 2.54912, 1, 1),
+"update": 0,
+"values": [Vector2(0.7, 0.7), Vector2(1, 1), Vector2(1.05, 1.05), Vector2(1, 1), Vector2(1, 1), Vector2(1.15, 1.15), Vector2(1, 1), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gvh7o"]
+_data = {
+"RESET": SubResource("Animation_8l6c2"),
+"fade_out": SubResource("Animation_dit0h")
+}
+
+[node name="BootSplashTransition" type="CanvasLayer" node_paths=PackedStringArray("_animation", "_animated_control")]
+layer = 10
+script = ExtResource("1_wik84")
+_next_scene = "res://levels/tree/boot_splash/boot_splash_2.tscn"
+_animation = NodePath("Control/AnimationPlayer")
+_animated_control = NodePath("Control")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[node name="Control" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(640, 360)
+size_flags_vertical = 4
+
+[node name="Splash" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ubat3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+libraries = {
+"": SubResource("AnimationLibrary_gvh7o")
+}

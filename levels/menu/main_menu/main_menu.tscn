@@ -1,0 +1,203 @@
+[gd_scene load_steps=13 format=3 uid="uid://sauheq582i4g"]
+
+[ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/puffed_bun_ui_theme/puffed_bun_ui_theme.tres" id="1_mu4b4"]
+[ext_resource type="Texture2D" uid="uid://bax065kwqmiyd" path="res://assets/screenshots/worms.png" id="2_osk3t"]
+[ext_resource type="Texture2D" uid="uid://c0tt6b50gf8ql" path="res://assets/ui/logos/mishamol.svg" id="3_hmljr"]
+[ext_resource type="Texture2D" uid="uid://dhcqufnd3di7a" path="res://assets/ui/logos/andreway.svg" id="4_dvbnq"]
+[ext_resource type="Script" path="res://levels/menu/main_menu/menu_navigation_buttons/play_button.gd" id="6_2tpi4"]
+[ext_resource type="Script" path="res://addons_config/AutoExportVersion/display_version_on_label.gd" id="6_aenh1"]
+[ext_resource type="Script" path="res://levels/menu/main_menu/menu_navigation_buttons/options.gd" id="7_7dydj"]
+[ext_resource type="Script" path="res://levels/menu/main_menu/menu_navigation_buttons/quit_app_button.gd" id="7_onnbg"]
+[ext_resource type="PackedScene" uid="uid://ce51lvlxd4cex" path="res://ui/marquee/marquee.tscn" id="7_p8asg"]
+[ext_resource type="Script" path="res://levels/menu/main_menu/menu_navigation_buttons/about.gd" id="8_uhrgg"]
+
+[sub_resource type="Gradient" id="Gradient_opn1a"]
+colors = PackedColorArray(0.698085, 0.768917, 0.309712, 1, 0.698039, 0.768627, 0.309804, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yboho"]
+gradient = SubResource("Gradient_opn1a")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mu4b4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.698085, 0.768917, 0.309712, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_osk3t")
+stretch_mode = 6
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -204.0
+offset_right = 230.0
+offset_bottom = 342.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_yboho")
+
+[node name="GameVersion" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 127.0
+offset_top = -174.0
+offset_right = 499.0
+offset_bottom = -129.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0.0.0"
+horizontal_alignment = 1
+script = ExtResource("6_aenh1")
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -191.0
+offset_right = 186.0
+offset_bottom = 297.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_type_variation = &"Button_Play"
+text = "Play"
+script = ExtResource("6_2tpi4")
+
+[node name="Options" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Options"
+script = ExtResource("7_7dydj")
+
+[node name="About" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "About"
+script = ExtResource("8_uhrgg")
+
+[node name="Quit" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quit"
+script = ExtResource("7_onnbg")
+
+[node name="MythHunters" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -281.0
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 123
+text = "Tower of Bagle"
+horizontal_alignment = 1
+
+[node name="Marquee" parent="." node_paths=PackedStringArray("content") instance=ExtResource("7_p8asg")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -678.5
+offset_top = -89.0
+offset_right = 678.5
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+animation_speed = 0.05
+direction = 2
+content = NodePath("Logos")
+
+[node name="Logos" type="HBoxContainer" parent="Marquee"]
+layout_mode = 2
+theme_override_constants/separation = 80
+metadata/_edit_use_anchors_ = true
+
+[node name="WatermelonFroggy" type="Label" parent="Marquee/Logos"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 55
+text = "Watermelon Froggy"
+horizontal_alignment = 1
+
+[node name="GhoulMage" type="Label" parent="Marquee/Logos"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 55
+text = "GhoulMage"
+horizontal_alignment = 1
+
+[node name="GhoulMage2" type="Label" parent="Marquee/Logos"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 55
+text = "Ghoul Mage"
+horizontal_alignment = 1
+
+[node name="Mishamol" type="TextureRect" parent="Marquee/Logos"]
+custom_minimum_size = Vector2(250, 37.765)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("3_hmljr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Andreway" type="TextureRect" parent="Marquee/Logos"]
+custom_minimum_size = Vector2(250, 37.765)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("4_dvbnq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SpaceAtTheEnd" type="Control" parent="Marquee/Logos"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
