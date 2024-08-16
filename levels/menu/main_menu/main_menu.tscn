@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://levels/menu/main_menu/menu_navigation_buttons/about.gd" id="8_uhrgg"]
 
 [sub_resource type="Gradient" id="Gradient_opn1a"]
-colors = PackedColorArray(0.698085, 0.768917, 0.309712, 1, 0.698039, 0.768627, 0.309804, 0)
+colors = PackedColorArray(0.12549, 0.447059, 0.290196, 0.941176, 0.12549, 0.447059, 0.290196, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_yboho"]
 gradient = SubResource("Gradient_opn1a")
@@ -29,16 +29,77 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_mu4b4")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="BackgroundLines" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.698085, 0.768917, 0.309712, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="BackgroundLines"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_right = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.447059, 0.290196, 0.901961)
+
+[node name="ColorRect3" type="ColorRect" parent="BackgroundLines"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 211.0
+offset_right = 254.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.447059, 0.290196, 0.901961)
+
+[node name="ColorRect4" type="ColorRect" parent="BackgroundLines"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -251.0
+offset_right = -208.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.447059, 0.290196, 0.901961)
+
+[node name="ColorRect5" type="ColorRect" parent="BackgroundLines"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -507.0
+offset_right = -492.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.447059, 0.290196, 0.901961)
+
+[node name="ColorRect6" type="ColorRect" parent="BackgroundLines"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 502.0
+offset_right = 517.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.447059, 0.290196, 0.901961)
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -171,12 +232,12 @@ theme_override_font_sizes/font_size = 55
 text = "GhoulMage"
 horizontal_alignment = 1
 
-[node name="GhoulMage2" type="Label" parent="Marquee/Logos"]
+[node name="spdy4" type="Label" parent="Marquee/Logos"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 55
-text = "Ghoul Mage"
+text = "spdy4"
 horizontal_alignment = 1
 
 [node name="Mishamol" type="TextureRect" parent="Marquee/Logos"]

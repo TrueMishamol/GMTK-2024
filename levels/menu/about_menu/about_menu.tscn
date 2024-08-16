@@ -3,7 +3,16 @@
 [ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/puffed_bun_ui_theme/puffed_bun_ui_theme.tres" id="1_wtr12"]
 [ext_resource type="Script" path="res://levels/menu/about_menu/return.gd" id="2_4g7fn"]
 
-[node name="AboutMenu" type="MarginContainer"]
+[node name="AboutMenu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.447059, 0.290196, 0.901961)
+
+[node name="AboutMenu" type="MarginContainer" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -11,14 +20,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_wtr12")
 
-[node name="Control" type="VBoxContainer" parent="."]
+[node name="Control" type="VBoxContainer" parent="AboutMenu"]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+[node name="ScrollContainer" type="ScrollContainer" parent="AboutMenu/Control"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/ScrollContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="AboutMenu/Control/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -40,7 +49,7 @@ Chapter 7: on this xD
 Chapter 8:      NO     MORE       SUSUSUSUSUSUSUSUSUSUSUSUUSUS
 Chapter 9: PLEASE FOR THE LOVE OF GOD"
 
-[node name="Return" type="Button" parent="Control"]
+[node name="Return" type="Button" parent="AboutMenu/Control"]
 layout_mode = 2
 text = "Return"
 script = ExtResource("2_4g7fn")

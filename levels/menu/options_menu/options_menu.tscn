@@ -3,13 +3,13 @@
 [ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/puffed_bun_ui_theme/puffed_bun_ui_theme.tres" id="1_3berp"]
 [ext_resource type="Script" path="res://levels/menu/options_menu/options_menu.gd" id="2_wmle2"]
 
-[node name="OptionsMenu" type="Control"]
-layout_mode = 3
+[node name="OptionsMenu" type="ColorRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.12549, 0.447059, 0.290196, 0.901961)
 
 [node name="OptionsMenu" type="MarginContainer" parent="."]
 layout_mode = 1

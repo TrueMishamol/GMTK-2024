@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://sn8hr8g264hc"]
 
 [ext_resource type="Script" path="res://levels/tree/base_game_setup/ingame_game_pause.gd" id="1_fs3jd"]
-[ext_resource type="PackedScene" uid="uid://crnlx4g1pn2s7" path="res://nodes/cycle/day_night.tscn" id="2_dsbf6"]
+[ext_resource type="PackedScene" uid="uid://crnlx4g1pn2s7" path="res://nodes/day_night_cycle/day_night.tscn" id="2_dsbf6"]
 [ext_resource type="Script" path="res://packs/inventory/inventory_instance.gd" id="3_4tlk0"]
 
 [node name="BaseGameSetup" type="Node3D"]

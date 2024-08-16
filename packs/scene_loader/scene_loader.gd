@@ -12,10 +12,11 @@ const EMPTY_SCENE = "res://levels/empty_scene.tscn"
 ## Name ends with _scene, load with load_tree()
 const BOOT_SCENE = "res://levels/tree/boot_splash/boot_splash_2.tscn"
 const BASE_GAME_SETUP = "res://levels/tree/base_game_setup/base_game_setup.tscn"
+const MAIN_MENU_BACKGROUND = "res://levels/tree/main_menu_background/main_menu_background.tscn"
 
 ## Game Scenes
 ## Name ends with _game, load with load_game()
-#const LOBBY = "res://levels/game/lobby/lobby.tscn"
+const GAME_LEVEL = "res://levels/game/game_level/game_level.tscn"
 
 ## Menu Scenes
 ## Name ends with _menu, load with load_menu()
@@ -25,8 +26,8 @@ const ABOUT_MENU = "res://levels/menu/about_menu/about_menu.tscn"
 
 ## Menu Overlay Scenes
 ## Name ends with _overlay, load with load_menu()
-#const UI_OVERLAY = "res://levels/menu/ui_overlay/ui_overlay.tscn"
-#const PAUSE_OVERLAY = "res://levels/menu/pause_overlay/pause_overlay.tscn"
+const UI_OVERLAY = "res://levels/menu/ui_overlay/ui_overlay.tscn"
+const PAUSE_OVERLAY = "res://levels/menu/pause_overlay/pause_overlay.tscn"
 
 
 

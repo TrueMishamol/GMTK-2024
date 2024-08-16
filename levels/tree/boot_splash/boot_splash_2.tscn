@@ -92,7 +92,7 @@ _data = {
 [node name="BootSplashTransition" type="CanvasLayer" node_paths=PackedStringArray("_animation", "_animated_control")]
 layer = 10
 script = ExtResource("1_m8jep")
-_next_scene = "res://levels/empty_scene.tscn"
+_next_scene = "res://levels/tree/main_menu_background/main_menu_background.tscn"
 _animation = NodePath("Control/AnimationPlayer")
 _animated_control = NodePath("Control")
 
