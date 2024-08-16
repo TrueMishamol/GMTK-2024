@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://byjvpqo0b2w7p"]
 
-[ext_resource type="Script" path="res://nodes/towerPieces/tower_piece_base.gd" id="1_x0bqu"]
+[ext_resource type="Script" path="res://nodes/tower_pieces/tower_piece_base.gd" id="1_x0bqu"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_pt76c"]
 height = 0.5

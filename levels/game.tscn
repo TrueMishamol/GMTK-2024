@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://d0ftc30gdfrve"]
 
-[ext_resource type="PackedScene" uid="uid://f6kk4whontcp" path="res://nodes/Sky/main.tscn" id="1_m753q"]
+[ext_resource type="PackedScene" uid="uid://f6kk4whontcp" path="res://nodes/sky/main.tscn" id="1_m753q"]
 [ext_resource type="Script" path="res://levels/MoveCamera.gd" id="2_2nuij"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibkdi"]

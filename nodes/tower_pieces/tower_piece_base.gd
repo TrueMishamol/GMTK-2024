@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var towerStats:towerFunction
+@export var towerStats:tower_function
 @export var towerFullyBuilt:bool = false
 @export var towerBuildTime:float = 5
 

@@ -1,5 +1,5 @@
 extends Resource
-class_name towerFunction
+class_name tower_function
 
 
 @export_group("Part Stats")
