@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpaj7p2fgbmkq"]
+
+[ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/puffed_bun_ui_theme/puffed_bun_ui_theme.tres" id="1_3berp"]
+[ext_resource type="Script" path="res://levels/menu/options_menu/options_menu.gd" id="2_wmle2"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsMenu" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3berp")
+script = ExtResource("2_wmle2")
+
+[node name="OptionsMenu" type="VBoxContainer" parent="OptionsMenu"]
+layout_mode = 2
+theme = ExtResource("1_3berp")
+
+[node name="TabContainer" type="TabContainer" parent="OptionsMenu/OptionsMenu"]
+layout_mode = 2
+size_flags_vertical = 3
+tab_alignment = 1
+current_tab = 0
+
+[node name="General" type="MarginContainer" parent="OptionsMenu/OptionsMenu/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="OptionsMenu/OptionsMenu/TabContainer/General"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu/OptionsMenu/TabContainer/General/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="SkipBootScreen" type="CheckButton" parent="OptionsMenu/OptionsMenu/TabContainer/General/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Skip boot screen"
+
+[node name="Sound" type="MarginContainer" parent="OptionsMenu/OptionsMenu/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="OptionsMenu/OptionsMenu/TabContainer/Sound"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="MasterLabel" type="Label" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Global volume"
+
+[node name="MasterSlider" type="HSlider" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+value = 50.0
+
+[node name="MusicLabel" type="Label" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+value = 50.0
+
+[node name="SFXLabel" type="Label" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sound effects"
+
+[node name="SFXSlider" type="HSlider" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+value = 50.0
+
+[node name="Control" type="Control" parent="OptionsMenu/OptionsMenu/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="SaveAndReturn" type="Button" parent="OptionsMenu/OptionsMenu"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save & return"

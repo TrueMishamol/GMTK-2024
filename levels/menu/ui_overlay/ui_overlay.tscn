@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2o5t3pqh33ir"]
+
+[ext_resource type="Theme" uid="uid://b5dqa0j70yb01" path="res://visuals/poppy_seed_ui_theme/poppy_seed_ui_theme.tres" id="1_b4oji"]
+[ext_resource type="PackedScene" uid="uid://df0fe4uefbxu8" path="res://packs/inventory/hotbar/hotbar.tscn" id="2_82ack"]
+
+[node name="UIOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_b4oji")
+
+[node name="Hotbar" parent="." instance=ExtResource("2_82ack")]
+layout_mode = 1

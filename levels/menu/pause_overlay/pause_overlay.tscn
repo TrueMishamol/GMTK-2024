@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6r6fumj387gv"]
+
+[ext_resource type="Theme" uid="uid://b5dqa0j70yb01" path="res://visuals/poppy_seed_ui_theme/poppy_seed_ui_theme.tres" id="1_5mc07"]
+[ext_resource type="Script" path="res://levels/menu/main_menu/menu_navigation_buttons/options.gd" id="2_dd6q8"]
+[ext_resource type="Script" path="res://levels/menu/pause_overlay/save_and_quit.gd" id="2_gce4v"]
+
+[node name="PauseOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0784314, 0.133333, 0.247059, 0.941176)
+
+[node name="PauseOverlay" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5mc07")
+
+[node name="Control" type="VBoxContainer" parent="PauseOverlay"]
+layout_mode = 2
+alignment = 1
+
+[node name="Options" type="Button" parent="PauseOverlay/Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Options"
+script = ExtResource("2_dd6q8")
+
+[node name="BackToGame" type="Button" parent="PauseOverlay/Control"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back to game"
+
+[node name="SaveAndQuit" type="Button" parent="PauseOverlay/Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Save & quit"
+script = ExtResource("2_gce4v")
