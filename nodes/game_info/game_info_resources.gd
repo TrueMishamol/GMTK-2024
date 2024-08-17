@@ -2,6 +2,9 @@ class_name GameInfo_Resources
 extends Node
 
 
+## Use GameInfo.resources to access this file
+
+
 signal on_resource_set
 
 var _game_save_resources: GameSave_Resources

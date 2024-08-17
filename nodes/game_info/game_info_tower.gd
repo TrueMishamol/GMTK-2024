@@ -2,6 +2,9 @@ class_name GameInfo_Tower
 extends Node
 
 
+## Use GameInfo.tower to access this file
+
+
 var _game_save: GameSave_Tower
 
 
