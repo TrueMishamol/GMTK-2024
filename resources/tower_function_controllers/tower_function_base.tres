@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="TowerFunction" load_steps=2 format=3 uid="uid://weoambgvd06y"]
 
-[ext_resource type="Script" path="res://nodes/resources/tower_function_controllers/tower_function_base.gd" id="1_bj26t"]
+[ext_resource type="Script" path="res://resources/tower_function_controllers/tower_function_base.gd" id="1_bj26t"]
 
 [resource]
 script = ExtResource("1_bj26t")

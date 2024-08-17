@@ -46,6 +46,7 @@ folder_colors={
 "res://levels/": "purple",
 "res://nodes/": "blue",
 "res://packs/": "teal",
+"res://resources/": "teal",
 "res://scripts/": "green",
 "res://ui/": "yellow",
 "res://visuals/": "orange",
