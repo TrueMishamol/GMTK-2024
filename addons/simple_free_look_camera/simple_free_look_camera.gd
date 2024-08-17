@@ -4,7 +4,11 @@ class_name FreeLookCamera extends Camera3D
 const SHIFT_MULTIPLIER = 2.5
 const ALT_MULTIPLIER = 1.0 / SHIFT_MULTIPLIER
 
+@export_group("Camera Values")
 @export_range(0.0, 1.0) var sensitivity = 0.25
+@export var default_position:Vector3
+@export var max_distance_from_tower:float
+@export var max_height:float
 
 # Mouse state
 var _mouse_position = Vector2(0.0, 0.0)
@@ -37,6 +41,9 @@ func _input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	elif Input.is_action_just_released("camera_rotate"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		
+	if Input.is_action_just_pressed("reset_camera"):
+		_reset_position(default_position)
 		
 	if Input.is_action_just_pressed("speed_increase"):
 		_vel_multiplier = clamp(_vel_multiplier * 1.1, 0.2, 20)
@@ -82,8 +89,17 @@ func _input(event):
 
 # Updates mouselook and movement every frame
 func _process(delta):
-	_update_mouselook()
 	_update_movement(delta)
+	_update_mouselook()
+	position.y = clamp(position.y, 0.25, max_height)
+	position.x = clamp(position.x, -max_distance_from_tower, max_distance_from_tower)
+	position.z = clamp(position.z, -max_distance_from_tower, max_distance_from_tower)
+	if (position.x >= max_distance_from_tower or 
+		position.x <= -max_distance_from_tower or 
+		position.z >= max_distance_from_tower or 
+		position.z <= -max_distance_from_tower):
+		_reset_position(default_position)
+
 
 # Updates camera movement
 func _update_movement(delta):
@@ -113,6 +129,7 @@ func _update_movement(delta):
 		_velocity.z = clamp(_velocity.z + offset.z, -_vel_multiplier, _vel_multiplier)
 	
 		translate(_velocity * delta * speed_multi)
+	
 
 # Updates mouse look 
 func _update_mouselook():
@@ -129,3 +146,6 @@ func _update_mouselook():
 	
 		rotate_y(deg_to_rad(-yaw))
 		rotate_object_local(Vector3(1,0,0), deg_to_rad(-pitch))
+
+func _reset_position(pos):
+	position = pos

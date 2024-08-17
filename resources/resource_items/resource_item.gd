@@ -3,7 +3,7 @@ class_name ResourceItem
 
 @export_group("Item Definitions")
 # Name of the resource
-@export var item_name: String
+@export var name: String
 # Value of the resource in gold
 @export var value: int
 # Texture of the item

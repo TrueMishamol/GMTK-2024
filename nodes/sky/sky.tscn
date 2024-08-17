@@ -28,7 +28,7 @@ shader_parameter/clouds_bottom_color = Color(0.83, 0.83, 0.94, 1)
 shader_parameter/clouds_speed = 2.0
 shader_parameter/clouds_direction = 0.2
 shader_parameter/clouds_scale = 1.0
-shader_parameter/clouds_cutoff = 0.3
+shader_parameter/clouds_cutoff = 0.45
 shader_parameter/clouds_fuzziness = 0.5
 shader_parameter/clouds_weight = 0.0
 shader_parameter/clouds_blur = 0.25
@@ -53,6 +53,7 @@ fog_sky_affect = 0.452
 [node name="Sky" type="Node3D"]
 script = ExtResource("1_awq8r")
 day_time = 6.0
+clouds_cutoff = 0.45
 use_day_time_for_shader = true
 time_scale = 0.25
 sun_base_enegry = 1.0

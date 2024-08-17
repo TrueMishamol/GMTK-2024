@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TowerLayerResource" load_steps=3 format=3 uid="uid://pnib0srj35nc"]
+
+[ext_resource type="Script" path="res://resources/resource_items/inventory_resource_items/inventory_resource_item.gd" id="1_l1lcr"]
+[ext_resource type="Script" path="res://nodes/components/tower_pieces/tower_layers/tower_layer_resource.gd" id="1_p6c4x"]
+
+[resource]
+script = ExtResource("1_p6c4x")
+layer_name = ""
+material_cost = Array[ExtResource("1_l1lcr")]([])

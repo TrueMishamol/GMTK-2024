@@ -1,17 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://pxiw514vxcg1"]
+[gd_scene load_steps=5 format=3 uid="uid://pxiw514vxcg1"]
 
 [ext_resource type="PackedScene" uid="uid://byjvpqo0b2w7p" path="res://nodes/components/tower_pieces/tower_piece_base.tscn" id="1_ptcbh"]
-[ext_resource type="Script" path="res://nodes/components/tower_pieces_finished/merchant_outpost/merchant_outpost_function.gd" id="2_mwhdp"]
-
-[sub_resource type="Resource" id="Resource_oj1if"]
-script = ExtResource("2_mwhdp")
-partName = "Merchant Outpost"
-partLevel = null
-maxPartLevel = 1
-upkeepPrice = null
-defenseLevel = null
-maxDefenselevel = 1
-unlockedAtBeginning = null
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_pyh8l"]
 height = 0.05
@@ -22,12 +11,7 @@ size = Vector3(0.25, 0.5, 0.25)
 [sub_resource type="BoxMesh" id="BoxMesh_16mwo"]
 size = Vector3(0.05, 0.5, 0.05)
 
-[node name="MerchantOutpost" groups=["Merchant Outpost"] instance=ExtResource("1_ptcbh")]
-towerStats = SubResource("Resource_oj1if")
-towerFullyBuilt = true
-towerBuildTime = 0.0
-compatible_tower_base_name = null
-yesnt = null
+[node name="MerchantOutpost" instance=ExtResource("1_ptcbh")]
 
 [node name="Model" type="Node3D" parent="." index="3"]
 

@@ -12,7 +12,10 @@ signal on_save
 @export var carrot: int = 30
 @export var onion: int = 30
 @export var herbs: int = 0
+@export var spices: int = 0
 @export var metal: int = 0
+@export var wood: int = 15
+@export var fertile_soil: int = 5
 @export var research: int = 100
 @export var money: int = 100
 

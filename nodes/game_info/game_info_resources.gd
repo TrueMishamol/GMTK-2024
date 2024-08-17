@@ -26,13 +26,21 @@ var onion: int:
 	set(value):
 		onion = value
 		on_resource_set.emit()
-var herbs: int:
+var spices: int:
 	set(value):
-		herbs = value
+		spices = value
 		on_resource_set.emit()
 var metal: int:
 	set(value):
 		metal = value
+		on_resource_set.emit()
+var wood: int:
+	set(value):
+		wood = value
+		on_resource_set.emit()
+var fertile_soil: int:
+	set(value):
+		fertile_soil = value
 		on_resource_set.emit()
 var research: int:
 	set(value):
@@ -56,8 +64,10 @@ func _ready() -> void:
 	potato = _game_save_resources.potato
 	carrot = _game_save_resources.carrot
 	onion = _game_save_resources.onion
-	herbs = _game_save_resources.herbs
+	spices = _game_save_resources.spices
 	metal = _game_save_resources.metal
+	wood = _game_save_resources.wood
+	fertile_soil = _game_save_resources.fertile_soil
 	research = _game_save_resources.research
 	money = _game_save_resources.money
 	
@@ -69,8 +79,10 @@ func save_game():
 	_game_save_resources.potato = potato
 	_game_save_resources.carrot = carrot
 	_game_save_resources.onion = onion
-	_game_save_resources.herbs = herbs
+	_game_save_resources.spices = spices
 	_game_save_resources.metal = metal
+	_game_save_resources.wood = wood
+	_game_save_resources.fertile_soil = fertile_soil
 	_game_save_resources.research = research
 	_game_save_resources.money = money
 	

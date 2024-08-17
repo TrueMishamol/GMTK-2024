@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="TowerLayerResource" load_steps=2 format=3 uid="uid://dfv84ii0m4qy2"]
+
+[ext_resource type="Script" path="res://nodes/components/tower_pieces/tower_layers/tower_layer_resource.gd" id="1_cchff"]
+
+[resource]
+script = ExtResource("1_cchff")
+layer_name = ""

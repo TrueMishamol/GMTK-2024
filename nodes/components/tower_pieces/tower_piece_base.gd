@@ -9,10 +9,6 @@ class_name TowerPieceNode
 @export_group("Compatible Tower Base")
 @export var compatible_tower_base_name: String
 
-@export_dir var yesnt: String = "res://nodes/components/tower_pieces_finished/merchant_outpost/merchant_outpost.tscn"
-
-
-
 func _ready():
 	$BuildTimer.connect("timeout", buildFinished)
 	if not tower_fully_built:
@@ -23,24 +19,6 @@ func do_nightly_tasks():
 	if tower_fully_built:
 		tower_stats.do_tower_stuff()
 
-# Function to check if a new piece can be placed on this piece
-func can_place_piece(new_piece: Node3D) -> bool:
-	return true
-
-
-# Function to check if the new piece is compatible with the current piece
-func is_compatible(new_piece: Node3D) -> bool:
-	# Check compatibility based on the group name
-	if not compatible_tower_base_name == "":
-		if not new_piece.is_in_group(compatible_tower_base_name):
-			print("New piece does not belong to the required compatibility group.")
-			return false
-	
-	# Additional compatibility checks can be added here
-	# For example, you could compare levels or stats if needed
-
-	return true
-
 func buildFinished():
 	tower_fully_built = true
 
@@ -49,13 +27,10 @@ func instantiate_tower_piece(scene: PackedScene) -> bool:
 	if scene:
 		var new_piece = scene.instantiate()
 		if new_piece and new_piece is Node3D:
-			if can_place_piece(new_piece):
-				# Add the new piece to the scene
-				$ConnectionPoint.add_child(new_piece)
-				print("New piece instantiated and placed.")
-				return true
-			else:
-				print("New piece cannot be placed.")
+			# Add the new piece to the scene
+			$ConnectionPoint.add_child(new_piece)
+			print("New piece instantiated and placed.")
+			return true
 		else:
 			print("Failed to instantiate the new piece.")
 	else:
