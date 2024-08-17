@@ -6,7 +6,7 @@ class_name tower_function
 # Name of the part that will appear in UI
 @export var partName:String
 # Current level of the part
-@export var partLevel:int = 0
+@export var partLevel:int = 1
 # Maximum level the part can reach
 @export var maxPartLevel:int = 3
 
@@ -16,7 +16,7 @@ class_name tower_function
 
 @export_group("Defense Stats")
 # Current defense level of the part
-@export var defenseLevel:int = 0
+@export var defenseLevel:int = 1
 # Maximum defense level the part can reach
 @export var maxDefenselevel:int = 5
 
@@ -27,5 +27,5 @@ class_name tower_function
 @export var unlockedAtBeginning:bool = true
 
 
-func doTowerStuff(delta:float):
+func doTowerStuff():
 	pass
