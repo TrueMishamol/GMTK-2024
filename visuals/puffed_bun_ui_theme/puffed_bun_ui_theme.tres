@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=11 format=3 uid="uid://dd5rl8w6bxi0p"]
+[gd_resource type="Theme" load_steps=17 format=3 uid="uid://dd5rl8w6bxi0p"]
 
 [ext_resource type="StyleBox" uid="uid://cavp0c160mdas" path="res://visuals/puffed_bun_ui_theme/style_boxes/button_normal_style_box.tres" id="1_g3upc"]
 [ext_resource type="StyleBox" uid="uid://25jmwrl552bp" path="res://visuals/puffed_bun_ui_theme/style_boxes/button_play_style_box.tres" id="2_uqmle"]
@@ -69,6 +69,34 @@ spacing_glyph = 6
 base_font = ExtResource("5_bkxf4")
 variation_embolden = 0.5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dl2o7"]
+content_margin_left = 70.0
+content_margin_right = 70.0
+content_margin_bottom = 5.0
+bg_color = Color(0.698085, 0.768917, 0.309712, 1)
+corner_radius_top_left = 256
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fusdi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5p8tp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_feefh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bisi0"]
+content_margin_left = 70.0
+content_margin_right = 70.0
+content_margin_bottom = 5.0
+bg_color = Color(0.517647, 0.654902, 0.301961, 1)
+corner_radius_top_left = 256
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eenmo"]
+
 [resource]
 default_font = ExtResource("5_bkxf4")
 default_font_size = 50
@@ -104,4 +132,14 @@ MarginContainer/constants/margin_bottom = 40
 MarginContainer/constants/margin_left = 40
 MarginContainer/constants/margin_right = 40
 MarginContainer/constants/margin_top = 40
+ProgressBar/styles/background = ExtResource("1_g3upc")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_dl2o7")
+TabContainer/colors/font_unselected_color = Color(1, 1, 1, 1)
+TabContainer/styles/panel = SubResource("StyleBoxEmpty_fusdi")
+TabContainer/styles/tab_disabled = SubResource("StyleBoxEmpty_5p8tp")
+TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_feefh")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_bisi0")
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_bisi0")
+TabContainer/styles/tab_unselected = ExtResource("1_g3upc")
 VBoxContainer/constants/separation = 34
+VSeparator/styles/separator = SubResource("StyleBoxEmpty_eenmo")

@@ -110,6 +110,7 @@ texture = ExtResource("2_osk3t")
 stretch_mode = 6
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

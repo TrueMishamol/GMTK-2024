@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bcpgqgn315ms"]
+[gd_scene load_steps=16 format=3 uid="uid://bcpgqgn315ms"]
 
 [ext_resource type="Script" path="res://levels/game/inventory.gd" id="1_hpl3q"]
 [ext_resource type="PackedScene" uid="uid://f6kk4whontcp" path="res://nodes/sky/sky.tscn" id="1_m753q"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://addons/simple_free_look_camera/simple_free_look_camera.gd" id="4_n76aj"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="4_ywcds"]
 [ext_resource type="Material" uid="uid://cuma8autqdper" path="res://visuals/materials/grass.tres" id="5_2stf2"]
+[ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://visuals/environment/camera_shake.tscn" id="5_coxug"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="5_juiub"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="5_xsv2c"]
 [ext_resource type="PackedScene" uid="uid://pxiw514vxcg1" path="res://nodes/components/tower_pieces_finished/merchant_outpost/merchant_outpost.tscn" id="6_53gwl"]
@@ -18,7 +19,7 @@ material = ExtResource("5_2stf2")
 size = Vector2(1000, 1000)
 orientation = 1
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3xe0t"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_50ij8"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("4_ywcds")
@@ -47,7 +48,7 @@ shader_parameter/interactive_level_y = 0.3
 shader_parameter/texture_albedo = ExtResource("5_xsv2c")
 
 [sub_resource type="QuadMesh" id="QuadMesh_co6l7"]
-material = SubResource("ShaderMaterial_3xe0t")
+material = SubResource("ShaderMaterial_50ij8")
 size = Vector2(0.075, 1)
 
 [sub_resource type="MultiMesh" id="MultiMesh_yr6l2"]
@@ -71,6 +72,9 @@ attributes = ExtResource("3_m0r6p")
 fov = 90.0269
 size = 45.0
 script = ExtResource("4_n76aj")
+
+[node name="CameraShake" parent="Camera3D" node_paths=PackedStringArray("camera") instance=ExtResource("5_coxug")]
+camera = NodePath("..")
 
 [node name="Enviroment" type="Node3D" parent="."]
 

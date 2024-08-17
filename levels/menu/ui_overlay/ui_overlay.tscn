@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2o5t3pqh33ir"]
+[gd_scene load_steps=2 format=3 uid="uid://c2o5t3pqh33ir"]
 
-[ext_resource type="Theme" uid="uid://b5dqa0j70yb01" path="res://visuals/poppy_seed_ui_theme/poppy_seed_ui_theme.tres" id="1_b4oji"]
-[ext_resource type="PackedScene" uid="uid://df0fe4uefbxu8" path="res://packs/inventory/hotbar/hotbar.tscn" id="2_82ack"]
+[ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/puffed_bun_ui_theme/puffed_bun_ui_theme.tres" id="1_b4oji"]
 
 [node name="UIOverlay" type="Control"]
 layout_mode = 3
@@ -12,5 +11,231 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_b4oji")
 
-[node name="Hotbar" parent="." instance=ExtResource("2_82ack")]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Resources" type="Control" parent="MarginContainer/Control/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Resources" type="VBoxContainer" parent="MarginContainer/Control/TabContainer/Resources"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -236.0
+offset_right = 318.0
+offset_bottom = 236.0
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="People" type="HBoxContainer" parent="MarginContainer/Control/TabContainer/Resources/Resources"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/People"]
+layout_mode = 2
+text = "Free pupils"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Control/TabContainer/Resources/Resources/People"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Count" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/People"]
+layout_mode = 2
+text = "102"
+
+[node name="Potato" type="HBoxContainer" parent="MarginContainer/Control/TabContainer/Resources/Resources"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Potato"]
+layout_mode = 2
+text = "Potato"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Control/TabContainer/Resources/Resources/Potato"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Count" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Potato"]
+layout_mode = 2
+text = "102"
+
+[node name="Carrot" type="HBoxContainer" parent="MarginContainer/Control/TabContainer/Resources/Resources"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Carrot"]
+layout_mode = 2
+text = "Carrots"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Control/TabContainer/Resources/Resources/Carrot"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Count" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Carrot"]
+layout_mode = 2
+text = "102"
+
+[node name="Onion" type="HBoxContainer" parent="MarginContainer/Control/TabContainer/Resources/Resources"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Onion"]
+layout_mode = 2
+text = "Onion"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Control/TabContainer/Resources/Resources/Onion"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Count" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Onion"]
+layout_mode = 2
+text = "102"
+
+[node name="Herbs" type="HBoxContainer" parent="MarginContainer/Control/TabContainer/Resources/Resources"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Herbs"]
+layout_mode = 2
+text = "Rare Herbs"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Control/TabContainer/Resources/Resources/Herbs"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Count" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Herbs"]
+layout_mode = 2
+text = "102"
+
+[node name="Metal" type="HBoxContainer" parent="MarginContainer/Control/TabContainer/Resources/Resources"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Metal"]
+layout_mode = 2
+text = "Metal"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Control/TabContainer/Resources/Resources/Metal"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Count" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Metal"]
+layout_mode = 2
+text = "102"
+
+[node name="Research" type="HBoxContainer" parent="MarginContainer/Control/TabContainer/Resources/Resources"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Research"]
+layout_mode = 2
+text = "Research"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Control/TabContainer/Resources/Resources/Research"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Count" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Research"]
+layout_mode = 2
+text = "102"
+
+[node name="Money" type="HBoxContainer" parent="MarginContainer/Control/TabContainer/Resources/Resources"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Money"]
+layout_mode = 2
+text = "Monkey"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Control/TabContainer/Resources/Resources/Money"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Count" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Money"]
+layout_mode = 2
+text = "102"
+
+[node name="Progress" type="Control" parent="MarginContainer/Control/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/Control/TabContainer/Progress"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="View" type="Control" parent="MarginContainer/Control/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Special" type="ScrollContainer" parent="MarginContainer/Control/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Special" type="VBoxContainer" parent="MarginContainer/Control/TabContainer/Special"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/Control/TabContainer/Special/Special"]
+custom_minimum_size = Vector2(0, 620.48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 471
+text = "Potato"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/Control/TabContainer/Special/Special"]
+custom_minimum_size = Vector2(0, 512)
+layout_mode = 2
+text = "please do not attempt to scroll down"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/Control/TabContainer/Special/Special"]
+custom_minimum_size = Vector2(0, 1024)
+layout_mode = 2
+text = "really stop this you will regret it"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/Control/TabContainer/Special/Special"]
+custom_minimum_size = Vector2(0, 1024)
+layout_mode = 2
+text = "I warned you"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="MarginContainer/Control/TabContainer/Special/Special"]
+custom_minimum_size = Vector2(0, 620.48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 636
+text = "SUS"
+horizontal_alignment = 1
+vertical_alignment = 1
