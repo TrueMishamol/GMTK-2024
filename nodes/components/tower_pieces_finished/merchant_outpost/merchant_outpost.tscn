@@ -6,12 +6,12 @@
 [sub_resource type="Resource" id="Resource_oj1if"]
 script = ExtResource("2_mwhdp")
 partName = "Merchant Outpost"
-partLevel = 1
+partLevel = null
 maxPartLevel = 1
-upkeepPrice = 0
-defenseLevel = 1
+upkeepPrice = null
+defenseLevel = null
 maxDefenselevel = 1
-unlockedAtBeginning = true
+unlockedAtBeginning = null
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_pyh8l"]
 height = 0.05
@@ -26,6 +26,8 @@ size = Vector3(0.05, 0.5, 0.05)
 towerStats = SubResource("Resource_oj1if")
 towerFullyBuilt = true
 towerBuildTime = 0.0
+compatible_tower_base_name = null
+yesnt = null
 
 [node name="Model" type="Node3D" parent="." index="3"]
 

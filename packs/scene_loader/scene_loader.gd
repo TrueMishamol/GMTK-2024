@@ -16,7 +16,7 @@ const MAIN_MENU_BACKGROUND = "res://levels/tree/main_menu_background/main_menu_b
 
 ## Game Scenes
 ## Name ends with _game, load with load_game()
-const GAME_LEVEL = "res://levels/game/game_level/game_level.tscn"
+const GAME = "res://levels/game/game.tscn"
 
 ## Menu Scenes
 ## Name ends with _menu, load with load_menu()

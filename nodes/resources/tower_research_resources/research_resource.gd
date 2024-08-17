@@ -1,4 +1,4 @@
 extends Resource
-class_name researchGoal
+class_name ResearchGoal
 
-@export var unlocked:bool = false
+@export var unlocked: bool = false

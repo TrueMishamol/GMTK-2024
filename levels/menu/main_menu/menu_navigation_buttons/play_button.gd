@@ -9,4 +9,4 @@ func _ready() -> void:
 func _pressed() -> void:
 	SceneLoader.load_tree(SceneLoader.BASE_GAME_SETUP)
 	SceneLoader.load_menu(SceneLoader.UI_OVERLAY)
-	SceneLoader.load_game(SceneLoader.GAME_LEVEL)
+	SceneLoader.load_game(SceneLoader.GAME)

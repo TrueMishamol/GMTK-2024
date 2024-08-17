@@ -1,8 +1,8 @@
 extends Node3D
-class_name tower_piece_node
+class_name TowerPieceNode
 
 @export_group("Tower Stats")
-@export var towerStats: tower_function
+@export var towerStats: TowerFunction
 @export var towerFullyBuilt: bool = false
 @export var towerBuildTime: float = 5
 

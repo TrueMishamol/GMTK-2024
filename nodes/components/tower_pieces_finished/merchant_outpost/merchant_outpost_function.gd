@@ -1,4 +1,4 @@
-extends tower_function
+extends TowerFunction
 class_name merchant_outpost_function
 
 func doTowerStuff():
