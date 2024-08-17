@@ -149,9 +149,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -186.0
+offset_left = -199.0
 offset_top = -191.0
-offset_right = 186.0
+offset_right = 199.0
 offset_bottom = 297.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -164,18 +164,21 @@ text = "Play"
 script = ExtResource("6_2tpi4")
 
 [node name="Options" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Options"
 script = ExtResource("7_7dydj")
 
 [node name="About" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "About"
 script = ExtResource("8_uhrgg")
 
 [node name="Quit" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(210, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Quit"
