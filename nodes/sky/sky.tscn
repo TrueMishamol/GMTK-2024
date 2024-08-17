@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://f6kk4whontcp"]
 
-[ext_resource type="Script" path="res://nodes/sky/main.gd" id="1_awq8r"]
+[ext_resource type="Script" path="res://nodes/sky/sky.gd" id="1_awq8r"]
 [ext_resource type="Shader" path="res://nodes/sky/sky.gdshader" id="2_itwhi"]
 [ext_resource type="Texture2D" uid="uid://clkehq4uey56r" path="res://nodes/sky/stars.png" id="3_yetut"]
 
@@ -50,7 +50,7 @@ fog_light_color = Color(0.342879, 0.372905, 0.420101, 1)
 fog_sun_scatter = 0.1
 fog_sky_affect = 0.452
 
-[node name="Main" type="Node3D"]
+[node name="Sky" type="Node3D"]
 script = ExtResource("1_awq8r")
 day_time = 6.0
 use_day_time_for_shader = true
