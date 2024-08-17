@@ -52,7 +52,7 @@ theme_override_constants/separation = 45
 
 [node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/People"]
 layout_mode = 2
-text = "Free pupils"
+text = "Free peepols"
 
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/Control/TabContainer/Resources/Resources/People"]
 layout_mode = 2
@@ -164,7 +164,7 @@ theme_override_constants/separation = 45
 
 [node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Money"]
 layout_mode = 2
-text = "Monkey"
+text = "Money"
 
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/Control/TabContainer/Resources/Resources/Money"]
 layout_mode = 2
