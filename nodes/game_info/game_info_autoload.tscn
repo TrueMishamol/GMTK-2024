@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://mdqm4kqltxue"]
+
+[ext_resource type="Script" path="res://nodes/game_info/game_info.gd" id="1_yr1np"]
+[ext_resource type="Script" path="res://nodes/game_info/game_info_resources.gd" id="2_lhjwb"]
+[ext_resource type="Script" path="res://nodes/game_info/game_info_expedition.gd" id="3_v3o0y"]
+[ext_resource type="Script" path="res://nodes/game_info/game_info_tower.gd" id="4_8c6he"]
+
+[node name="GameInfo" type="Node"]
+script = ExtResource("1_yr1np")
+
+[node name="Resources" type="Node" parent="."]
+script = ExtResource("2_lhjwb")
+
+[node name="Expedition" type="Node" parent="."]
+script = ExtResource("3_v3o0y")
+
+[node name="Tower" type="Node" parent="."]
+script = ExtResource("4_8c6he")

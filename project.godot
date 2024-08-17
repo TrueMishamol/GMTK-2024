@@ -25,6 +25,7 @@ SimpleGrass="*res://addons/simplegrasstextured/singleton.tscn"
 SceneLoader="*res://packs/scene_loader/scene_loader.gd"
 SessionStorage="*res://scripts/session_storage.gd"
 GamePause="*res://scripts/game_pause.gd"
+GameInfoAutoload="*res://nodes/game_info/game_info_autoload.tscn"
 
 [display]
 

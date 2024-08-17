@@ -8,6 +8,8 @@ func _pressed() -> void:
 	_save_game()
 
 func _save_game():
+	GameInfo.save_game()
+	
 	var game_save: GameSave = GameSave.load_or_create()
 	
 	#! I am not shure if float can be null / othervise use -1

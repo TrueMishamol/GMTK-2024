@@ -19,7 +19,7 @@ material = ExtResource("5_2stf2")
 size = Vector2(1000, 1000)
 orientation = 1
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5ayte"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jr2x0"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("4_ywcds")
@@ -48,7 +48,7 @@ shader_parameter/interactive_level_y = 0.3
 shader_parameter/texture_albedo = ExtResource("5_xsv2c")
 
 [sub_resource type="QuadMesh" id="QuadMesh_co6l7"]
-material = SubResource("ShaderMaterial_5ayte")
+material = SubResource("ShaderMaterial_jr2x0")
 size = Vector2(0.075, 1)
 
 [sub_resource type="MultiMesh" id="MultiMesh_yr6l2"]
