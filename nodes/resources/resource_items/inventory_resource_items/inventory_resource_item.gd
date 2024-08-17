@@ -1,4 +1,4 @@
-extends resource_item
-class_name inventory_resource_item
+extends ResourceItem
+class_name InventoryResourceItem
 
-@export var amount:int
+@export var amount: int

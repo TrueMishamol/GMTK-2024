@@ -1,8 +1,8 @@
 extends TowerFunction
 class_name merchant_outpost_function
 
-func doTowerStuff():
+func doT_tower_stuff():
 	pass
 
-func sellResources(resource:inventory_resource_item, amount:int):
+func sellResources(resource:InventoryResourceItem, amount:int):
 	pass

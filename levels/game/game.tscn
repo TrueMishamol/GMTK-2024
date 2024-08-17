@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://d0ftc30gdfrve"]
+[gd_scene load_steps=14 format=3 uid="uid://bcpgqgn315ms"]
 
-[ext_resource type="Script" path="res://levels/game/game.gd" id="1_hpl3q"]
+[ext_resource type="Script" path="res://levels/game/inventory.gd" id="1_hpl3q"]
 [ext_resource type="PackedScene" uid="uid://f6kk4whontcp" path="res://nodes/sky/main.tscn" id="1_m753q"]
 [ext_resource type="Script" path="res://levels/game/move_camera.gd" id="2_2nuij"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="4_ywcds"]
@@ -19,7 +19,7 @@ material = SubResource("StandardMaterial3D_wortk")
 size = Vector2(1000, 1000)
 orientation = 1
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8pjf4"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e5dd0"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("4_ywcds")
@@ -48,7 +48,7 @@ shader_parameter/interactive_level_y = 0.3
 shader_parameter/texture_albedo = ExtResource("5_xsv2c")
 
 [sub_resource type="QuadMesh" id="QuadMesh_co6l7"]
-material = SubResource("ShaderMaterial_8pjf4")
+material = SubResource("ShaderMaterial_e5dd0")
 size = Vector2(0.075, 1)
 
 [sub_resource type="MultiMesh" id="MultiMesh_q22w3"]
@@ -59,8 +59,9 @@ buffer = PackedFloat32Array(-0.78049, 0, 0.625168, 9.3852, 0, 1, 0, 0.000500023,
 
 [node name="Game" type="Node3D"]
 
-[node name="GameStatsHandler" type="Node3D" parent="."]
+[node name="Inventory" type="Node3D" parent="."]
 script = ExtResource("1_hpl3q")
+resources = null
 
 [node name="Main" parent="." instance=ExtResource("1_m753q")]
 script = null
@@ -99,3 +100,5 @@ metadata/SimpleGrassTextured = "2.0.3"
 [node name="Tower" type="Node3D" parent="."]
 
 [node name="MerchantOutpost" parent="Tower" instance=ExtResource("6_53gwl")]
+compatible_tower_base_name = ""
+yesnt = "res://nodes/components/tower_pieces_finished/merchant_outpost/merchant_outpost.tscn"

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="researchGoal" load_steps=2 format=3 uid="uid://dmaa1wn51aj7f"]
+[gd_resource type="Resource" script_class="ResearchGoal" load_steps=2 format=3 uid="uid://dmaa1wn51aj7f"]
 
 [ext_resource type="Script" path="res://nodes/resources/tower_research_resources/research_resource.gd" id="1_3g327"]
 

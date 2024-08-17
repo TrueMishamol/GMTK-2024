@@ -2,9 +2,9 @@ extends Node3D
 class_name TowerPieceNode
 
 @export_group("Tower Stats")
-@export var towerStats: TowerFunction
-@export var towerFullyBuilt: bool = false
-@export var towerBuildTime: float = 5
+@export var tower_stats: TowerFunction
+@export var tower_fully_built: bool = false
+@export var tower_build_time: float = 5
 
 @export_group("Compatible Tower Base")
 @export var compatible_tower_base_name: String
@@ -15,13 +15,13 @@ class_name TowerPieceNode
 
 func _ready():
 	$BuildTimer.connect("timeout", buildFinished)
-	if not towerFullyBuilt:
-		$BuildTimer.start(towerBuildTime)
+	if not tower_fully_built:
+		$BuildTimer.start(tower_build_time)
 
 # Call this function every night to do the tower stuff such as taking money and giving materials
 func do_nightly_tasks():
-	if towerFullyBuilt:
-		towerStats.doTowerStuff()
+	if tower_fully_built:
+		tower_stats.doT_tower_stuff()
 
 # Function to check if a new piece can be placed on this piece
 func can_place_piece(new_piece: Node3D) -> bool:
@@ -42,7 +42,7 @@ func is_compatible(new_piece: Node3D) -> bool:
 	return true
 
 func buildFinished():
-	towerFullyBuilt = true
+	tower_fully_built = true
 
 # Function to instantiate and place the new tower piece
 func instantiate_tower_piece(scene: PackedScene) -> bool:

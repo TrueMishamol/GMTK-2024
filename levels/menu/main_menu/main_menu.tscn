@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c0tt6b50gf8ql" path="res://assets/ui/logos/mishamol.svg" id="3_hmljr"]
 [ext_resource type="Texture2D" uid="uid://dhcqufnd3di7a" path="res://assets/ui/logos/andreway.svg" id="4_dvbnq"]
 [ext_resource type="Script" path="res://levels/menu/main_menu/menu_navigation_buttons/play_button.gd" id="6_2tpi4"]
-[ext_resource type="Script" path="res://addons_config/AutoExportVersion/display_version_on_label.gd" id="6_aenh1"]
+[ext_resource type="Script" path="res://addons_config/auto_export_version/display_version_on_label.gd" id="6_aenh1"]
 [ext_resource type="Script" path="res://levels/menu/main_menu/menu_navigation_buttons/options.gd" id="7_7dydj"]
 [ext_resource type="Script" path="res://levels/menu/main_menu/menu_navigation_buttons/quit_app_button.gd" id="7_onnbg"]
 [ext_resource type="PackedScene" uid="uid://ce51lvlxd4cex" path="res://ui/marquee/marquee.tscn" id="7_p8asg"]
