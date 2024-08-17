@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://levels/game/inventory.gd" id="1_hpl3q"]
 [ext_resource type="PackedScene" uid="uid://f6kk4whontcp" path="res://nodes/sky/sky.tscn" id="1_m753q"]
-[ext_resource type="Script" path="res://levels/game/move_camera.gd" id="2_2nuij"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dd4mtjb7cl46y" path="res://visuals/environment/camera_attributes_practical.tres" id="3_m0r6p"]
+[ext_resource type="Script" path="res://addons/simple_free_look_camera/simple_free_look_camera.gd" id="4_n76aj"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="4_ywcds"]
 [ext_resource type="Material" uid="uid://cuma8autqdper" path="res://visuals/materials/grass.tres" id="5_2stf2"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="5_juiub"]
@@ -18,7 +18,7 @@ material = ExtResource("5_2stf2")
 size = Vector2(1000, 1000)
 orientation = 1
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7rg2o"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3xe0t"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("4_ywcds")
@@ -47,7 +47,7 @@ shader_parameter/interactive_level_y = 0.3
 shader_parameter/texture_albedo = ExtResource("5_xsv2c")
 
 [sub_resource type="QuadMesh" id="QuadMesh_co6l7"]
-material = SubResource("ShaderMaterial_7rg2o")
+material = SubResource("ShaderMaterial_3xe0t")
 size = Vector2(0.075, 1)
 
 [sub_resource type="MultiMesh" id="MultiMesh_yr6l2"]
@@ -70,7 +70,7 @@ transform = Transform3D(0.819152, -0.148453, 0.554032, 0, 0.965926, 0.258819, -0
 attributes = ExtResource("3_m0r6p")
 fov = 90.0269
 size = 45.0
-script = ExtResource("2_2nuij")
+script = ExtResource("4_n76aj")
 
 [node name="Enviroment" type="Node3D" parent="."]
 
