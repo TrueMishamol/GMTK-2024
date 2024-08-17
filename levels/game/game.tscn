@@ -61,7 +61,6 @@ buffer = PackedFloat32Array(-0.78049, 0, 0.625168, 9.3852, 0, 1, 0, 0.000500023,
 
 [node name="Inventory" type="Node3D" parent="."]
 script = ExtResource("1_hpl3q")
-resources = null
 
 [node name="Sky" parent="." instance=ExtResource("1_m753q")]
 script = null

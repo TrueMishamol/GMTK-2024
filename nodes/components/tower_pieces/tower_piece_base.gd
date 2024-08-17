@@ -21,7 +21,7 @@ func _ready():
 # Call this function every night to do the tower stuff such as taking money and giving materials
 func do_nightly_tasks():
 	if tower_fully_built:
-		tower_stats.doT_tower_stuff()
+		tower_stats.do_tower_stuff()
 
 # Function to check if a new piece can be placed on this piece
 func can_place_piece(new_piece: Node3D) -> bool:
