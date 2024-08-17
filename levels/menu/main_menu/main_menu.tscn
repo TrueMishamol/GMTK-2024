@@ -221,7 +221,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 55
-text = "Watermelon Froggy"
+text = "WatermelonFroggy"
 horizontal_alignment = 1
 
 [node name="GhoulMage" type="Label" parent="Marquee/Logos"]
