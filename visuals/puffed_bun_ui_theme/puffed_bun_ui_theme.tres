@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=17 format=3 uid="uid://dd5rl8w6bxi0p"]
+[gd_resource type="Theme" load_steps=19 format=3 uid="uid://dd5rl8w6bxi0p"]
 
 [ext_resource type="StyleBox" uid="uid://cavp0c160mdas" path="res://visuals/puffed_bun_ui_theme/style_boxes/button_normal_style_box.tres" id="1_g3upc"]
 [ext_resource type="StyleBox" uid="uid://25jmwrl552bp" path="res://visuals/puffed_bun_ui_theme/style_boxes/button_play_style_box.tres" id="2_uqmle"]
@@ -95,6 +95,10 @@ corner_radius_top_right = 1024
 corner_radius_bottom_right = 256
 corner_radius_bottom_left = 1024
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tmi48"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5wbi"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eenmo"]
 
 [resource]
@@ -142,4 +146,9 @@ TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_bisi0")
 TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_bisi0")
 TabContainer/styles/tab_unselected = ExtResource("1_g3upc")
 VBoxContainer/constants/separation = 34
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_tmi48")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_q5wbi")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_q5wbi")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_q5wbi")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_q5wbi")
 VSeparator/styles/separator = SubResource("StyleBoxEmpty_eenmo")

@@ -30,9 +30,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 0
+tab_alignment = 1
+current_tab = 3
 
 [node name="Resources" type="Control" parent="MarginContainer/Control/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -176,12 +178,12 @@ size_flags_horizontal = 3
 layout_mode = 2
 text = "102"
 
-[node name="Progress" type="Control" parent="MarginContainer/Control/TabContainer"]
+[node name="Expedition" type="Control" parent="MarginContainer/Control/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/Control/TabContainer/Progress"]
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/Control/TabContainer/Expedition"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -191,21 +193,24 @@ offset_top = -50.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="View" type="Control" parent="MarginContainer/Control/TabContainer"]
+[node name="Shop" type="Control" parent="MarginContainer/Control/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="Special" type="ScrollContainer" parent="MarginContainer/Control/TabContainer"]
-visible = false
+[node name="Watch" type="ScrollContainer" parent="MarginContainer/Control/TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 3
 
-[node name="Special" type="VBoxContainer" parent="MarginContainer/Control/TabContainer/Special"]
+[node name="Special" type="VBoxContainer" parent="MarginContainer/Control/TabContainer/Watch"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="MarginContainer/Control/TabContainer/Special/Special"]
+[node name="Control" type="Control" parent="MarginContainer/Control/TabContainer/Watch/Special"]
+custom_minimum_size = Vector2(0, 720)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/TabContainer/Watch/Special"]
 custom_minimum_size = Vector2(0, 620.48)
 layout_mode = 2
 theme_override_font_sizes/font_size = 471
@@ -213,28 +218,28 @@ text = "Potato"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="MarginContainer/Control/TabContainer/Special/Special"]
+[node name="Label2" type="Label" parent="MarginContainer/Control/TabContainer/Watch/Special"]
 custom_minimum_size = Vector2(0, 512)
 layout_mode = 2
 text = "please do not attempt to scroll down"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="MarginContainer/Control/TabContainer/Special/Special"]
+[node name="Label3" type="Label" parent="MarginContainer/Control/TabContainer/Watch/Special"]
 custom_minimum_size = Vector2(0, 1024)
 layout_mode = 2
 text = "really stop this you will regret it"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label4" type="Label" parent="MarginContainer/Control/TabContainer/Special/Special"]
+[node name="Label4" type="Label" parent="MarginContainer/Control/TabContainer/Watch/Special"]
 custom_minimum_size = Vector2(0, 1024)
 layout_mode = 2
 text = "I warned you"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label5" type="Label" parent="MarginContainer/Control/TabContainer/Special/Special"]
+[node name="Label5" type="Label" parent="MarginContainer/Control/TabContainer/Watch/Special"]
 custom_minimum_size = Vector2(0, 620.48)
 layout_mode = 2
 theme_override_font_sizes/font_size = 636
