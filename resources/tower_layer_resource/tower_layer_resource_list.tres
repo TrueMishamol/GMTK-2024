@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TowerLayerResource_List" load_steps=10 format=3 uid="uid://dlvbvkd5c7kk4"]
+
+[ext_resource type="Script" path="res://resources/tower_layer_resource/tower_layer_resouce_list.gd" id="1_tudfo"]
+[ext_resource type="Script" path="res://resources/tower_layer_resource/tower_layer_resource.gd" id="2_k8xd2"]
+[ext_resource type="Resource" uid="uid://bdghdtk5ua0st" path="res://resources/tower_layer_resource/resources/carrot_farm.tres" id="3_82n0t"]
+[ext_resource type="Resource" uid="uid://hyqi7y1pfvy1" path="res://resources/tower_layer_resource/resources/carrot_shop.tres" id="4_g5grq"]
+[ext_resource type="Resource" uid="uid://cj71n6v3kr5hm" path="res://resources/tower_layer_resource/resources/home.tres" id="5_uwo13"]
+[ext_resource type="Resource" uid="uid://b0eqchxvcuv64" path="res://resources/tower_layer_resource/resources/onion_farm.tres" id="6_jrgy6"]
+[ext_resource type="Resource" uid="uid://bylxan2rhwgi4" path="res://resources/tower_layer_resource/resources/onion_shop.tres" id="7_ve58c"]
+[ext_resource type="Resource" uid="uid://c77aldp1hom0l" path="res://resources/tower_layer_resource/resources/potato_farm.tres" id="8_r2u2m"]
+[ext_resource type="Resource" uid="uid://dptw0fs6vfrl3" path="res://resources/tower_layer_resource/resources/potato_shop.tres" id="9_2o5xx"]
+
+[resource]
+script = ExtResource("1_tudfo")
+tower_layer_resource_list = Array[ExtResource("2_k8xd2")]([ExtResource("3_82n0t"), ExtResource("4_g5grq"), ExtResource("5_uwo13"), ExtResource("6_jrgy6"), ExtResource("7_ve58c"), ExtResource("8_r2u2m"), ExtResource("9_2o5xx")])

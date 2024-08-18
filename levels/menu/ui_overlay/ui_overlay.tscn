@@ -4,9 +4,9 @@
 [ext_resource type="Script" path="res://levels/menu/ui_overlay/resources.gd" id="2_tifq6"]
 [ext_resource type="Script" path="res://levels/menu/ui_overlay/towers_list.gd" id="3_45jxk"]
 [ext_resource type="Resource" uid="uid://b8kevs8v68fk8" path="res://resources/resource_items/resource_item_list.tres" id="3_llbl2"]
-[ext_resource type="Resource" uid="uid://dlvbvkd5c7kk4" path="res://resources/tower_resource_layer/tower_layer_resource_list.tres" id="4_n66nr"]
+[ext_resource type="Resource" uid="uid://dlvbvkd5c7kk4" path="res://resources/tower_layer_resource/tower_layer_resource_list.tres" id="4_n66nr"]
 
-[node name="UIOverlay" type="Control" groups=["Game UI Overlay"]]
+[node name="UIOverlay" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -108,7 +108,7 @@ metadata/_tab_index = 0
 [node name="Control" type="Control" parent="MarginContainer/Control/TabContainer/Build/Floors"]
 layout_mode = 2
 
-[node name="TowersList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/Floors" groups=["Towers List Item Tab"]]
+[node name="TowersList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/Floors"]
 unique_name_in_owner = true
 layout_mode = 2
 item_count = 2

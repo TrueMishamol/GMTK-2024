@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="TowerLayerResource" load_steps=3 format=3 uid="uid://hyqi7y1pfvy1"]
+
+[ext_resource type="Script" path="res://resources/tower_layer_resource/tower_layer_resource.gd" id="1_ntvxr"]
+[ext_resource type="Resource" uid="uid://dx6oq8ikd8vq" path="res://resources/resource_items/resources/wood.tres" id="1_u4fkd"]
+
+[resource]
+script = ExtResource("1_ntvxr")
+layer_name = "Carrot Shop"
+scene_path = "res://nodes/components/tower/tower_floor_scenes/merchant_outpost.tscn"
+material_cost = ExtResource("1_u4fkd")
+cost = 10
+build_time = 5
+reseatch_cost = 5
+unlocked_at_beginning = false
+max_part_level = 3
+upkeep_price = 0
+max_defense_level = 5

@@ -4,7 +4,7 @@
 [ext_resource type="CameraAttributesPractical" uid="uid://dd4mtjb7cl46y" path="res://visuals/environment/camera_attributes_practical.tres" id="2_hbvm8"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://visuals/environment/camera_shake.tscn" id="3_npuva"]
 [ext_resource type="Material" uid="uid://cuma8autqdper" path="res://visuals/materials/grass.tres" id="4_r27jm"]
-[ext_resource type="PackedScene" uid="uid://pxiw514vxcg1" path="res://nodes/components/tower_pieces_finished/merchant_outpost/merchant_outpost.tscn" id="8_avna7"]
+[ext_resource type="PackedScene" uid="uid://pxiw514vxcg1" path="res://nodes/components/tower/tower_floor_scenes/merchant_outpost.tscn" id="8_avna7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0b8xe"]
 size = Vector3(1000, 0.001, 1000)
@@ -47,81 +47,108 @@ mesh = SubResource("QuadMesh_o7tik")
 [node name="Tower" type="Node3D" parent="MainMenuBackground/Game"]
 
 [node name="MerchantOutpost" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
+script = null
 
 [node name="MerchantOutpost2" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.524947, 0)
+script = null
 
 [node name="MerchantOutpost3" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05438, 0)
+script = null
 
 [node name="MerchantOutpost4" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55679, 0)
+script = null
 
 [node name="MerchantOutpost5" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0668, 0)
+script = null
 
 [node name="MerchantOutpost6" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59175, 0)
+script = null
 
 [node name="MerchantOutpost7" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.12118, 0)
+script = null
 
 [node name="MerchantOutpost8" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6236, 0)
+script = null
 
 [node name="MerchantOutpost9" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.12094, 0)
+script = null
 
 [node name="MerchantOutpost10" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.64589, 0)
+script = null
 
 [node name="MerchantOutpost11" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.17532, 0)
+script = null
 
 [node name="MerchantOutpost12" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.67774, 0)
+script = null
 
 [node name="MerchantOutpost13" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.21563, 0)
+script = null
 
 [node name="MerchantOutpost14" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.74058, 0)
+script = null
 
 [node name="MerchantOutpost15" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.27001, 0)
+script = null
 
 [node name="MerchantOutpost16" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.77242, 0)
+script = null
 
 [node name="MerchantOutpost17" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.29856, 0)
+script = null
 
 [node name="MerchantOutpost18" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.82799, 0)
+script = null
 
 [node name="MerchantOutpost19" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.3304, 0)
+script = null
 
 [node name="MerchantOutpost20" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.82775, 0)
+script = null
 
 [node name="MerchantOutpost21" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.3527, 0)
+script = null
 
 [node name="MerchantOutpost22" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.8821, 0)
+script = null
 
 [node name="MerchantOutpost23" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.3845, 0)
+script = null
 
 [node name="MerchantOutpost24" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.9224, 0)
+script = null
 
 [node name="MerchantOutpost25" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.4474, 0)
+script = null
 
 [node name="MerchantOutpost26" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.9768, 0)
+script = null
 
 [node name="MerchantOutpost27" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.4792, 0)
+script = null
