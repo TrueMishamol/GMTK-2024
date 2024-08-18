@@ -4,4 +4,6 @@
 
 [resource]
 script = ExtResource("1_5boyh")
+id = "metal"
 name = "Metal"
+default_count = 0

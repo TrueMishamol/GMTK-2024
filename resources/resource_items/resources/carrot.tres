@@ -4,4 +4,6 @@
 
 [resource]
 script = ExtResource("1_imms8")
+id = "carrot"
 name = "Carrot"
+default_count = 30

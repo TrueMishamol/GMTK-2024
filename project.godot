@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Tower of Bagle"
-config/description="Crafted by Cool Cyan Donut team!
+config/name="Tower of Bagel"
+config/description="A slow-paced strategy game where the player builds and manages the Tower of Bagel. Players must carefully plan each layer’s purpose and resource allocation while defending against external threats during the night.
 
-"
+Crafted by Cool Cyan Donut team!"
 config/version="0.1.0"
 run/main_scene="res://levels/main_scene.tscn"
 config/features=PackedStringArray("4.3", "Mobile")

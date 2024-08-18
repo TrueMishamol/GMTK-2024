@@ -48,8 +48,8 @@ func get_resource_item_count(id: String) -> int:
 
 
 
-func _init() -> void:
-	_load_save()
+func _ready() -> void:
+	_load_save() # Do not use on _init()
 
 
 func _load_save():
@@ -60,6 +60,18 @@ func _load_save():
 		return
 	
 	_resource_count_dictionary = _game_save_resources.resource_count_dictionary
+	
+	# Fill with default values if empty
+	
+	if _resource_count_dictionary.size() == 0:
+		print("_resource_count_dictionary is empty. Fill it with default count values")
+		if _resource_item_list == null:
+			printerr("_resource_item_list == null")
+			return
+			
+		for resource in _resource_item_list.resource_item_list:
+			_resource_count_dictionary[resource.id] = resource.default_count
+	
 	
 	# WIP
 	#for resource_item in _resource_item_list.resource_item_list:

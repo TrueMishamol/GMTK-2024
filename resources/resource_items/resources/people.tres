@@ -4,4 +4,6 @@
 
 [resource]
 script = ExtResource("1_mjfco")
+id = "people"
 name = "People"
+default_count = 10
