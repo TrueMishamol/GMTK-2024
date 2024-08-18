@@ -5,7 +5,7 @@ extends Node
 ## Use GameInfo.expedition to access this file
 
 
-signal on_expedition_set
+#signal on_expedition_set
 
 var _game_save: GameSave_Expedition
 

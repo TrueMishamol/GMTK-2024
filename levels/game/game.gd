@@ -2,17 +2,12 @@ extends Node3D
 
 
 
-@export var _tower_floor_resource_list: TowerFloorResource_List
-
-var _last_placed_tower_floor: Node3D = null
-
-
 # Wave state variable
 var _night_wave_active: bool = false
 
 
 
-func _process(delta):
+func _process(_delta):
 	if _night_wave_active:
 		_check_enemies_defeated()
 
