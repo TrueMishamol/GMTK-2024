@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 
-@export var _item_resource_list: ResourceItem_List
+@export var _item_resource_list: ItemResource_List
 
 #@on
 #@onready var _title: Label = $Template/Title

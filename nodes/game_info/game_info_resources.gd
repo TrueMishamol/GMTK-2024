@@ -7,7 +7,7 @@ extends Node
 
 signal on_resource_set
 
-@export var _item_resource_list: ResourceItem_List
+@export var _item_resource_list: ItemResource_List
 
 var _resource_count_dictionary: Dictionary = {"empty": 0}
 

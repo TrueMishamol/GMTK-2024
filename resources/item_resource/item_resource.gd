@@ -1,4 +1,4 @@
-class_name ResourceItem
+class_name ItemResource
 extends Resource
 
 
