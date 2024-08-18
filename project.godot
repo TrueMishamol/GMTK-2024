@@ -10,13 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Tower of Bagle"
-config/description="Crafted by Cool Cyan Donut team!
-
-"
+config/name="Tower of Bagel"
+config/description="A slow-paced strategy game where the player builds and manages the Tower of Bagels. Players must carefully plan each layer’s purpose and resource allocation while defending against external threats during the nights"
+config/version="0.1.0"
 run/main_scene="res://levels/main_scene.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-boot_splash/bg_color=Color(0.305806, 0.529549, 0.242786, 1)
+boot_splash/bg_color=Color(0.517647, 0.654902, 0.301961, 1)
 boot_splash/show_image=false
 config/icon="res://assets/app_icons/appicon.png"
 
