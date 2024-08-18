@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="TowerLayerResource" load_steps=2 format=3 uid="uid://bnp2v3adln01s"]
-
-[ext_resource type="Script" path="res://nodes/components/tower_pieces/tower_layers/tower_layer_resource.gd" id="1_i4ntp"]
-
-[resource]
-script = ExtResource("1_i4ntp")
-layer_name = ""

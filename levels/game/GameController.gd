@@ -130,89 +130,90 @@ func set_selected_piece_scene(scene: PackedScene):
 func tower_selected(tower_id: int):
 	set_selected_piece_scene(null)
 	match remove_text_after_pipe(_tower_list_tab.get_item_text(tower_id)):
-		"Agriculture Layer":
+		"Carrot Farm":
 			set_selected_piece_scene(tower_layers[0].scene) # Adjust index as needed
-		"Workshop Layer":
+		"Carrot Shop":
 			set_selected_piece_scene(tower_layers[1].scene) # Adjust index as needed
-		"Defense Layer":
-			set_selected_piece_scene(tower_layers[2].scene) # Adjust index as needed
-		"Library Layer":
+		"Onion Farm":
 			set_selected_piece_scene(tower_layers[3].scene) # Adjust index as needed
-		"Marketplace Layer":
-			# if _last_placed_piece and _last_placed_piece.name == "Workshop Layer":
+		"Onion Shop":
 			set_selected_piece_scene(tower_layers[4].scene) # Adjust index as needed
-			# else:
-			# 	print("Marketplace requires the Workshop Layer below it.")
-		"Barracks Layer":
-			if _last_placed_piece and _last_placed_piece.name == "Defense Layer":
-				set_selected_piece_scene(tower_layers[5].scene) # Adjust index as needed
-			else:
-				print("Barracks requires the Defense Layer below it.")
-		"Temple Layer":
+		"Potato Farm":
+			set_selected_piece_scene(tower_layers[5].scene) # Adjust index as needed
+		"Potato Shop":
 			set_selected_piece_scene(tower_layers[6].scene) # Adjust index as needed
-		"Engineering Layer":
-			if _last_placed_piece and _last_placed_piece.name == "Workshop Layer":
-				set_selected_piece_scene(tower_layers[7].scene) # Adjust index as needed
-			else:
-				print("Engineering requires the Workshop Layer below it.")
-		"Observation Deck":
-			if _last_placed_piece and _last_placed_piece.name == "Defense Layer":
-				set_selected_piece_scene(tower_layers[8].scene) # Adjust index as needed
-			else:
-				print("Observation Deck requires the Defense Layer below it.")
-		"Storage Layer":
-			set_selected_piece_scene(tower_layers[9].scene) # Adjust index as needed
-		"Alchemy Lab":
-			if _last_placed_piece and _last_placed_piece.name == "Library Layer":
-				set_selected_piece_scene(tower_layers[10].scene) # Adjust index as needed
-			else:
-				print("Alchemy Lab requires the Library Layer below it.")
-		"Greenhouse":
-			if _last_placed_piece and _last_placed_piece.name == "Agriculture Layer":
-				set_selected_piece_scene(tower_layers[11].scene) # Adjust index as needed
-			else:
-				print("Greenhouse requires the Agriculture Layer below it.")
-		"Trading Post":
-			if _last_placed_piece and (_last_placed_piece.name == "Marketplace Layer" or _last_placed_piece.name == "Workshop Layer"):
-				set_selected_piece_scene(tower_layers[12].scene) # Adjust index as needed
-			else:
-				print("Trading Post requires the Marketplace and Workshop Layers below it.")
-		"Watchtower":
-			if _last_placed_piece and _last_placed_piece.name == "Observation Deck":
-				set_selected_piece_scene(tower_layers[13].scene) # Adjust index as needed
-			else:
-				print("Watchtower requires the Observation Deck below it.")
-		"Water Reservoir":
-			if _last_placed_piece and _last_placed_piece.name == "Agriculture Layer":
-				set_selected_piece_scene(tower_layers[14].scene) # Adjust index as needed
-			else:
-				print("Water Reservoir requires the Agriculture Layer below it.")
-		"Tavern":
-			set_selected_piece_scene(tower_layers[15].scene) # Adjust index as needed
-		"Armory":
-			if _last_placed_piece and _last_placed_piece.name == "Barracks Layer":
-				set_selected_piece_scene(tower_layers[16].scene) # Adjust index as needed
-			else:
-				print("Armory requires the Barracks Layer below it.")
-		"Smithy":
-			if _last_placed_piece and _last_placed_piece.name == "Workshop Layer":
-				set_selected_piece_scene(tower_layers[17].scene) # Adjust index as needed
-			else:
-				print("Smithy requires the Workshop Layer below it.")
-		"Clocktower":
-			if _last_placed_piece and _last_placed_piece.name == "Library Layer":
-				set_selected_piece_scene(tower_layers[18].scene) # Adjust index as needed
-			else:
-				print("Clocktower requires the Library Layer below it.")
-		"Hospital":
-			if _last_placed_piece and (_last_placed_piece.name == "Barracks Layer" and _last_placed_piece.name == "Engineering Layer"):
-				set_selected_piece_scene(tower_layers[19].scene) # Adjust index as needed
-			else:
-				print("Hospital requires the Barracks and Engineering Layers below it.")
-		_:
-			print("Unknown tower part selected.")
-			pass
-	
+		"House":
+			set_selected_piece_scene(tower_layers[2].scene) # Adjust index as needed
+		#"Barracks Layer":
+			#if _last_placed_piece and _last_placed_piece.name == "Defense Layer":
+				#set_selected_piece_scene(tower_layers[5].scene) # Adjust index as needed
+			#else:
+				#print("Barracks requires the Defense Layer below it.")
+		#"Temple Layer":
+			#set_selected_piece_scene(tower_layers[6].scene) # Adjust index as needed
+		#"Engineering Layer":
+			#if _last_placed_piece and _last_placed_piece.name == "Workshop Layer":
+				#set_selected_piece_scene(tower_layers[7].scene) # Adjust index as needed
+			#else:
+				#print("Engineering requires the Workshop Layer below it.")
+		#"Observation Deck":
+			#if _last_placed_piece and _last_placed_piece.name == "Defense Layer":
+				#set_selected_piece_scene(tower_layers[8].scene) # Adjust index as needed
+			#else:
+				#print("Observation Deck requires the Defense Layer below it.")
+		#"Storage Layer":
+			#set_selected_piece_scene(tower_layers[9].scene) # Adjust index as needed
+		#"Alchemy Lab":
+			#if _last_placed_piece and _last_placed_piece.name == "Library Layer":
+				#set_selected_piece_scene(tower_layers[10].scene) # Adjust index as needed
+			#else:
+				#print("Alchemy Lab requires the Library Layer below it.")
+		#"Greenhouse":
+			#if _last_placed_piece and _last_placed_piece.name == "Agriculture Layer":
+				#set_selected_piece_scene(tower_layers[11].scene) # Adjust index as needed
+			#else:
+				#print("Greenhouse requires the Agriculture Layer below it.")
+		#"Trading Post":
+			#if _last_placed_piece and (_last_placed_piece.name == "Marketplace Layer" or _last_placed_piece.name == "Workshop Layer"):
+				#set_selected_piece_scene(tower_layers[12].scene) # Adjust index as needed
+			#else:
+				#print("Trading Post requires the Marketplace and Workshop Layers below it.")
+		#"Watchtower":
+			#if _last_placed_piece and _last_placed_piece.name == "Observation Deck":
+				#set_selected_piece_scene(tower_layers[13].scene) # Adjust index as needed
+			#else:
+				#print("Watchtower requires the Observation Deck below it.")
+		#"Water Reservoir":
+			#if _last_placed_piece and _last_placed_piece.name == "Agriculture Layer":
+				#set_selected_piece_scene(tower_layers[14].scene) # Adjust index as needed
+			#else:
+				#print("Water Reservoir requires the Agriculture Layer below it.")
+		#"Tavern":
+			#set_selected_piece_scene(tower_layers[15].scene) # Adjust index as needed
+		#"Armory":
+			#if _last_placed_piece and _last_placed_piece.name == "Barracks Layer":
+				#set_selected_piece_scene(tower_layers[16].scene) # Adjust index as needed
+			#else:
+				#print("Armory requires the Barracks Layer below it.")
+		#"Smithy":
+			#if _last_placed_piece and _last_placed_piece.name == "Workshop Layer":
+				#set_selected_piece_scene(tower_layers[17].scene) # Adjust index as needed
+			#else:
+				#print("Smithy requires the Workshop Layer below it.")
+		#"Clocktower":
+			#if _last_placed_piece and _last_placed_piece.name == "Library Layer":
+				#set_selected_piece_scene(tower_layers[18].scene) # Adjust index as needed
+			#else:
+				#print("Clocktower requires the Library Layer below it.")
+		#"Hospital":
+			#if _last_placed_piece and (_last_placed_piece.name == "Barracks Layer" and _last_placed_piece.name == "Engineering Layer"):
+				#set_selected_piece_scene(tower_layers[19].scene) # Adjust index as needed
+			#else:
+				#print("Hospital requires the Barracks and Engineering Layers below it.")
+		#_:
+			#print("Unknown tower part selected.")
+			#pass
+	#
 	place_selected_piece()
 
 func remove_text_after_pipe(original_text: String) -> String:
