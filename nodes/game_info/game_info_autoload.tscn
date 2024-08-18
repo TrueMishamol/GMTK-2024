@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://mdqm4kqltxue"]
 
 [ext_resource type="Script" path="res://nodes/game_info/game_info.gd" id="1_yr1np"]
-[ext_resource type="Script" path="res://nodes/game_info/game_info_resources.gd" id="2_lhjwb"]
+[ext_resource type="Script" path="res://nodes/game_info/game_info_items.gd" id="2_lhjwb"]
 [ext_resource type="Resource" uid="uid://b8kevs8v68fk8" path="res://resources/item_resource/item_resource_list.tres" id="3_cadxv"]
 [ext_resource type="Script" path="res://nodes/game_info/game_info_expedition.gd" id="3_v3o0y"]
 [ext_resource type="Script" path="res://nodes/game_info/game_info_tower.gd" id="4_8c6he"]
@@ -9,7 +9,7 @@
 [node name="GameInfo" type="Node"]
 script = ExtResource("1_yr1np")
 
-[node name="Resources" type="Node" parent="."]
+[node name="Items" type="Node" parent="."]
 script = ExtResource("2_lhjwb")
 _item_resource_list = ExtResource("3_cadxv")
 

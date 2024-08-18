@@ -13,21 +13,21 @@ extends VBoxContainer
 func _ready() -> void:
 	_update_info()
 	
-	GameInfo.resources.on_resource_set.connect(_update_info)
+	GameInfo.items.on_item_set.connect(_update_info)
 
 
 func _update_info():
 	_text.text = ""
-	for resource in _item_resource_list.item_resource_list:
-		_text.text += resource.name + " " + str(GameInfo.resources.get_item_resource_count(resource.id)) + "\n"
+	for item in _item_resource_list.item_resource_list:
+		_text.text += item.name + " " + str(GameInfo.items.get_item_resource_count(item.id)) + "\n"
 	
-	#_people.text = str(GameInfo.resources.people)
-	#_potato.text = str(GameInfo.resources.potato)
-	#_carrot.text = str(GameInfo.resources.carrot)
-	#_onion.text = str(GameInfo.resources.onion)
-	#_spices.text = str(GameInfo.resources.spices)
-	#_metal.text = str(GameInfo.resources.metal)
-	#_wood.text = str(GameInfo.resources.wood)
-	#_fertile_soil.text = str(GameInfo.resources.fertile_soil)
-	#_research.text = str(GameInfo.resources.research)
-	#_money.text = str(GameInfo.resources.money)
+	#_people.text = str(GameInfo.items.people)
+	#_potato.text = str(GameInfo.items.potato)
+	#_carrot.text = str(GameInfo.items.carrot)
+	#_onion.text = str(GameInfo.items.onion)
+	#_spices.text = str(GameInfo.items.spices)
+	#_metal.text = str(GameInfo.items.metal)
+	#_wood.text = str(GameInfo.items.wood)
+	#_fertile_soil.text = str(GameInfo.items.fertile_soil)
+	#_research.text = str(GameInfo.items.research)
+	#_money.text = str(GameInfo.items.money)

@@ -18,7 +18,7 @@ func _ready() -> void:
 	_load()
 	
 
-## Build floor & use resources
+## Build floor & use items
 func try_buy_floor(tower_floor_resource: TowerFloorResource) -> bool:
 	if tower_floor_resource == null:
 		printerr("game.gd tower_floor_resource == null")
@@ -31,15 +31,15 @@ func try_buy_floor(tower_floor_resource: TowerFloorResource) -> bool:
 	if tower_floor_resource.material_cost == null:
 		return true
 	
-	# If there are enough resources
-	if GameInfo.resources.try_remove_item_count(tower_floor_resource.material_cost.id, tower_floor_resource.cost):
+	# If there are enough items
+	if GameInfo.items.try_remove_item_count(tower_floor_resource.material_cost.id, tower_floor_resource.cost):
 		_build_floor(tower_floor_resource)
 		return true
 	
 	return false
 
 
-## Builds floor without using resources 
+## Builds floor without using items 
 func _build_floor(tower_floor_resource: TowerFloorResource):
 	print("_build_floor " + tower_floor_resource.layer_name)
 	
