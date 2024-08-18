@@ -2,9 +2,9 @@ class_name Tower
 extends Node3D
 
 
-@export var _basement_floor: TowerLayerResource
+@export var _basement_floor: TowerFloorResource
 
-#var _list_of_unlocked_floors: Array[TowerLayerResource] # Save this in game save
+#var _list_of_unlocked_floors: Array[TowerFloorResource] # Save this in game save
 var _list_of_floors: Array[TowerFloor]
 
 static var instance: Tower
@@ -19,7 +19,7 @@ func _ready() -> void:
 	
 
 ## Build floor & use resources
-func try_buy_floor(tower_floor_resource: TowerLayerResource) -> bool:
+func try_buy_floor(tower_floor_resource: TowerFloorResource) -> bool:
 	if tower_floor_resource == null:
 		printerr("game.gd tower_floor_resource == null")
 		return false
@@ -40,7 +40,7 @@ func try_buy_floor(tower_floor_resource: TowerLayerResource) -> bool:
 
 
 ## Builds floor without using resources 
-func _build_floor(tower_floor_resource: TowerLayerResource):
+func _build_floor(tower_floor_resource: TowerFloorResource):
 	print("_build_floor " + tower_floor_resource.layer_name)
 	
 	# Get the new floor position

@@ -8,7 +8,7 @@ extends Node3D
 @export var part_level: int = 1
 @export var defense_level: int = 1
 
-@export var tower_floor_resource: TowerLayerResource
+@export var tower_floor_resource: TowerFloorResource
 
 # You have a tower build timer, so you need this
 var _floor_fully_built: bool = false

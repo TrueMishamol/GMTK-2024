@@ -1,5 +1,5 @@
-class_name TowerLayerResource_List
+class_name TowerFloorResource_List
 extends Resource
 
 
-@export var tower_floor_resource_list: Array[TowerLayerResource]
+@export var tower_floor_resource_list: Array[TowerFloorResource]

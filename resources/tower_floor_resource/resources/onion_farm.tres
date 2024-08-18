@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="TowerLayerResource" load_steps=2 format=3 uid="uid://b0eqchxvcuv64"]
+[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=2 format=3 uid="uid://b0eqchxvcuv64"]
 
 [ext_resource type="Script" path="res://resources/tower_floor_resource/tower_floor_resource.gd" id="1_klby5"]
 

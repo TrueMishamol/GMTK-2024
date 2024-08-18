@@ -1,4 +1,4 @@
-class_name TowerLayerResource
+class_name TowerFloorResource
 extends Resource
 
 

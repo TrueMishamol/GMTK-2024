@@ -6,7 +6,7 @@
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_x74kw"]
 height = 0.5
 
-[node name="TowerPieceBase" type="StaticBody3D" groups=["tower_piece"]]
+[node name="TowerPieceBase" type="StaticBody3D" groups=["tower_floor"]]
 script = ExtResource("1_k4d5l")
 tower_floor_resource = ExtResource("2_b5bap")
 

@@ -1,7 +1,7 @@
 extends ItemList
 
 
-@export var _tower_floor_resource_list: TowerLayerResource_List
+@export var _tower_floor_resource_list: TowerFloorResource_List
 
 
 func _ready() -> void:
@@ -11,10 +11,10 @@ func _ready() -> void:
 	item_activated.connect(_on_item_activated)
 
 
-func _fill_info(tower_floor_resource_list: TowerLayerResource_List):
+func _fill_info(tower_floor_resource_list: TowerFloorResource_List):
 	self.clear()
 	
-	for tower_floor: TowerLayerResource in tower_floor_resource_list.tower_floor_resource_list:
+	for tower_floor: TowerFloorResource in tower_floor_resource_list.tower_floor_resource_list:
 		var text: String = ""
 		text += tower_floor.layer_name + " | Item Cost: "
 		
@@ -27,6 +27,6 @@ func _fill_info(tower_floor_resource_list: TowerLayerResource_List):
 
 
 func _on_item_activated(index: int):
-	var tower_floor_resource: TowerLayerResource = _tower_floor_resource_list.tower_floor_resource_list[index]
+	var tower_floor_resource: TowerFloorResource = _tower_floor_resource_list.tower_floor_resource_list[index]
 	Tower.instance.try_buy_floor(tower_floor_resource)
 	
