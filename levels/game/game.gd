@@ -186,10 +186,11 @@ func remove_text_after_pipe(original_text: String) -> String:
 
 # Called every frame to check game logic
 func _process(delta):
-	if _tower_list_tab == null && get_tree().get_first_node_in_group("Towers List Item Tab") != null:
-		_tower_list_tab = get_tree().get_first_node_in_group("Towers List Item Tab")
-		get_tree().get_first_node_in_group("Towers List Item Tab").connect("item_activated", tower_selected)
-		update_item_list_text_with_cost()
+	#! WIP
+	#if _tower_list_tab == null && get_tree().get_first_node_in_group("Towers List Item Tab") != null:
+		#_tower_list_tab = get_tree().get_first_node_in_group("Towers List Item Tab")
+		#get_tree().get_first_node_in_group("Towers List Item Tab").connect("item_activated", tower_selected)
+		#update_item_list_text_with_cost()
 	if _night_wave_active:
 		check_enemies_defeated()
 
