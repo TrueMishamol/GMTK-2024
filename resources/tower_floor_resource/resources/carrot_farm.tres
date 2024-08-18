@@ -1,12 +1,13 @@
 [gd_resource type="Resource" script_class="TowerLayerResource" load_steps=3 format=3 uid="uid://bdghdtk5ua0st"]
 
-[ext_resource type="Resource" uid="uid://batkxr5vmri5h" path="res://resources/resource_items/resources/soil.tres" id="1_p1p8e"]
-[ext_resource type="Script" path="res://resources/tower_layer_resource/tower_layer_resource.gd" id="3_2ud3m"]
+[ext_resource type="Resource" uid="uid://batkxr5vmri5h" path="res://resources/item_resource/resources/soil.tres" id="1_p1p8e"]
+[ext_resource type="Script" path="res://resources/tower_floor_resource/tower_floor_resource.gd" id="3_2ud3m"]
 
 [resource]
 script = ExtResource("3_2ud3m")
 layer_name = "Carrot Farm"
 scene_path = "res://nodes/components/tower/tower_floor_scenes/merchant_outpost.tscn"
+people_cost = 0
 material_cost = ExtResource("1_p1p8e")
 cost = 12
 build_time = 5

@@ -2,7 +2,7 @@ extends Node3D
 
 
 
-@export var _tower_layer_resource_list: TowerLayerResource_List
+@export var _tower_floor_resource_list: TowerLayerResource_List
 
 var _last_placed_tower_piece: Node3D = null
 

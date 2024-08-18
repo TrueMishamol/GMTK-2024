@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 
-@export var _resource_item_list: ResourceItem_List
+@export var _item_resource_list: ResourceItem_List
 
 #@on
 #@onready var _title: Label = $Template/Title
@@ -18,8 +18,8 @@ func _ready() -> void:
 
 func _update_info():
 	_text.text = ""
-	for resource in _resource_item_list.resource_item_list:
-		_text.text += resource.name + " " + str(GameInfo.resources.get_resource_item_count(resource.id)) + "\n"
+	for resource in _item_resource_list.item_resource_list:
+		_text.text += resource.name + " " + str(GameInfo.resources.get_item_resource_count(resource.id)) + "\n"
 	
 	#_people.text = str(GameInfo.resources.people)
 	#_potato.text = str(GameInfo.resources.potato)

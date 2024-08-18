@@ -7,7 +7,7 @@ extends Node
 
 signal on_resource_set
 
-@export var _resource_item_list: ResourceItem_List
+@export var _item_resource_list: ResourceItem_List
 
 var _resource_count_dictionary: Dictionary = {"empty": 0}
 
@@ -15,12 +15,12 @@ var _game_save_resources: GameSave_Resources
 
 
 
-func set_resource_item_count(id: String, count: int):
+func set_item_resource_count(id: String, count: int):
 	_resource_count_dictionary[id] = count
 	on_resource_set.emit()
 
 
-func add_resource_item_count(id: String, count: int):
+func add_item_resource_count(id: String, count: int):
 	if _resource_count_dictionary.has(id):
 		_resource_count_dictionary[id] += count
 	else:
@@ -39,7 +39,7 @@ func try_remove_item_count(id: String, count: int) -> bool:
 	return true
 	
 
-func get_resource_item_count(id: String) -> int:
+func get_item_resource_count(id: String) -> int:
 	if _resource_count_dictionary.has(id):
 		return _resource_count_dictionary[id]
 	return 0
@@ -65,11 +65,11 @@ func _load_save():
 	
 	if _resource_count_dictionary.size() == 0:
 		print("_resource_count_dictionary is empty. Fill it with default count values")
-		if _resource_item_list == null:
-			printerr("_resource_item_list == null")
+		if _item_resource_list == null:
+			printerr("_item_resource_list == null")
 			return
 			
-		for resource in _resource_item_list.resource_item_list:
+		for resource in _item_resource_list.item_resource_list:
 			_resource_count_dictionary[resource.id] = resource.default_count
 
 

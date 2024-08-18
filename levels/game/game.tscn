@@ -10,7 +10,7 @@
 [ext_resource type="Shader" path="res://nodes/sky/sky.gdshader" id="6_bhhei"]
 [ext_resource type="Texture2D" uid="uid://clkehq4uey56r" path="res://nodes/sky/stars.png" id="7_yubki"]
 [ext_resource type="Script" path="res://nodes/components/tower/tower.gd" id="9_wfn2v"]
-[ext_resource type="Resource" uid="uid://cj71n6v3kr5hm" path="res://resources/tower_layer_resource/resources/home.tres" id="10_3vino"]
+[ext_resource type="Resource" uid="uid://cj71n6v3kr5hm" path="res://resources/tower_floor_resource/resources/home.tres" id="10_3vino"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_msgkm"]
 shader = ExtResource("6_bhhei")

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="TowerLayerResource" load_steps=3 format=3 uid="uid://hyqi7y1pfvy1"]
 
-[ext_resource type="Script" path="res://resources/tower_layer_resource/tower_layer_resource.gd" id="1_ntvxr"]
-[ext_resource type="Resource" uid="uid://dx6oq8ikd8vq" path="res://resources/resource_items/resources/wood.tres" id="1_u4fkd"]
+[ext_resource type="Script" path="res://resources/tower_floor_resource/tower_floor_resource.gd" id="1_ntvxr"]
+[ext_resource type="Resource" uid="uid://dx6oq8ikd8vq" path="res://resources/item_resource/resources/wood.tres" id="1_u4fkd"]
 
 [resource]
 script = ExtResource("1_ntvxr")

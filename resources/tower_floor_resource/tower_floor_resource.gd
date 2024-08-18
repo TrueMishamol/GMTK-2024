@@ -4,6 +4,7 @@ extends Resource
 
 @export var layer_name: String
 @export_file("*.tscn") var scene_path: String ## Must be TowerFloor
+@export var people_cost: int
 @export var material_cost: ResourceItem
 @export var cost: int
 @export var build_time: int = 5

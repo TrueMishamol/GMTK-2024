@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://byjvpqo0b2w7p"]
 
 [ext_resource type="Script" path="res://nodes/components/tower/tower_floor.gd" id="1_k4d5l"]
-[ext_resource type="Resource" uid="uid://cj71n6v3kr5hm" path="res://resources/tower_layer_resource/resources/home.tres" id="2_b5bap"]
+[ext_resource type="Resource" uid="uid://cj71n6v3kr5hm" path="res://resources/tower_floor_resource/resources/home.tres" id="2_b5bap"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_x74kw"]
 height = 0.5
 
 [node name="TowerPieceBase" type="StaticBody3D" groups=["tower_piece"]]
 script = ExtResource("1_k4d5l")
-tower_layer_resource = ExtResource("2_b5bap")
+tower_floor_resource = ExtResource("2_b5bap")
 
 [node name="ConnectionPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

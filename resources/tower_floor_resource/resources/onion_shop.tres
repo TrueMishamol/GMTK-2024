@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="TowerLayerResource" load_steps=2 format=3 uid="uid://bylxan2rhwgi4"]
 
-[ext_resource type="Script" path="res://resources/tower_layer_resource/tower_layer_resource.gd" id="1_l6rek"]
+[ext_resource type="Script" path="res://resources/tower_floor_resource/tower_floor_resource.gd" id="1_l6rek"]
 
 [resource]
 script = ExtResource("1_l6rek")

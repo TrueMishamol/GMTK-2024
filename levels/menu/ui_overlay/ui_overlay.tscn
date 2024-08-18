@@ -3,8 +3,8 @@
 [ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/puffed_bun_ui_theme/puffed_bun_ui_theme.tres" id="1_b4oji"]
 [ext_resource type="Script" path="res://levels/menu/ui_overlay/resources.gd" id="2_tifq6"]
 [ext_resource type="Script" path="res://levels/menu/ui_overlay/towers_list.gd" id="3_45jxk"]
-[ext_resource type="Resource" uid="uid://b8kevs8v68fk8" path="res://resources/resource_items/resource_item_list.tres" id="3_llbl2"]
-[ext_resource type="Resource" uid="uid://dlvbvkd5c7kk4" path="res://resources/tower_layer_resource/tower_layer_resource_list.tres" id="4_n66nr"]
+[ext_resource type="Resource" uid="uid://b8kevs8v68fk8" path="res://resources/item_resource/item_resource_list.tres" id="3_llbl2"]
+[ext_resource type="Resource" uid="uid://dlvbvkd5c7kk4" path="res://resources/tower_floor_resource/tower_floor_resource_list.tres" id="4_n66nr"]
 
 [node name="UIOverlay" type="Control"]
 layout_mode = 3
@@ -53,7 +53,7 @@ offset_bottom = 236.0
 grow_vertical = 2
 theme_override_constants/separation = 16
 script = ExtResource("2_tifq6")
-_resource_item_list = ExtResource("3_llbl2")
+_item_resource_list = ExtResource("3_llbl2")
 
 [node name="Text" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources"]
 layout_mode = 2
@@ -115,7 +115,7 @@ item_count = 2
 item_0/text = "Carrot Farm | Material Cost: "
 item_1/text = "Workshop Layer | Material Cost:"
 script = ExtResource("3_45jxk")
-_tower_layer_resource_list = ExtResource("4_n66nr")
+_tower_floor_resource_list = ExtResource("4_n66nr")
 
 [node name="WIP" type="Node" parent="MarginContainer/Control/TabContainer/Build"]
 

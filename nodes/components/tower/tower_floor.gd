@@ -8,7 +8,7 @@ extends Node3D
 @export var part_level: int = 1
 @export var defense_level: int = 1
 
-@export var tower_layer_resource: TowerLayerResource
+@export var tower_floor_resource: TowerLayerResource
 
 # You have a tower build timer, so you need this
 var _floor_fully_built: bool = false
@@ -22,7 +22,7 @@ var _floor_fully_built: bool = false
 func _ready():
 	_build_timer.connect("timeout", _on_build_finished)
 	if not _floor_fully_built:
-		_build_timer.start(tower_layer_resource.build_time)
+		_build_timer.start(tower_floor_resource.build_time)
 		
 
 func _on_build_finished():
