@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TowerLayerResource" load_steps=3 format=3 uid="uid://cj71n6v3kr5hm"]
+
+[ext_resource type="Script" path="res://resources/tower_layers/tower_layer_resource.gd" id="1_osf1t"]
+[ext_resource type="PackedScene" uid="uid://byjvpqo0b2w7p" path="res://nodes/components/tower_pieces/tower_piece_base.tscn" id="1_pn7ao"]
+
+[resource]
+script = ExtResource("1_osf1t")
+layer_name = "Home"
+scene = ExtResource("1_pn7ao")
+material_cost = {}

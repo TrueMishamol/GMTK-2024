@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=19 format=3 uid="uid://dd5rl8w6bxi0p"]
+[gd_resource type="Theme" load_steps=20 format=3 uid="uid://dd5rl8w6bxi0p"]
 
 [ext_resource type="StyleBox" uid="uid://cavp0c160mdas" path="res://visuals/puffed_bun_ui_theme/style_boxes/button_normal_style_box.tres" id="1_g3upc"]
 [ext_resource type="StyleBox" uid="uid://25jmwrl552bp" path="res://visuals/puffed_bun_ui_theme/style_boxes/button_play_style_box.tres" id="2_uqmle"]
@@ -60,6 +60,8 @@ corner_radius_bottom_right = 1024
 corner_radius_bottom_left = 256
 corner_detail = 20
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pjcyx"]
+
 [sub_resource type="FontVariation" id="FontVariation_57uud"]
 base_font = ExtResource("5_bkxf4")
 variation_embolden = 0.5
@@ -115,6 +117,14 @@ Button_Play/font_sizes/font_size = 90
 Button_Play/styles/hover = SubResource("StyleBoxFlat_jvmoy")
 Button_Play/styles/normal = ExtResource("2_uqmle")
 Button_Play/styles/pressed = SubResource("StyleBoxFlat_yx8ud")
+ItemList/colors/font_color = Color(1, 1, 1, 1)
+ItemList/colors/font_hovered_color = Color(1, 1, 1, 1)
+ItemList/colors/font_selected_color = Color(1, 1, 1, 1)
+ItemList/styles/focus = SubResource("StyleBoxEmpty_pjcyx")
+ItemList/styles/hovered = SubResource("StyleBoxEmpty_pjcyx")
+ItemList/styles/panel = SubResource("StyleBoxEmpty_pjcyx")
+ItemList/styles/selected = SubResource("StyleBoxEmpty_pjcyx")
+ItemList/styles/selected_focus = SubResource("StyleBoxEmpty_pjcyx")
 Label_GameTitle/base_type = &"Label"
 Label_GameTitle/colors/font_color = Color(0.698039, 0.243137, 0.407843, 1)
 Label_GameTitle/colors/font_outline_color = Color(0.996078, 0.945098, 0.894118, 1)

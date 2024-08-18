@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TowerLayerResource" load_steps=3 format=3 uid="uid://bylxan2rhwgi4"]
+
+[ext_resource type="PackedScene" uid="uid://byjvpqo0b2w7p" path="res://nodes/components/tower_pieces/tower_piece_base.tscn" id="1_5q8kn"]
+[ext_resource type="Script" path="res://resources/tower_layers/tower_layer_resource.gd" id="1_l6rek"]
+
+[resource]
+script = ExtResource("1_l6rek")
+layer_name = "Onion Shop"
+scene = ExtResource("1_5q8kn")
+material_cost = {}

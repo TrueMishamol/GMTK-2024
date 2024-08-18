@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2o5t3pqh33ir"]
+[gd_scene load_steps=5 format=3 uid="uid://c2o5t3pqh33ir"]
 
 [ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/puffed_bun_ui_theme/puffed_bun_ui_theme.tres" id="1_b4oji"]
 [ext_resource type="Script" path="res://levels/menu/ui_overlay/resources.gd" id="2_tifq6"]
+[ext_resource type="Script" path="res://levels/menu/ui_overlay/towers_list.gd" id="3_45jxk"]
+[ext_resource type="Resource" uid="uid://dlvbvkd5c7kk4" path="res://resources/tower_layers/tower_layer_resource_list.tres" id="4_n66nr"]
 
 [node name="UIOverlay" type="Control" groups=["Game UI Overlay"]]
 layout_mode = 3
@@ -31,7 +33,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 3
+current_tab = 2
 clip_tabs = false
 deselect_enabled = true
 
@@ -229,7 +231,6 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Build" type="TabContainer" parent="MarginContainer/Control/TabContainer"]
-visible = false
 layout_mode = 2
 tab_alignment = 1
 current_tab = 0
@@ -237,48 +238,37 @@ tabs_position = 1
 deselect_enabled = true
 metadata/_tab_index = 2
 
-[node name="Tower Layers" type="Control" parent="MarginContainer/Control/TabContainer/Build"]
+[node name="Floors" type="VSplitContainer" parent="MarginContainer/Control/TabContainer/Build"]
 layout_mode = 2
+split_offset = 350
 metadata/_tab_index = 0
 
-[node name="TowersList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/Tower Layers" groups=["Towers List Item Tab"]]
+[node name="Control" type="Control" parent="MarginContainer/Control/TabContainer/Build/Floors"]
+layout_mode = 2
+
+[node name="TowersList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/Floors" groups=["Towers List Item Tab"]]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.68
+layout_mode = 2
+item_count = 2
+item_0/text = "Carrot Farm | Material Cost: "
+item_1/text = "Workshop Layer | Material Cost:"
+script = ExtResource("3_45jxk")
+_tower_layer_resource_list = ExtResource("4_n66nr")
+
+[node name="WIP" type="Node" parent="MarginContainer/Control/TabContainer/Build"]
+
+[node name="Upgrade" type="Control" parent="MarginContainer/Control/TabContainer/Build/WIP"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -0.200012
-grow_horizontal = 2
-grow_vertical = 2
-item_count = 20
-item_0/text = "Agriculture Layer | Material Cost: "
-item_1/text = "Workshop Layer | Material Cost:"
-item_2/text = "Defense Layer | Material Cost:"
-item_3/text = "Library Layer | Material Cost:"
-item_4/text = "Marketplace Layer | Material Cost:"
-item_5/text = "Barracks Layer | Material Cost:"
-item_6/text = "Temple Layer | Material Cost:"
-item_7/text = "Engineering Layer | Material Cost:"
-item_8/text = "Observation Deck | Material Cost:"
-item_9/text = "Storage Layer | Material Cost:"
-item_10/text = "Alchemy Lab | Material Cost:"
-item_11/text = "Greenhouse | Material Cost:"
-item_12/text = "Trading Post | Material Cost:"
-item_13/text = "Watchtower | Material Cost:"
-item_14/text = "Water Reservoir | Material Cost:"
-item_15/text = "Tavern | Material Cost:"
-item_16/text = "Armory | Material Cost:"
-item_17/text = "Smithy | Material Cost:"
-item_18/text = "Clocktower | Material Cost:"
-item_19/text = "Hospital | Material Cost:"
+offset_left = 40.0
+offset_top = 90.0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Upgrade" type="Control" parent="MarginContainer/Control/TabContainer/Build"]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 1
-
-[node name="UpgradesList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/Upgrade"]
+[node name="UpgradesList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/WIP/Upgrade"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -291,12 +281,18 @@ grow_vertical = 2
 item_count = 1
 item_0/text = "Merchant Outpost Lvl. 1 | Upgrade | Materail Cost: 10 Gold"
 
-[node name="Decorations" type="Control" parent="MarginContainer/Control/TabContainer/Build"]
+[node name="Decorations" type="Control" parent="MarginContainer/Control/TabContainer/Build/WIP"]
 visible = false
-layout_mode = 2
-metadata/_tab_index = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 90.0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="DecorationsList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/Decorations"]
+[node name="DecorationsList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/WIP/Decorations"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -309,6 +305,7 @@ grow_vertical = 2
 max_columns = 10
 
 [node name="Watch" type="Control" parent="MarginContainer/Control/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 

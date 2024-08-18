@@ -1,5 +1,7 @@
 extends Node3D
 
+
+
 # Stores the last placed tower piece
 @export var _last_placed_piece: Node3D = null
 
@@ -9,8 +11,11 @@ var _selected_piece_scene: PackedScene = null
 # Wave state variable
 var _night_wave_active: bool = false
 
-@onready var _tower_list_tab:ItemList = null
-@export var tower_layers: Array[TowerLayerResource] = []
+@onready var _tower_list_tab: ItemList = null
+@export var _tower_layer_resource_list: TowerLayerResource_List
+
+
+
 
 # Function to update the ItemList text with material cost
 func update_item_list_text_with_cost():
@@ -37,7 +42,7 @@ func update_item_list_text_with_cost():
 
 # Helper function to get TowerLayerResource by layer name
 func get_tower_layer_resource_by_name(name: String) -> TowerLayerResource:
-	for resource in tower_layers:
+	for resource in _tower_layer_resource_list:
 		if resource.layer_name == name:
 			return resource
 	return null
@@ -55,25 +60,25 @@ func has_sufficient_materials(material_cost: Array[InventoryResourceItem]) -> bo
 func has_enough_material(item: InventoryResourceItem) -> bool:
 	match item.name:
 		"Potato":
-			return GameInfoAutoload.resources.potato >= item.amount
+			return GameInfo.resources.potato >= item.amount
 		"Carrot":
-			return GameInfoAutoload.resources.carrot >= item.amount
+			return GameInfo.resources.carrot >= item.amount
 		"Onion":
-			return GameInfoAutoload.resources.onion >= item.amount
+			return GameInfo.resources.onion >= item.amount
 		"Herbs":
-			return GameInfoAutoload.resources.herbs >= item.amount
+			return GameInfo.resources.herbs >= item.amount
 		"Spices":
-			return GameInfoAutoload.resources.spices >= item.amount
+			return GameInfo.resources.spices >= item.amount
 		"Metal":
-			return GameInfoAutoload.resources.metal >= item.amount
+			return GameInfo.resources.metal >= item.amount
 		"Soil":
-			return GameInfoAutoload.resources.fertile_soil >= item.amount
+			return GameInfo.resources.fertile_soil >= item.amount
 		"Wood":
-			return GameInfoAutoload.resources.wood >= item.amount
+			return GameInfo.resources.wood >= item.amount
 		"Research":
-			return GameInfoAutoload.resources.research >= item.amount
+			return GameInfo.resources.research >= item.amount
 		"Money":
-			return GameInfoAutoload.resources.money >= item.amount
+			return GameInfo.resources.money >= item.amount
 		_:
 			print("Unknown material: ", item.name)
 			return false
@@ -131,83 +136,83 @@ func tower_selected(tower_id: int):
 	set_selected_piece_scene(null)
 	match remove_text_after_pipe(_tower_list_tab.get_item_text(tower_id)):
 		"Carrot Farm":
-			set_selected_piece_scene(tower_layers[0].scene) # Adjust index as needed
+			set_selected_piece_scene(_tower_layer_resource_list[0].scene) # Adjust index as needed
 		"Carrot Shop":
-			set_selected_piece_scene(tower_layers[1].scene) # Adjust index as needed
+			set_selected_piece_scene(_tower_layer_resource_list[1].scene) # Adjust index as needed
 		"Onion Farm":
-			set_selected_piece_scene(tower_layers[3].scene) # Adjust index as needed
+			set_selected_piece_scene(_tower_layer_resource_list[3].scene) # Adjust index as needed
 		"Onion Shop":
-			set_selected_piece_scene(tower_layers[4].scene) # Adjust index as needed
+			set_selected_piece_scene(_tower_layer_resource_list[4].scene) # Adjust index as needed
 		"Potato Farm":
-			set_selected_piece_scene(tower_layers[5].scene) # Adjust index as needed
+			set_selected_piece_scene(_tower_layer_resource_list[5].scene) # Adjust index as needed
 		"Potato Shop":
-			set_selected_piece_scene(tower_layers[6].scene) # Adjust index as needed
+			set_selected_piece_scene(_tower_layer_resource_list[6].scene) # Adjust index as needed
 		"House":
-			set_selected_piece_scene(tower_layers[2].scene) # Adjust index as needed
+			set_selected_piece_scene(_tower_layer_resource_list[2].scene) # Adjust index as needed
 		#"Barracks Layer":
 			#if _last_placed_piece and _last_placed_piece.name == "Defense Layer":
-				#set_selected_piece_scene(tower_layers[5].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[5].scene) # Adjust index as needed
 			#else:
 				#print("Barracks requires the Defense Layer below it.")
 		#"Temple Layer":
-			#set_selected_piece_scene(tower_layers[6].scene) # Adjust index as needed
+			#set_selected_piece_scene(_tower_layer_resource_list[6].scene) # Adjust index as needed
 		#"Engineering Layer":
 			#if _last_placed_piece and _last_placed_piece.name == "Workshop Layer":
-				#set_selected_piece_scene(tower_layers[7].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[7].scene) # Adjust index as needed
 			#else:
 				#print("Engineering requires the Workshop Layer below it.")
 		#"Observation Deck":
 			#if _last_placed_piece and _last_placed_piece.name == "Defense Layer":
-				#set_selected_piece_scene(tower_layers[8].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[8].scene) # Adjust index as needed
 			#else:
 				#print("Observation Deck requires the Defense Layer below it.")
 		#"Storage Layer":
-			#set_selected_piece_scene(tower_layers[9].scene) # Adjust index as needed
+			#set_selected_piece_scene(_tower_layer_resource_list[9].scene) # Adjust index as needed
 		#"Alchemy Lab":
 			#if _last_placed_piece and _last_placed_piece.name == "Library Layer":
-				#set_selected_piece_scene(tower_layers[10].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[10].scene) # Adjust index as needed
 			#else:
 				#print("Alchemy Lab requires the Library Layer below it.")
 		#"Greenhouse":
 			#if _last_placed_piece and _last_placed_piece.name == "Agriculture Layer":
-				#set_selected_piece_scene(tower_layers[11].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[11].scene) # Adjust index as needed
 			#else:
 				#print("Greenhouse requires the Agriculture Layer below it.")
 		#"Trading Post":
 			#if _last_placed_piece and (_last_placed_piece.name == "Marketplace Layer" or _last_placed_piece.name == "Workshop Layer"):
-				#set_selected_piece_scene(tower_layers[12].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[12].scene) # Adjust index as needed
 			#else:
 				#print("Trading Post requires the Marketplace and Workshop Layers below it.")
 		#"Watchtower":
 			#if _last_placed_piece and _last_placed_piece.name == "Observation Deck":
-				#set_selected_piece_scene(tower_layers[13].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[13].scene) # Adjust index as needed
 			#else:
 				#print("Watchtower requires the Observation Deck below it.")
 		#"Water Reservoir":
 			#if _last_placed_piece and _last_placed_piece.name == "Agriculture Layer":
-				#set_selected_piece_scene(tower_layers[14].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[14].scene) # Adjust index as needed
 			#else:
 				#print("Water Reservoir requires the Agriculture Layer below it.")
 		#"Tavern":
-			#set_selected_piece_scene(tower_layers[15].scene) # Adjust index as needed
+			#set_selected_piece_scene(_tower_layer_resource_list[15].scene) # Adjust index as needed
 		#"Armory":
 			#if _last_placed_piece and _last_placed_piece.name == "Barracks Layer":
-				#set_selected_piece_scene(tower_layers[16].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[16].scene) # Adjust index as needed
 			#else:
 				#print("Armory requires the Barracks Layer below it.")
 		#"Smithy":
 			#if _last_placed_piece and _last_placed_piece.name == "Workshop Layer":
-				#set_selected_piece_scene(tower_layers[17].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[17].scene) # Adjust index as needed
 			#else:
 				#print("Smithy requires the Workshop Layer below it.")
 		#"Clocktower":
 			#if _last_placed_piece and _last_placed_piece.name == "Library Layer":
-				#set_selected_piece_scene(tower_layers[18].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[18].scene) # Adjust index as needed
 			#else:
 				#print("Clocktower requires the Library Layer below it.")
 		#"Hospital":
 			#if _last_placed_piece and (_last_placed_piece.name == "Barracks Layer" and _last_placed_piece.name == "Engineering Layer"):
-				#set_selected_piece_scene(tower_layers[19].scene) # Adjust index as needed
+				#set_selected_piece_scene(_tower_layer_resource_list[19].scene) # Adjust index as needed
 			#else:
 				#print("Hospital requires the Barracks and Engineering Layers below it.")
 		#_:

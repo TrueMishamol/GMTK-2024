@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ResourceItem" load_steps=2 format=3 uid="uid://f8i31u0grr7o"]
+
+[ext_resource type="Script" path="res://resources/resource_items/resource_item.gd" id="1_m8fvb"]
+
+[resource]
+script = ExtResource("1_m8fvb")
+name = "Herbs"

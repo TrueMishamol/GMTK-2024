@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TowerLayerResource" load_steps=3 format=3 uid="uid://hyqi7y1pfvy1"]
+
+[ext_resource type="PackedScene" uid="uid://byjvpqo0b2w7p" path="res://nodes/components/tower_pieces/tower_piece_base.tscn" id="1_fesli"]
+[ext_resource type="Script" path="res://resources/tower_layers/tower_layer_resource.gd" id="1_ntvxr"]
+
+[resource]
+script = ExtResource("1_ntvxr")
+layer_name = "Carrot Shop"
+scene = ExtResource("1_fesli")
+material_cost = {}

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ResourceItem" load_steps=2 format=3 uid="uid://eemn4cku0cel"]
+
+[ext_resource type="Script" path="res://resources/resource_items/resource_item.gd" id="1_6y70k"]
+
+[resource]
+script = ExtResource("1_6y70k")
+name = "Potato"
