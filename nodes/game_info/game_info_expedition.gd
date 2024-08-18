@@ -16,10 +16,8 @@ var people: int = 0
 #! var destination: Destination = 
 
 
-#! Check if it'sworking on _init()
 func _init() -> void:
 	_game_save = GameSave_Expedition.load_or_create()
-	
 	if !_game_save:
 		printerr ("Game Expedition, game_save == null")
 		return

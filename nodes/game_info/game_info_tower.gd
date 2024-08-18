@@ -14,7 +14,6 @@ var _game_save: GameSave_Tower
 #! Check if it's working on _init()
 func _init() -> void:
 	_game_save = GameSave_Tower.load_or_create()
-	
 	if !_game_save:
 		printerr ("Game Info Tower, game_save == null")
 		return

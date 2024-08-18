@@ -36,7 +36,9 @@ func save() -> void:
 
 
 static func load_or_create() -> GameSave_Expedition:
-	var resource: GameSave_Expedition = load(GAME_SAVE_PATH) as GameSave_Expedition
+	var resource: GameSave_Expedition
+	if ResourceLoader.exists(GAME_SAVE_PATH):
+		resource = load(GAME_SAVE_PATH) as GameSave_Expedition
 	if !resource:
 		resource = GameSave_Expedition.new()
 	return resource

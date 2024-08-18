@@ -1,8 +1,8 @@
-[gd_resource type="Theme" load_steps=20 format=3 uid="uid://dd5rl8w6bxi0p"]
+[gd_resource type="Theme" load_steps=25 format=3 uid="uid://dd5rl8w6bxi0p"]
 
-[ext_resource type="StyleBox" uid="uid://cavp0c160mdas" path="res://visuals/puffed_bun_ui_theme/style_boxes/button_normal_style_box.tres" id="1_g3upc"]
-[ext_resource type="StyleBox" uid="uid://25jmwrl552bp" path="res://visuals/puffed_bun_ui_theme/style_boxes/button_play_style_box.tres" id="2_uqmle"]
-[ext_resource type="FontFile" uid="uid://bh0lb4bidjaa" path="res://visuals/puffed_bun_ui_theme/MishamolPuffedBun2-Regular.otf" id="5_bkxf4"]
+[ext_resource type="StyleBox" uid="uid://cavp0c160mdas" path="res://visuals/tower_of_bagel_ui_theme/style_boxes/button_normal_style_box.tres" id="1_evc2s"]
+[ext_resource type="StyleBox" uid="uid://25jmwrl552bp" path="res://visuals/tower_of_bagel_ui_theme/style_boxes/button_play_style_box.tres" id="2_5yvxg"]
+[ext_resource type="FontFile" uid="uid://bh0lb4bidjaa" path="res://visuals/tower_of_bagel_ui_theme/MishamolPuffedBun2-Regular.otf" id="3_minyc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ho28w"]
 
@@ -60,15 +60,49 @@ corner_radius_bottom_right = 1024
 corner_radius_bottom_left = 256
 corner_detail = 20
 
+[sub_resource type="ImageTexture" id="ImageTexture_e203e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apd0t"]
+content_margin_left = 70.0
+content_margin_right = 70.0
+content_margin_bottom = 5.0
+bg_color = Color(0.698085, 0.768917, 0.309712, 1)
+corner_radius_top_left = 256
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 1024
+
+[sub_resource type="ImageTexture" id="ImageTexture_si5wv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwc8m"]
+content_margin_left = 70.0
+content_margin_right = 70.0
+content_margin_bottom = 5.0
+bg_color = Color(0.933547, 0.862715, 0.329259, 1)
+corner_radius_top_left = 256
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6bqvc"]
+content_margin_left = 70.0
+content_margin_right = 70.0
+content_margin_bottom = 20.0
+bg_color = Color(0.305806, 0.529549, 0.242786, 1)
+corner_radius_top_left = 256
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 256
+corner_radius_bottom_left = 1024
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pjcyx"]
 
 [sub_resource type="FontVariation" id="FontVariation_57uud"]
-base_font = ExtResource("5_bkxf4")
+base_font = ExtResource("3_minyc")
 variation_embolden = 0.5
 spacing_glyph = 6
 
 [sub_resource type="FontVariation" id="FontVariation_dti0c"]
-base_font = ExtResource("5_bkxf4")
+base_font = ExtResource("3_minyc")
 variation_embolden = 0.5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dl2o7"]
@@ -104,19 +138,36 @@ corner_radius_bottom_left = 1024
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eenmo"]
 
 [resource]
-default_font = ExtResource("5_bkxf4")
+default_font = ExtResource("3_minyc")
 default_font_size = 50
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
 Button/styles/focus = SubResource("StyleBoxEmpty_ho28w")
 Button/styles/hover = SubResource("StyleBoxFlat_qvwh5")
-Button/styles/normal = ExtResource("1_g3upc")
+Button/styles/normal = ExtResource("1_evc2s")
 Button/styles/pressed = SubResource("StyleBoxFlat_hgc0h")
 Button_Play/base_type = &"Button"
 Button_Play/font_sizes/font_size = 90
 Button_Play/styles/hover = SubResource("StyleBoxFlat_jvmoy")
-Button_Play/styles/normal = ExtResource("2_uqmle")
+Button_Play/styles/normal = ExtResource("2_5yvxg")
 Button_Play/styles/pressed = SubResource("StyleBoxFlat_yx8ud")
+CheckButton/icons/checked = SubResource("ImageTexture_e203e")
+CheckButton/icons/checked_disabled = SubResource("ImageTexture_e203e")
+CheckButton/icons/checked_disabled_mirrored = SubResource("ImageTexture_e203e")
+CheckButton/icons/checked_mirrored = SubResource("ImageTexture_e203e")
+CheckButton/icons/icon = SubResource("ImageTexture_e203e")
+CheckButton/icons/unchecked = SubResource("ImageTexture_e203e")
+CheckButton/icons/unchecked_disabled = SubResource("ImageTexture_e203e")
+CheckButton/icons/unchecked_disabled_mirrored = SubResource("ImageTexture_e203e")
+CheckButton/icons/unchecked_mirrored = SubResource("ImageTexture_e203e")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxFlat_apd0t")
+HSlider/icons/grabber = SubResource("ImageTexture_si5wv")
+HSlider/icons/grabber_disabled = SubResource("ImageTexture_si5wv")
+HSlider/icons/grabber_highlight = SubResource("ImageTexture_si5wv")
+HSlider/icons/tick = SubResource("ImageTexture_si5wv")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_fwc8m")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_fwc8m")
+HSlider/styles/slider = SubResource("StyleBoxFlat_6bqvc")
 ItemList/colors/font_color = Color(1, 1, 1, 1)
 ItemList/colors/font_hovered_color = Color(1, 1, 1, 1)
 ItemList/colors/font_selected_color = Color(1, 1, 1, 1)
@@ -146,7 +197,7 @@ MarginContainer/constants/margin_bottom = 40
 MarginContainer/constants/margin_left = 40
 MarginContainer/constants/margin_right = 40
 MarginContainer/constants/margin_top = 40
-ProgressBar/styles/background = ExtResource("1_g3upc")
+ProgressBar/styles/background = ExtResource("1_evc2s")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_dl2o7")
 TabContainer/colors/font_unselected_color = Color(1, 1, 1, 1)
 TabContainer/styles/panel = SubResource("StyleBoxEmpty_fusdi")
@@ -154,7 +205,7 @@ TabContainer/styles/tab_disabled = SubResource("StyleBoxEmpty_5p8tp")
 TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_feefh")
 TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_bisi0")
 TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_bisi0")
-TabContainer/styles/tab_unselected = ExtResource("1_g3upc")
+TabContainer/styles/tab_unselected = ExtResource("1_evc2s")
 VBoxContainer/constants/separation = 34
 VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_tmi48")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_q5wbi")

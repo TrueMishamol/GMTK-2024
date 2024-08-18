@@ -29,6 +29,7 @@ func _ready() -> void:
 		_skip_boot_screen.button_pressed = _user_preferences.skip_boot_screen
 		_skip_boot_screen.toggled.connect(_on_skip_boot_screen_pressed)
 	
+	
 	# Sound
 	if _master_slider:
 		_master_slider.value = _user_preferences.master_audio_level

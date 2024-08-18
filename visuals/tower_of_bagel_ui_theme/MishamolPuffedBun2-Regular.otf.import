@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bh0lb4bidjaa"
-path="res://.godot/imported/MishamolPuffedBun2-Regular.otf-fd18854e0add78697d933bb7fef9306f.fontdata"
+path="res://.godot/imported/MishamolPuffedBun2-Regular.otf-1d770037f6cfbda3bb8784b150c0a7c2.fontdata"
 
 [deps]
 
-source_file="res://visuals/puffed_bun_ui_theme/MishamolPuffedBun2-Regular.otf"
-dest_files=["res://.godot/imported/MishamolPuffedBun2-Regular.otf-fd18854e0add78697d933bb7fef9306f.fontdata"]
+source_file="res://visuals/tower_of_bagel_ui_theme/MishamolPuffedBun2-Regular.otf"
+dest_files=["res://.godot/imported/MishamolPuffedBun2-Regular.otf-1d770037f6cfbda3bb8784b150c0a7c2.fontdata"]
 
 [params]
 

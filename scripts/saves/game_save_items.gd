@@ -16,7 +16,9 @@ func save() -> void:
 
 
 static func load_or_create() -> GameSave_Items:
-	var resource: GameSave_Items = load(GAME_SAVE_PATH) as GameSave_Items
+	var resource: GameSave_Items
+	if ResourceLoader.exists(GAME_SAVE_PATH):
+		resource = load(GAME_SAVE_PATH) as GameSave_Items
 	if !resource:
 		resource = GameSave_Items.new()
 	return resource

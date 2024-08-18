@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6r6fumj387gv"]
 
-[ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/puffed_bun_ui_theme/puffed_bun_ui_theme.tres" id="1_5mc07"]
+[ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/tower_of_bagel_ui_theme/tower_of_bagel_ui_theme.tres" id="1_5mc07"]
 [ext_resource type="Script" path="res://levels/menu/main_menu/menu_navigation_buttons/options.gd" id="2_dd6q8"]
 [ext_resource type="Script" path="res://levels/menu/pause_overlay/save_and_quit.gd" id="2_gce4v"]
 

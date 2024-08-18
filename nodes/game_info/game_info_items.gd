@@ -54,7 +54,6 @@ func _ready() -> void:
 
 func _load_save():
 	_game_save_items = GameSave_Items.load_or_create()
-	
 	if !_game_save_items:
 		printerr ("Game Info Items, game_save == null")
 		return

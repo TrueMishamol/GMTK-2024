@@ -1,9 +1,17 @@
 extends Node3D
 
 
+@onready var sky: Node3D = $Enviroment/Sky
+
 
 # Wave state variable
 var _night_wave_active: bool = false
+
+
+func _ready() -> void:
+	sky.day_time = GameInfo.globals.day_time
+	sky.day_of_year = GameInfo.globals.day_of_year
+	GameInfo.globals.set_sky(sky)
 
 
 

@@ -1,11 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://sn8hr8g264hc"]
+[gd_scene load_steps=2 format=3 uid="uid://sn8hr8g264hc"]
 
 [ext_resource type="Script" path="res://levels/tree/base_game_setup/ingame_game_pause.gd" id="1_fs3jd"]
-[ext_resource type="PackedScene" uid="uid://crnlx4g1pn2s7" path="res://nodes/day_night_cycle/day_night.tscn" id="2_dsbf6"]
 
 [node name="BaseGameSetup" type="Node3D"]
 
 [node name="IngameGamePause" type="Node" parent="."]
 script = ExtResource("1_fs3jd")
-
-[node name="DayNight" parent="." instance=ExtResource("2_dsbf6")]
