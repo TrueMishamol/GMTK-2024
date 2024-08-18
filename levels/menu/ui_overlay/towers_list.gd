@@ -28,6 +28,5 @@ func _fill_info(tower_layer_resource_list: TowerLayerResource_List):
 
 func _on_item_activated(index: int):
 	var tower_layer_resource: TowerLayerResource = _tower_layer_resource_list.tower_layer_resource_list[index]
-	#GameManager.try_buy_tower_floor(tower_layer_resource)
 	Tower.instance.try_buy_floor(tower_layer_resource)
 	

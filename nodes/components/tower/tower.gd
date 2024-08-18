@@ -6,7 +6,6 @@ extends Node3D
 
 #var _list_of_unlocked_floors: Array[TowerLayerResource] # Save this in game save
 var _list_of_floors: Array[TowerFloor]
-#var _last_floor_built: TowerFloor
 
 static var instance: Tower
 
@@ -49,9 +48,7 @@ func _build_floor(tower_layer_resource: TowerLayerResource):
 	if _list_of_floors.size() > 0:
 		print(_list_of_floors.size())
 		var previous_floor: TowerFloor = _list_of_floors[_list_of_floors.size() - 1] #! If there is 0 floors
-		#var previous_floor: TowerFloor = _list_of_floors[0]
 		new_floor_position = previous_floor.get_tower_top_position()
-		print(previous_floor.get_tower_top_position())
 	else:
 		new_floor_position = self.position
 	
@@ -59,7 +56,6 @@ func _build_floor(tower_layer_resource: TowerLayerResource):
 	var new_floor: TowerFloor = new_floor_scene.instantiate()
 
 	# Add the new floor to the scene
-	#previous_floor.connection_point.add_child(new_floor)
 	add_child(new_floor)
 	new_floor.global_position = new_floor_position
 	
@@ -74,9 +70,6 @@ func _load():
 	#! WIP
 	#! If there is no save or smth => build_floor(_base_floor)
 	_build_floor(_basement_floor)
-	
-	#! WIP
-	pass
 	
 
 func _save():
