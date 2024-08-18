@@ -71,12 +71,6 @@ func _load_save():
 			
 		for resource in _resource_item_list.resource_item_list:
 			_resource_count_dictionary[resource.id] = resource.default_count
-	
-	
-	# WIP
-	#for resource_item in _resource_item_list.resource_item_list:
-		#_resource_count_dictionary[resource_item.id] = _game_save_resources.resource_count_dictionary[resource_item.id]
-		#print(resource_item.name + " " + str(_resource_count_dictionary[resource_item.id]))
 
 
 func save_game():

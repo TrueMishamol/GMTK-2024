@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmfj7dgrn1qqw"]
+[gd_scene load_steps=8 format=3 uid="uid://dmfj7dgrn1qqw"]
 
-[ext_resource type="Texture2D" uid="uid://bax065kwqmiyd" path="res://assets/screenshots/worms.png" id="1_e24ks"]
 [ext_resource type="PackedScene" uid="uid://f6kk4whontcp" path="res://nodes/sky/sky.tscn" id="1_sn81e"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dd4mtjb7cl46y" path="res://visuals/environment/camera_attributes_practical.tres" id="2_hbvm8"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://visuals/environment/camera_shake.tscn" id="3_npuva"]
@@ -126,22 +125,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.9768, 0)
 
 [node name="MerchantOutpost27" parent="MainMenuBackground/Game/Tower" instance=ExtResource("8_avna7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.4792, 0)
-
-[node name="StaticWIP" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="StaticWIP"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_e24ks")
-stretch_mode = 6
