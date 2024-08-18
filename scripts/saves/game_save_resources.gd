@@ -6,6 +6,7 @@ const GAME_SAVE_PATH: String = "user://resources.tres"
 
 signal on_save
 
+@export var resource_count_dictionary: Dictionary = {}
 
 @export var people: int = 10
 @export var potato: int = 30

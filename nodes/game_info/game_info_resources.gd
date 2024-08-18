@@ -7,83 +7,67 @@ extends Node
 
 signal on_resource_set
 
+@export var _resource_item_list: ResourceItem_List
+
+var _resource_count_dictionary: Dictionary = {"empty": 0}
+
 var _game_save_resources: GameSave_Resources
 
 
-var people: int:
-	set(value):
-		people = value
-		on_resource_set.emit()
-var potato: int:
-	set(value):
-		potato = value
-		on_resource_set.emit()
-var carrot: int:
-	set(value):
-		carrot = value
-		on_resource_set.emit()
-var onion: int:
-	set(value):
-		onion = value
-		on_resource_set.emit()
-var spices: int:
-	set(value):
-		spices = value
-		on_resource_set.emit()
-var metal: int:
-	set(value):
-		metal = value
-		on_resource_set.emit()
-var wood: int:
-	set(value):
-		wood = value
-		on_resource_set.emit()
-var fertile_soil: int:
-	set(value):
-		fertile_soil = value
-		on_resource_set.emit()
-var research: int:
-	set(value):
-		research = value
-		on_resource_set.emit()
-var money: int:
-	set(value):
-		money = value
-		on_resource_set.emit()
+
+func set_resource_item_count(id: String, count: int):
+	_resource_count_dictionary[id] = count
+	on_resource_set.emit()
 
 
-#! Check if it'sworking on _init()
-func _ready() -> void:
+func add_resource_item_count(id: String, count: int):
+	if _resource_count_dictionary.has(id):
+		_resource_count_dictionary[id] += count
+	else:
+		_resource_count_dictionary[id] = count
+	on_resource_set.emit()
+	
+
+func try_remove_item_count(id: String, count: int) -> bool:
+	if !_resource_count_dictionary.has(id):
+		return false
+	if count > _resource_count_dictionary[id]:
+		return false
+	
+	_resource_count_dictionary[id] -= count
+	on_resource_set.emit()
+	return true
+	
+
+func get_resource_item_count(id: String) -> int:
+	if _resource_count_dictionary.has(id):
+		return _resource_count_dictionary[id]
+	return 0
+
+
+
+
+
+func _init() -> void:
+	_load_save()
+
+
+func _load_save():
 	_game_save_resources = GameSave_Resources.load_or_create()
 	
 	if !_game_save_resources:
 		printerr ("Game Resources, game_save == null")
 		return
 	
-	people = _game_save_resources.people
-	potato = _game_save_resources.potato
-	carrot = _game_save_resources.carrot
-	onion = _game_save_resources.onion
-	spices = _game_save_resources.spices
-	metal = _game_save_resources.metal
-	wood = _game_save_resources.wood
-	fertile_soil = _game_save_resources.fertile_soil
-	research = _game_save_resources.research
-	money = _game_save_resources.money
+	_resource_count_dictionary = _game_save_resources.resource_count_dictionary
 	
-	print(_game_save_resources.people)
+	# WIP
+	#for resource_item in _resource_item_list.resource_item_list:
+		#_resource_count_dictionary[resource_item.id] = _game_save_resources.resource_count_dictionary[resource_item.id]
+		#print(resource_item.name + " " + str(_resource_count_dictionary[resource_item.id]))
 
 
 func save_game():
-	_game_save_resources.people = people
-	_game_save_resources.potato = potato
-	_game_save_resources.carrot = carrot
-	_game_save_resources.onion = onion
-	_game_save_resources.spices = spices
-	_game_save_resources.metal = metal
-	_game_save_resources.wood = wood
-	_game_save_resources.fertile_soil = fertile_soil
-	_game_save_resources.research = research
-	_game_save_resources.money = money
+	_game_save_resources.resource_count_dictionary = _resource_count_dictionary
 	
 	_game_save_resources.save()

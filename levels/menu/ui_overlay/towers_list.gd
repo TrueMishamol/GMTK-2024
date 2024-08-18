@@ -6,10 +6,27 @@ extends ItemList
 
 func _ready() -> void:
 	if _tower_layer_resource_list != null:
-		fill(_tower_layer_resource_list)
+		_fill_info(_tower_layer_resource_list)
+	
+	item_activated.connect(_on_item_activated)
 
 
-func fill(tower_layer_resource_list: TowerLayerResource_List):
+func _fill_info(tower_layer_resource_list: TowerLayerResource_List):
 	self.clear()
+	
 	for tower_layer: TowerLayerResource in tower_layer_resource_list.tower_layer_resource_list:
-		self.add_item(tower_layer.layer_name + " | cost: " + str(tower_layer.cost))
+		var text: String = ""
+		text += tower_layer.layer_name + " | Item Cost: "
+		
+		if tower_layer.material_cost != null:
+			text += str(tower_layer.cost) + " " + tower_layer.material_cost.name
+		else:
+			text += "Free"
+			
+		self.add_item(text)
+
+
+func _on_item_activated(index: int):
+	var tower_layer_resource: TowerLayerResource = _tower_layer_resource_list.tower_layer_resource_list[index]
+	GameManager.try_buy_tower_layer(tower_layer_resource)
+	

@@ -1,22 +1,22 @@
 [gd_scene load_steps=23 format=3 uid="uid://bcpgqgn315ms"]
 
 [ext_resource type="Script" path="res://levels/game/game.gd" id="1_ml1rt"]
-[ext_resource type="Script" path="res://resources/tower_layers/tower_layer_resource.gd" id="2_fqa87"]
-[ext_resource type="Resource" uid="uid://bdghdtk5ua0st" path="res://resources/tower_layers/resources/carrot_farm.tres" id="3_fs3bq"]
+[ext_resource type="Script" path="res://resources/tower_resource_layer/tower_layer_resource.gd" id="2_fqa87"]
+[ext_resource type="Resource" uid="uid://bdghdtk5ua0st" path="res://resources/tower_resource_layer/resources/carrot_farm.tres" id="3_fs3bq"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dd4mtjb7cl46y" path="res://visuals/environment/camera_attributes_practical.tres" id="3_m0r6p"]
 [ext_resource type="Script" path="res://addons/simple_free_look_camera/simple_free_look_camera.gd" id="4_n76aj"]
-[ext_resource type="Resource" uid="uid://hyqi7y1pfvy1" path="res://resources/tower_layers/resources/carrot_shop.tres" id="4_nhrdy"]
+[ext_resource type="Resource" uid="uid://hyqi7y1pfvy1" path="res://resources/tower_resource_layer/resources/carrot_shop.tres" id="4_nhrdy"]
 [ext_resource type="Material" uid="uid://cuma8autqdper" path="res://visuals/materials/grass.tres" id="5_2stf2"]
-[ext_resource type="Resource" uid="uid://cj71n6v3kr5hm" path="res://resources/tower_layers/resources/home.tres" id="5_8sjdh"]
+[ext_resource type="Resource" uid="uid://cj71n6v3kr5hm" path="res://resources/tower_resource_layer/resources/home.tres" id="5_8sjdh"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://visuals/environment/camera_shake.tscn" id="5_coxug"]
 [ext_resource type="Script" path="res://nodes/sky/sky.gd" id="5_gdunx"]
 [ext_resource type="PackedScene" uid="uid://pxiw514vxcg1" path="res://nodes/components/tower_pieces_finished/merchant_outpost/merchant_outpost.tscn" id="6_53gwl"]
 [ext_resource type="Shader" path="res://nodes/sky/sky.gdshader" id="6_bhhei"]
-[ext_resource type="Resource" uid="uid://b0eqchxvcuv64" path="res://resources/tower_layers/resources/onion_farm.tres" id="6_boaa8"]
-[ext_resource type="Resource" uid="uid://bylxan2rhwgi4" path="res://resources/tower_layers/resources/onion_shop.tres" id="7_ripcf"]
+[ext_resource type="Resource" uid="uid://b0eqchxvcuv64" path="res://resources/tower_resource_layer/resources/onion_farm.tres" id="6_boaa8"]
+[ext_resource type="Resource" uid="uid://bylxan2rhwgi4" path="res://resources/tower_resource_layer/resources/onion_shop.tres" id="7_ripcf"]
 [ext_resource type="Texture2D" uid="uid://clkehq4uey56r" path="res://nodes/sky/stars.png" id="7_yubki"]
-[ext_resource type="Resource" uid="uid://c77aldp1hom0l" path="res://resources/tower_layers/resources/potato_farm.tres" id="8_e1jv8"]
-[ext_resource type="Resource" uid="uid://dptw0fs6vfrl3" path="res://resources/tower_layers/resources/potato_shop.tres" id="9_huxkw"]
+[ext_resource type="Resource" uid="uid://c77aldp1hom0l" path="res://resources/tower_resource_layer/resources/potato_farm.tres" id="8_e1jv8"]
+[ext_resource type="Resource" uid="uid://dptw0fs6vfrl3" path="res://resources/tower_resource_layer/resources/potato_shop.tres" id="9_huxkw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_msgkm"]
 shader = ExtResource("6_bhhei")
@@ -74,8 +74,8 @@ orientation = 1
 
 [node name="Game" type="Node3D" node_paths=PackedStringArray("_last_placed_piece")]
 script = ExtResource("1_ml1rt")
-_last_placed_piece = NodePath("Tower/MerchantOutpost")
 tower_layers = Array[ExtResource("2_fqa87")]([ExtResource("3_fs3bq"), ExtResource("4_nhrdy"), ExtResource("5_8sjdh"), ExtResource("6_boaa8"), ExtResource("7_ripcf"), ExtResource("8_e1jv8"), ExtResource("9_huxkw")])
+_last_placed_piece = NodePath("Tower/MerchantOutpost")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.819152, -0.148453, 0.554032, 0, 0.965926, 0.258819, -0.573576, -0.212012, 0.79124, 3, 3, 5)

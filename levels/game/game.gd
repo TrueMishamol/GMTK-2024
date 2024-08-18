@@ -3,7 +3,7 @@ extends Node3D
 
 
 # Stores the last placed tower piece
-@export var _last_placed_piece: Node3D = null
+var _last_placed_piece: Node3D = null
 
 # The selected tower piece scene to place
 var _selected_piece_scene: PackedScene = null
@@ -11,77 +11,27 @@ var _selected_piece_scene: PackedScene = null
 # Wave state variable
 var _night_wave_active: bool = false
 
-@onready var _tower_list_tab: ItemList = null
 @export var _tower_layer_resource_list: TowerLayerResource_List
 
 
 
-
-# Function to update the ItemList text with material cost
-func update_item_list_text_with_cost():
-	for index in range(_tower_list_tab.get_item_count()):
-		var item_text = _tower_list_tab.get_item_text(index)
-		
-		# Find the corresponding TowerLayerResource for this item
-		var layer_resource = get_tower_layer_resource_by_name(remove_text_after_pipe(item_text))
-		if layer_resource:
-			var cost_text = "Material Cost: "
-			var material_costs = []
-			
-			for item in layer_resource.material_cost:
-				material_costs.append(item.name + ": " + str(item.amount))
-
-			if material_costs.size() > 0:
-				cost_text += ", ".join(material_costs)
-			else:
-				cost_text += "Free"
-			# Update the item text with material cost at the end
-			var updated_text = layer_resource.layer_name + " | " + cost_text
-			_tower_list_tab.set_item_text(index, updated_text)
-			print("Updated item at index ", index, " to: ", updated_text)
-
 # Helper function to get TowerLayerResource by layer name
 func get_tower_layer_resource_by_name(name: String) -> TowerLayerResource:
-	for resource in _tower_layer_resource_list:
-		if resource.layer_name == name:
-			return resource
+	for tower_layer_resource in _tower_layer_resource_list.tower_layer_resource_list:
+		if tower_layer_resource.layer_name == name:
+			return tower_layer_resource
 	return null
 
-# Function to check if there are enough materials
-func has_sufficient_materials(material_cost: Array[InventoryResourceItem]) -> bool:
-	# Iterate through each item in the material cost
-	for item in material_cost:
-		if not has_enough_material(item):
-			return false
-	
-	return true
 
-# Helper function to check if there is enough of a specific material
-func has_enough_material(item: InventoryResourceItem) -> bool:
-	match item.name:
-		"Potato":
-			return GameInfo.resources.potato >= item.amount
-		"Carrot":
-			return GameInfo.resources.carrot >= item.amount
-		"Onion":
-			return GameInfo.resources.onion >= item.amount
-		"Herbs":
-			return GameInfo.resources.herbs >= item.amount
-		"Spices":
-			return GameInfo.resources.spices >= item.amount
-		"Metal":
-			return GameInfo.resources.metal >= item.amount
-		"Soil":
-			return GameInfo.resources.fertile_soil >= item.amount
-		"Wood":
-			return GameInfo.resources.wood >= item.amount
-		"Research":
-			return GameInfo.resources.research >= item.amount
-		"Money":
-			return GameInfo.resources.money >= item.amount
-		_:
-			print("Unknown material: ", item.name)
-			return false
+# Function to check if there are enough materials
+#func has_sufficient_materials(material_id: String, cost: int) -> bool:
+	#GameInfo.resources.get_resource_item_count(material_id)
+	#
+	#for item in material_cost:
+		#if not has_enough_material(item):
+			#return false
+			#
+	#return true
 
 # Function to start the night wave
 func start_night_wave():
@@ -132,23 +82,23 @@ func set_selected_piece_scene(scene: PackedScene):
 	_selected_piece_scene = scene
 	print("Selected piece scene set.")
 	
-func tower_selected(tower_id: int):
-	set_selected_piece_scene(null)
-	match remove_text_after_pipe(_tower_list_tab.get_item_text(tower_id)):
-		"Carrot Farm":
-			set_selected_piece_scene(_tower_layer_resource_list[0].scene) # Adjust index as needed
-		"Carrot Shop":
-			set_selected_piece_scene(_tower_layer_resource_list[1].scene) # Adjust index as needed
-		"Onion Farm":
-			set_selected_piece_scene(_tower_layer_resource_list[3].scene) # Adjust index as needed
-		"Onion Shop":
-			set_selected_piece_scene(_tower_layer_resource_list[4].scene) # Adjust index as needed
-		"Potato Farm":
-			set_selected_piece_scene(_tower_layer_resource_list[5].scene) # Adjust index as needed
-		"Potato Shop":
-			set_selected_piece_scene(_tower_layer_resource_list[6].scene) # Adjust index as needed
-		"House":
-			set_selected_piece_scene(_tower_layer_resource_list[2].scene) # Adjust index as needed
+#func tower_selected(tower_id: int):
+	#set_selected_piece_scene(null)
+	#match remove_text_after_pipe(_tower_list_tab.get_item_text(tower_id)):
+		#"Carrot Farm":
+			#set_selected_piece_scene(_tower_layer_resource_list[0].scene) # Adjust index as needed
+		#"Carrot Shop":
+			#set_selected_piece_scene(_tower_layer_resource_list[1].scene) # Adjust index as needed
+		#"Onion Farm":
+			#set_selected_piece_scene(_tower_layer_resource_list[3].scene) # Adjust index as needed
+		#"Onion Shop":
+			#set_selected_piece_scene(_tower_layer_resource_list[4].scene) # Adjust index as needed
+		#"Potato Farm":
+			#set_selected_piece_scene(_tower_layer_resource_list[5].scene) # Adjust index as needed
+		#"Potato Shop":
+			#set_selected_piece_scene(_tower_layer_resource_list[6].scene) # Adjust index as needed
+		#"House":
+			#set_selected_piece_scene(_tower_layer_resource_list[2].scene) # Adjust index as needed
 		#"Barracks Layer":
 			#if _last_placed_piece and _last_placed_piece.name == "Defense Layer":
 				#set_selected_piece_scene(_tower_layer_resource_list[5].scene) # Adjust index as needed
