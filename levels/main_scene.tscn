@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://hc57ydt060tv"]
+[gd_scene load_steps=2 format=3 uid="uid://hc57ydt060tv"]
 
 [ext_resource type="Script" path="res://levels/main_scene.gd" id="1_poxhl"]
-[ext_resource type="Texture2D" uid="uid://b8trxaf14wt85" path="res://assets/Palette.png" id="2_h128i"]
 
 [node name="MainScene" type="Node"]
 script = ExtResource("1_poxhl")
@@ -16,8 +15,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.305882, 0.529412, 0.243137, 1)
-
-[node name="Palette" type="Sprite2D" parent="."]
-position = Vector2(-135, 376)
-scale = Vector2(28.7357, 28.7357)
-texture = ExtResource("2_h128i")

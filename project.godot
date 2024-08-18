@@ -10,8 +10,10 @@ config_version=5
 
 [application]
 
-config/name="GMTK-2024"
-config/description="Crafted by Cool Cyan Donut team!"
+config/name="Tower of Bagle"
+config/description="Crafted by Cool Cyan Donut team!
+
+"
 run/main_scene="res://levels/main_scene.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/bg_color=Color(0.305806, 0.529549, 0.242786, 1)
@@ -35,7 +37,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
+enabled=PackedStringArray()
 
 [file_customization]
 
