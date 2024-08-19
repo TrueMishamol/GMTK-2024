@@ -5,15 +5,21 @@ extends Node
 ## Use GameInfo.expedition to access this file
 
 
-#signal on_expedition_set
+signal on_expedition_set
 
 var _game_save: GameSave_Expedition
 
+var expedition: Expedition:
+	set(value):
+		expedition = value
+		on_expedition_set.emit()
 
+# Save this:
 var is_expedition_active: bool = false
 var timer: float = 0
 var people: int = 0
-#! var destination: Destination = 
+var expedition_resource: Expedition_Resource
+
 
 
 func _init() -> void:

@@ -7,5 +7,6 @@
 
 [resource]
 script = ExtResource("2_7i2p2")
-expedition_time = 2400.0
+expedition_name = "Rare Herbs"
+expedition_time = 3.0
 reward_items = Array[ExtResource("1_3savn")]([ExtResource("2_hohva"), ExtResource("3_fk8py")])

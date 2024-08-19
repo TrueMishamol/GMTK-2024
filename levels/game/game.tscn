@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bcpgqgn315ms"]
+[gd_scene load_steps=18 format=3 uid="uid://bcpgqgn315ms"]
 
 [ext_resource type="Script" path="res://levels/game/game.gd" id="1_ml1rt"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dd4mtjb7cl46y" path="res://visuals/environment/camera_attributes_practical.tres" id="3_m0r6p"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://clkehq4uey56r" path="res://nodes/sky/stars.png" id="7_yubki"]
 [ext_resource type="Script" path="res://nodes/components/tower/tower.gd" id="9_wfn2v"]
 [ext_resource type="Resource" uid="uid://cj71n6v3kr5hm" path="res://resources/tower_floor_resource/resources/home.tres" id="10_3vino"]
+[ext_resource type="PackedScene" uid="uid://bv0vvki1rl4jn" path="res://nodes/expedition/expedition.tscn" id="12_v4f06"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_msgkm"]
 shader = ExtResource("6_bhhei")
@@ -128,3 +129,5 @@ script = ExtResource("9_wfn2v")
 _basement_floor = ExtResource("10_3vino")
 
 [node name="MerchantOutpost" parent="Tower" instance=ExtResource("6_53gwl")]
+
+[node name="Expedition" parent="." instance=ExtResource("12_v4f06")]
