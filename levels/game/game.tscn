@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bcpgqgn315ms"]
+[gd_scene load_steps=17 format=3 uid="uid://bcpgqgn315ms"]
 
 [ext_resource type="Script" path="res://levels/game/game.gd" id="1_ml1rt"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dd4mtjb7cl46y" path="res://visuals/environment/camera_attributes_practical.tres" id="3_m0r6p"]
@@ -6,7 +6,6 @@
 [ext_resource type="Material" uid="uid://cuma8autqdper" path="res://visuals/materials/grass.tres" id="5_2stf2"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://visuals/environment/camera_shake.tscn" id="5_coxug"]
 [ext_resource type="Script" path="res://nodes/sky/sky.gd" id="5_gdunx"]
-[ext_resource type="PackedScene" uid="uid://pxiw514vxcg1" path="res://nodes/components/tower/tower_floor_scenes/merchant_outpost.tscn" id="6_53gwl"]
 [ext_resource type="Shader" path="res://nodes/sky/sky.gdshader" id="6_bhhei"]
 [ext_resource type="Texture2D" uid="uid://clkehq4uey56r" path="res://nodes/sky/stars.png" id="7_yubki"]
 [ext_resource type="Script" path="res://nodes/components/tower/tower.gd" id="9_wfn2v"]
@@ -127,8 +126,5 @@ mesh = SubResource("QuadMesh_o7tik")
 [node name="Tower" type="Node3D" parent="."]
 script = ExtResource("9_wfn2v")
 _basement_floor = ExtResource("10_3vino")
-
-[node name="MerchantOutpost" parent="Tower" instance=ExtResource("6_53gwl")]
-visible = false
 
 [node name="Expedition" parent="." instance=ExtResource("12_v4f06")]

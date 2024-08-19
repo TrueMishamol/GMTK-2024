@@ -1,21 +1,25 @@
-[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=5 format=3 uid="uid://dptw0fs6vfrl3"]
+[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=6 format=3 uid="uid://dptw0fs6vfrl3"]
 
 [ext_resource type="Resource" uid="uid://f8i31u0grr7o" path="res://resources/item_resource/resources/herbs.tres" id="1_151fn"]
 [ext_resource type="Script" path="res://resources/tower_floor_resource/tower_floor_resource.gd" id="1_nnhn7"]
 [ext_resource type="Resource" uid="uid://ck7s8vhggqbu3" path="res://resources/item_resource/resources/metal.tres" id="2_epuhh"]
+[ext_resource type="Resource" uid="uid://eemn4cku0cel" path="res://resources/item_resource/resources/potato.tres" id="3_j4icu"]
 [ext_resource type="Resource" uid="uid://cnkux7ni6al2u" path="res://resources/item_resource/resources/people.tres" id="3_m8eur"]
 
 [resource]
 script = ExtResource("1_nnhn7")
 layer_name = "Potato Shop"
 scene_path = "res://nodes/components/tower/tower_floor_scenes/potato_shop.tscn"
-people_material = ExtResource("3_m8eur")
+build_time = 5
 people_cost = 1
 material_1 = ExtResource("1_151fn")
 cost_1 = 25
 material_2 = ExtResource("2_epuhh")
 cost_2 = 25
-build_time = 5
+takes_away = ExtResource("3_m8eur")
+takes_away_count = 100
+reward = ExtResource("3_j4icu")
+reward_count = 1
 reseatch_cost = 5
 unlocked_at_beginning = false
 max_part_level = 3

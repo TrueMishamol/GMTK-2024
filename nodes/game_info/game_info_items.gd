@@ -21,6 +21,8 @@ func set_item_resource_count(id: String, count: int):
 
 
 func add_item_resource_count(id: String, count: int):
+	if id == "":
+		return
 	if _item_count_dictionary.has(id):
 		_item_count_dictionary[id] += count
 	else:

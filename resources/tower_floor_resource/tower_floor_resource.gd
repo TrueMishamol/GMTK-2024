@@ -14,6 +14,12 @@ extends Resource
 @export var material_2: ItemResource
 @export var cost_2: int
 
+@export_group("Nightly Tasks")
+@export var takes_away: ItemResource
+@export var takes_away_count: int
+@export var reward: ItemResource
+@export var reward_count: int
+
 @export_group("On future updates")
 @export var reseatch_cost: int = 5 ## How many research points to spend to unlock this floor
 @export var unlocked_at_beginning: bool = false

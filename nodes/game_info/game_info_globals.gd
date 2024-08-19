@@ -5,9 +5,11 @@ extends Node
 ## Use GameInfo.globals to access this file
 
 
+signal on_new_day
+
 var _game_save: GameSave_Globals
 
-var _sky: Node3D
+var _sky: SkyClass
 
 var day_time: float:
 	get:
@@ -20,6 +22,8 @@ var day_of_year: int:
 			day_of_year = _sky.day_of_year
 		return day_of_year
 		
+
+
 
 func _init() -> void:
 	_game_save = GameSave_Globals.load_or_create()
@@ -37,6 +41,7 @@ func _init() -> void:
 
 func set_sky(sky):
 	_sky = sky
+	_sky.on_new_day.connect(func(): on_new_day.emit())
 
 
 func save_game():

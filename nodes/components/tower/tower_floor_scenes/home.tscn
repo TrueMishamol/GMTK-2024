@@ -389,6 +389,8 @@ shadow_mesh = SubResource("ArrayMesh_m07wo")
 
 [node name="TowerPieceBase" type="StaticBody3D" groups=["tower_floor"]]
 script = ExtResource("1_s0qn3")
+part_level = null
+defense_level = null
 tower_floor_resource = ExtResource("2_70dik")
 
 [node name="ConnectionPoint" type="Node3D" parent="."]

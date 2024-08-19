@@ -23,7 +23,9 @@ func _ready():
 	_build_timer.connect("timeout", _on_build_finished)
 	if not _floor_fully_built:
 		_build_timer.start(tower_floor_resource.build_time)
-		
+	
+	GameInfo.globals.on_new_day.connect(_on_new_day)
+	
 
 func _on_build_finished():
 	_floor_fully_built = true
@@ -32,11 +34,14 @@ func _on_build_finished():
 
 
 # Call this function every night to do the tower stuff such as taking money and giving materials
-func _do_nightly_tasks():
-	#! WIP
-	if _floor_fully_built:
-		pass
-
+func _on_new_day():
+	if !_floor_fully_built:
+		return
+	
+	if GameInfo.items.try_remove_item_count(tower_floor_resource.takes_away.id, tower_floor_resource.takes_away_count):
+		GameInfo.items.add_item_resource_count(tower_floor_resource.reward.id, tower_floor_resource.reward_count)
+	else:
+		print("Game Over!!!")
 
 func get_tower_top_position() -> Vector3:
 	return _connection_point.global_position

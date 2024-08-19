@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=5 format=3 uid="uid://bdghdtk5ua0st"]
+[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=6 format=3 uid="uid://bdghdtk5ua0st"]
 
 [ext_resource type="Resource" uid="uid://dx6oq8ikd8vq" path="res://resources/item_resource/resources/wood.tres" id="1_hfp8y"]
 [ext_resource type="Resource" uid="uid://dlskj338i6sr0" path="res://resources/item_resource/resources/money.tres" id="2_j67x0"]
+[ext_resource type="Resource" uid="uid://bsqa4sjnqtj5t" path="res://resources/item_resource/resources/carrot.tres" id="3_1d8cn"]
 [ext_resource type="Script" path="res://resources/tower_floor_resource/tower_floor_resource.gd" id="3_2ud3m"]
 [ext_resource type="Resource" uid="uid://cnkux7ni6al2u" path="res://resources/item_resource/resources/people.tres" id="3_fsxna"]
 
@@ -9,13 +10,16 @@
 script = ExtResource("3_2ud3m")
 layer_name = "Carrot Farm"
 scene_path = "res://nodes/components/tower/tower_floor_scenes/carrot_farm.tscn"
-people_material = ExtResource("3_fsxna")
+build_time = 5
 people_cost = 3
 material_1 = ExtResource("1_hfp8y")
 cost_1 = 20
 material_2 = ExtResource("2_j67x0")
 cost_2 = 150
-build_time = 5
+takes_away = ExtResource("3_fsxna")
+takes_away_count = 1
+reward = ExtResource("3_1d8cn")
+reward_count = 100
 reseatch_cost = 5
 unlocked_at_beginning = false
 max_part_level = 3
