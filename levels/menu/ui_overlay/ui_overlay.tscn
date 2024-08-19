@@ -1,14 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2o5t3pqh33ir"]
+[gd_scene load_steps=12 format=3 uid="uid://c2o5t3pqh33ir"]
 
 [ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/tower_of_bagel_ui_theme/tower_of_bagel_ui_theme.tres" id="1_b4oji"]
-[ext_resource type="Script" path="res://levels/menu/ui_overlay/resources.gd" id="2_tifq6"]
-[ext_resource type="Script" path="res://levels/menu/ui_overlay/towers_list.gd" id="3_45jxk"]
+[ext_resource type="Script" path="res://levels/menu/ui_overlay/items.gd" id="2_tifq6"]
 [ext_resource type="Resource" uid="uid://b8kevs8v68fk8" path="res://resources/item_resource/item_resource_list.tres" id="3_llbl2"]
 [ext_resource type="Script" path="res://levels/menu/ui_overlay/start_expedition.gd" id="4_fo8xc"]
 [ext_resource type="Resource" uid="uid://dlvbvkd5c7kk4" path="res://resources/tower_floor_resource/tower_floor_resource_list.tres" id="4_n66nr"]
 [ext_resource type="Resource" uid="uid://8tly5hhp2kgb" path="res://resources/expedition_resource/resources/research.tres" id="5_8afao"]
 [ext_resource type="Resource" uid="uid://duebd1wx784jj" path="res://resources/expedition_resource/resources/metal.tres" id="6_130d4"]
+[ext_resource type="Script" path="res://levels/menu/ui_overlay/tower_list_single.gd" id="6_c17v5"]
 [ext_resource type="PackedScene" uid="uid://ckp1nuyfbidj3" path="res://ui/controls_label.tscn" id="6_ndq2x"]
+[ext_resource type="Script" path="res://levels/menu/ui_overlay/tower_list.gd" id="6_yuj56"]
 [ext_resource type="Resource" uid="uid://camhggqyyha8g" path="res://resources/expedition_resource/resources/herbs.tres" id="7_c444x"]
 
 [node name="UIOverlay" type="Control"]
@@ -43,43 +44,128 @@ current_tab = 0
 clip_tabs = false
 deselect_enabled = true
 
-[node name="Resources" type="Control" parent="MarginContainer/Control/TabContainer"]
+[node name="Build" type="HSplitContainer" parent="MarginContainer/Control/TabContainer"]
 layout_mode = 2
+split_offset = 256
 metadata/_tab_index = 0
 
-[node name="Resources" type="VBoxContainer" parent="MarginContainer/Control/TabContainer/Resources"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -236.0
-offset_right = 318.0
-offset_bottom = 236.0
-grow_vertical = 2
+[node name="Items" type="VBoxContainer" parent="MarginContainer/Control/TabContainer/Build"]
+layout_mode = 2
 theme_override_constants/separation = 16
 script = ExtResource("2_tifq6")
 _item_resource_list = ExtResource("3_llbl2")
 
-[node name="Text" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources"]
+[node name="Text" type="Label" parent="MarginContainer/Control/TabContainer/Build/Items"]
 layout_mode = 2
-text = "102"
+text = "Carrot 1000
+Herbs 1000
+Metal 1000
+Money 1000
+Onion 1000
+People 1000
+Potato 1000
+Research 1000
+Soil 1000
+Wood 1000"
 
-[node name="Template" type="HBoxContainer" parent="MarginContainer/Control/TabContainer/Resources/Resources"]
-visible = false
+[node name="Build" type="TabContainer" parent="MarginContainer/Control/TabContainer/Build"]
 layout_mode = 2
-theme_override_constants/separation = 45
+tab_alignment = 1
+current_tab = 0
+tabs_position = 1
+deselect_enabled = true
 
-[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Template"]
+[node name="Floors" type="VSplitContainer" parent="MarginContainer/Control/TabContainer/Build/Build"]
 layout_mode = 2
-text = "Citizens"
+split_offset = 350
+metadata/_tab_index = 0
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/Control/TabContainer/Resources/Resources/Template"]
+[node name="Control" type="Control" parent="MarginContainer/Control/TabContainer/Build/Build/Floors"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/Control/TabContainer/Build/Build/Floors"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="TowerList" type="VBoxContainer" parent="MarginContainer/Control/TabContainer/Build/Build/Floors/ScrollContainer" node_paths=PackedStringArray("_template")]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("6_yuj56")
+_tower_floor_resource_list = ExtResource("4_n66nr")
+_template = NodePath("Template")
 
-[node name="Count" type="Label" parent="MarginContainer/Control/TabContainer/Resources/Resources/Template"]
+[node name="Template" type="HBoxContainer" parent="MarginContainer/Control/TabContainer/Build/Build/Floors/ScrollContainer/TowerList"]
 layout_mode = 2
-text = "102"
+script = ExtResource("6_c17v5")
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer/Control/TabContainer/Build/Build/Floors/ScrollContainer/TowerList/Template"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center][color=eedc54]Carrot Farm[/color] [/center]
+Item Cost: 20 Wood, 150 Money
+People needed: 3"
+fit_content = true
+autowrap_mode = 2
+
+[node name="Buy" type="Button" parent="MarginContainer/Control/TabContainer/Build/Build/Floors/ScrollContainer/TowerList/Template"]
+layout_mode = 2
+focus_mode = 0
+text = "Buy"
+
+[node name="WIP" type="Node" parent="MarginContainer/Control/TabContainer/Build/Build"]
+
+[node name="Upgrade" type="Control" parent="MarginContainer/Control/TabContainer/Build/Build/WIP"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 90.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UpgradesList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/Build/WIP/Upgrade"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.68
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.200012
+grow_horizontal = 2
+grow_vertical = 2
+item_count = 1
+item_0/text = "Merchant Outpost Lvl. 1 | Upgrade | Materail Cost: 10 Gold"
+
+[node name="Decorations" type="Control" parent="MarginContainer/Control/TabContainer/Build/Build/WIP"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 90.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DecorationsList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/Build/WIP/Decorations"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.68
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.200012
+grow_horizontal = 2
+grow_vertical = 2
+max_columns = 10
 
 [node name="Expedition" type="Control" parent="MarginContainer/Control/TabContainer"]
 visible = false
@@ -141,6 +227,7 @@ value = 50.0
 
 [node name="Start" type="Button" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Research/VBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 text = "Start"
 
 [node name="EmptySpaceBottom" type="Control" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Research/VBoxContainer"]
@@ -180,6 +267,7 @@ value = 50.0
 
 [node name="Start" type="Button" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Metal/VBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 text = "Start"
 
 [node name="EmptySpaceBottom" type="Control" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Metal/VBoxContainer"]
@@ -219,94 +307,16 @@ value = 50.0
 
 [node name="Start" type="Button" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Herbs/VBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 text = "Start"
 
 [node name="EmptySpaceBottom" type="Control" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Herbs/VBoxContainer"]
 layout_mode = 2
 
-[node name="Build" type="TabContainer" parent="MarginContainer/Control/TabContainer"]
-visible = false
-layout_mode = 2
-tab_alignment = 1
-current_tab = 0
-tabs_position = 1
-deselect_enabled = true
-metadata/_tab_index = 2
-
-[node name="Floors" type="VSplitContainer" parent="MarginContainer/Control/TabContainer/Build"]
-layout_mode = 2
-split_offset = 350
-metadata/_tab_index = 0
-
-[node name="Control" type="Control" parent="MarginContainer/Control/TabContainer/Build/Floors"]
-layout_mode = 2
-
-[node name="TowersList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/Floors"]
-unique_name_in_owner = true
-layout_mode = 2
-item_count = 2
-item_0/text = "Carrot Farm | Material Cost: "
-item_1/text = "Workshop Layer | Material Cost:"
-script = ExtResource("3_45jxk")
-_tower_floor_resource_list = ExtResource("4_n66nr")
-
-[node name="WIP" type="Node" parent="MarginContainer/Control/TabContainer/Build"]
-
-[node name="Upgrade" type="Control" parent="MarginContainer/Control/TabContainer/Build/WIP"]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 40.0
-offset_top = 90.0
-offset_right = 40.0
-offset_bottom = 40.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="UpgradesList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/WIP/Upgrade"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.68
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -0.200012
-grow_horizontal = 2
-grow_vertical = 2
-item_count = 1
-item_0/text = "Merchant Outpost Lvl. 1 | Upgrade | Materail Cost: 10 Gold"
-
-[node name="Decorations" type="Control" parent="MarginContainer/Control/TabContainer/Build/WIP"]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 40.0
-offset_top = 90.0
-offset_right = 40.0
-offset_bottom = 40.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="DecorationsList" type="ItemList" parent="MarginContainer/Control/TabContainer/Build/WIP/Decorations"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.68
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -0.200012
-grow_horizontal = 2
-grow_vertical = 2
-max_columns = 10
-
 [node name="Help" type="Control" parent="MarginContainer/Control/TabContainer"]
 visible = false
 layout_mode = 2
-metadata/_tab_index = 3
+metadata/_tab_index = 2
 
 [node name="ControlsLabel" parent="MarginContainer/Control/TabContainer/Help" instance=ExtResource("6_ndq2x")]
 layout_mode = 1
