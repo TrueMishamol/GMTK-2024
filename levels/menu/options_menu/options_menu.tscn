@@ -30,9 +30,10 @@ theme = ExtResource("1_3berp")
 layout_mode = 2
 size_flags_vertical = 3
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 
 [node name="General" type="MarginContainer" parent="OptionsMenu/OptionsMenu/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -51,7 +52,6 @@ size_flags_horizontal = 4
 text = "Skip boot screen"
 
 [node name="Sound" type="MarginContainer" parent="OptionsMenu/OptionsMenu/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -64,15 +64,17 @@ size_flags_horizontal = 3
 alignment = 1
 
 [node name="MasterLabel" type="Label" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Global volume"
 
 [node name="MasterSlider" type="HSlider" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
-max_value = 1.0
-step = 0.01
-value = 1.0
+min_value = -50.0
+max_value = 0.0
+step = 0.1
 
 [node name="MusicLabel" type="Label" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -81,20 +83,22 @@ text = "Music"
 [node name="MusicSlider" type="HSlider" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 1.0
-step = 0.01
-value = 1.0
+min_value = -50.0
+max_value = 0.0
+step = 0.1
 
 [node name="SFXLabel" type="Label" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Sound effects"
 
 [node name="SFXSlider" type="HSlider" parent="OptionsMenu/OptionsMenu/TabContainer/Sound/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
-max_value = 1.0
-step = 0.01
-value = 1.0
+min_value = -50.0
+max_value = 0.0
+step = 0.1
 
 [node name="Control" type="Control" parent="OptionsMenu/OptionsMenu/TabContainer"]
 visible = false

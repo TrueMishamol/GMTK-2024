@@ -56,6 +56,7 @@ func _on_sfx_slider_value_changed(value):
 	
 func _on_music_slider_value_changed(value):
 	_user_preferences.music_audio_level = value
+	MusicPlayer.audio_stream_player.volume_db = value
 	
 
 func _save_and_return():
