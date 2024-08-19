@@ -8,5 +8,5 @@
 [resource]
 script = ExtResource("2_vd04c")
 expedition_name = "Research"
-expedition_time = 2400.0
+expedition_time = 240.0
 reward_items = Array[ExtResource("1_8lixr")]([ExtResource("2_ew2im"), ExtResource("3_7ht11")])
