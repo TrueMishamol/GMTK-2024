@@ -130,4 +130,6 @@ _basement_floor = ExtResource("10_3vino")
 
 [node name="MerchantOutpost" parent="Tower" instance=ExtResource("6_53gwl")]
 
+visible = false
+
 [node name="Expedition" parent="." instance=ExtResource("12_v4f06")]
