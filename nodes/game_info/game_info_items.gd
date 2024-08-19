@@ -27,11 +27,16 @@ func add_item_resource_count(id: String, count: int):
 		_item_count_dictionary[id] = count
 	on_item_set.emit()
 	
-
-func try_remove_item_count(id: String, count: int) -> bool:
-	if !_item_count_dictionary.has(id):
+#func try_remove_item_count(id: String, count: int) -> bool:
+	#if !_item_count_dictionary.has(id):
+		#return false
+	#if count > _item_count_dictionary[id]:
+		#return false
+	
+func try_remove_multiple(id: String, count: int, id_2: String, count_2: int, id_3: String, count_3: int) -> bool:
+	if !_item_count_dictionary.has(id) and !_item_count_dictionary.has(id_2) and !_item_count_dictionary.has(id_3):
 		return false
-	if count > _item_count_dictionary[id]:
+	if count > _item_count_dictionary[id] and count_2 > _item_count_dictionary[id_2] and count_3 > _item_count_dictionary[id_3]:
 		return false
 	
 	_item_count_dictionary[id] -= count

@@ -6,4 +6,4 @@
 script = ExtResource("1_m8fvb")
 id = "herbs"
 name = "Herbs"
-default_count = 0
+default_count = 1000

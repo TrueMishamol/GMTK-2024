@@ -6,4 +6,4 @@
 script = ExtResource("1_8vb53")
 id = "money"
 name = "Money"
-default_count = 100
+default_count = 1000

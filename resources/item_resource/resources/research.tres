@@ -6,4 +6,4 @@
 script = ExtResource("1_cos6u")
 id = "research"
 name = "Research"
-default_count = 0
+default_count = 1000
