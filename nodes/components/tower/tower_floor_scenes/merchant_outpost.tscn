@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://pxiw514vxcg1"]
 
-[ext_resource type="PackedScene" uid="uid://byjvpqo0b2w7p" path="res://nodes/components/tower/tower_floor_scenes/tower_floor_base.tscn" id="1_ptcbh"]
+[ext_resource type="PackedScene" uid="uid://byjvpqo0b2w7p" path="res://nodes/components/tower/tower_floor_scenes/tower_piece_base.tscn" id="1_ptcbh"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_pyh8l"]
 height = 0.05

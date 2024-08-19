@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7iw8aqng8qva"
-path="res://.godot/imported/carrot_farm.png-6b22eb7c2ebfae93df15e1df2d472a45.ctex"
+uid="uid://cuh7l3rmt0yrq"
+path="res://.godot/imported/onion_farm.png-74a16e39f878e2efbe763d48769e17a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/models/carrot_farm.png"
-dest_files=["res://.godot/imported/carrot_farm.png-6b22eb7c2ebfae93df15e1df2d472a45.ctex"]
+source_file="res://assets/models/onion_farm.png"
+dest_files=["res://.godot/imported/onion_farm.png-74a16e39f878e2efbe763d48769e17a6.ctex"]
 
 [params]
 

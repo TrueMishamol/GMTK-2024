@@ -8,7 +8,7 @@
 [resource]
 script = ExtResource("3_2ud3m")
 layer_name = "Carrot Farm"
-scene_path = "res://nodes/components/tower/tower_floor_scenes/merchant_outpost.tscn"
+scene_path = "res://nodes/components/tower/tower_floor_scenes/carrot_farm.tscn"
 people_material = ExtResource("3_fsxna")
 people_cost = 3
 material_1 = ExtResource("1_hfp8y")

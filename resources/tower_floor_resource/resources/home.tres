@@ -8,13 +8,13 @@
 [resource]
 script = ExtResource("1_osf1t")
 layer_name = "Home"
-scene_path = "res://nodes/components/tower/tower_floor_scenes/merchant_outpost.tscn"
+scene_path = "res://nodes/components/tower/tower_floor_scenes/home.tscn"
 people_material = ExtResource("3_2h6tu")
 people_cost = 2
 material_1 = ExtResource("1_6ost2")
 cost_1 = 100
 material_2 = ExtResource("2_mks0p")
-cost_2 = 0
+cost_2 = 500
 build_time = 5
 reseatch_cost = 5
 unlocked_at_beginning = false
