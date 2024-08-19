@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3jvg08l3wk8j"]
+
+[ext_resource type="AudioStream" uid="uid://bqqcb3rncwa5x" path="res://assets/music/tower_of_bagle_01.wav" id="1_xfwam"]
+
+[node name="MusicPlayer" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_xfwam")
+autoplay = true
