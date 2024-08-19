@@ -1,16 +1,23 @@
-[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=2 format=3 uid="uid://c77aldp1hom0l"]
+[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=5 format=3 uid="uid://c77aldp1hom0l"]
 
+[ext_resource type="Resource" uid="uid://dx6oq8ikd8vq" path="res://resources/item_resource/resources/wood.tres" id="1_d82qf"]
 [ext_resource type="Script" path="res://resources/tower_floor_resource/tower_floor_resource.gd" id="1_so8xj"]
+[ext_resource type="Resource" uid="uid://dlskj338i6sr0" path="res://resources/item_resource/resources/money.tres" id="2_78bty"]
+[ext_resource type="Resource" uid="uid://cnkux7ni6al2u" path="res://resources/item_resource/resources/people.tres" id="3_d0jvb"]
 
 [resource]
 script = ExtResource("1_so8xj")
 layer_name = "Potato Farm"
 scene_path = "res://nodes/components/tower/tower_floor_scenes/merchant_outpost.tscn"
-people_cost = null
-cost = null
-build_time = null
-reseatch_cost = null
-unlocked_at_beginning = null
-max_part_level = null
-upkeep_price = null
-max_defense_level = null
+people_material = ExtResource("3_d0jvb")
+people_cost = 3
+material_1 = ExtResource("1_d82qf")
+cost_1 = 20
+material_2 = ExtResource("2_78bty")
+cost_2 = 150
+build_time = 5
+reseatch_cost = 5
+unlocked_at_beginning = false
+max_part_level = 3
+upkeep_price = 0
+max_defense_level = 5

@@ -1,16 +1,23 @@
-[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=2 format=3 uid="uid://bylxan2rhwgi4"]
+[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=5 format=3 uid="uid://bylxan2rhwgi4"]
 
 [ext_resource type="Script" path="res://resources/tower_floor_resource/tower_floor_resource.gd" id="1_l6rek"]
+[ext_resource type="Resource" uid="uid://f8i31u0grr7o" path="res://resources/item_resource/resources/herbs.tres" id="1_q0kpw"]
+[ext_resource type="Resource" uid="uid://ck7s8vhggqbu3" path="res://resources/item_resource/resources/metal.tres" id="2_cbqtn"]
+[ext_resource type="Resource" uid="uid://cnkux7ni6al2u" path="res://resources/item_resource/resources/people.tres" id="3_cj2lp"]
 
 [resource]
 script = ExtResource("1_l6rek")
 layer_name = "Onion Shop"
 scene_path = "res://nodes/components/tower/tower_floor_scenes/merchant_outpost.tscn"
-people_cost = null
-cost = null
-build_time = null
-reseatch_cost = null
-unlocked_at_beginning = null
-max_part_level = null
-upkeep_price = null
-max_defense_level = null
+people_material = ExtResource("3_cj2lp")
+people_cost = 1
+material_1 = ExtResource("1_q0kpw")
+cost_1 = 30
+material_2 = ExtResource("2_cbqtn")
+cost_2 = 20
+build_time = 5
+reseatch_cost = 5
+unlocked_at_beginning = false
+max_part_level = 3
+upkeep_price = 0
+max_defense_level = 5

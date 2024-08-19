@@ -1,16 +1,23 @@
-[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=2 format=3 uid="uid://cj71n6v3kr5hm"]
+[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=5 format=3 uid="uid://cj71n6v3kr5hm"]
 
+[ext_resource type="Resource" uid="uid://dx6oq8ikd8vq" path="res://resources/item_resource/resources/wood.tres" id="1_6ost2"]
 [ext_resource type="Script" path="res://resources/tower_floor_resource/tower_floor_resource.gd" id="1_osf1t"]
+[ext_resource type="Resource" uid="uid://dlskj338i6sr0" path="res://resources/item_resource/resources/money.tres" id="2_mks0p"]
+[ext_resource type="Resource" uid="uid://cnkux7ni6al2u" path="res://resources/item_resource/resources/people.tres" id="3_2h6tu"]
 
 [resource]
 script = ExtResource("1_osf1t")
 layer_name = "Home"
 scene_path = "res://nodes/components/tower/tower_floor_scenes/merchant_outpost.tscn"
-people_cost = null
-cost = null
-build_time = null
-reseatch_cost = null
-unlocked_at_beginning = null
-max_part_level = null
-upkeep_price = null
-max_defense_level = null
+people_material = ExtResource("3_2h6tu")
+people_cost = 2
+material_1 = ExtResource("1_6ost2")
+cost_1 = 100
+material_2 = ExtResource("2_mks0p")
+cost_2 = 0
+build_time = 5
+reseatch_cost = 5
+unlocked_at_beginning = false
+max_part_level = 3
+upkeep_price = 0
+max_defense_level = 5

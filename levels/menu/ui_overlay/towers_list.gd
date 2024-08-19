@@ -18,8 +18,12 @@ func _fill_info(tower_floor_resource_list: TowerFloorResource_List):
 		var text: String = ""
 		text += tower_floor.layer_name + " | Item Cost: "
 		
-		if tower_floor.material_cost != null:
-			text += str(tower_floor.cost) + " " + tower_floor.material_cost.name
+		if tower_floor.people_material != null:
+			text += str(tower_floor.people_cost) + " " + tower_floor.people_material.name
+			if tower_floor.material_1 != null:
+				text += ", " + str(tower_floor.cost_1) + " " + tower_floor.material_1.name
+				if tower_floor.material_2 != null:
+					text += ", " + str(tower_floor.cost_2) + " " + tower_floor.material_2.name
 		else:
 			text += "Free"
 			
