@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Expedition_Resource" load_steps=5 format=3 uid="uid://8tly5hhp2kgb"]
+
+[ext_resource type="Script" path="res://resources/item_resource/item_resource.gd" id="1_8lixr"]
+[ext_resource type="Resource" uid="uid://bj23y50clpt7q" path="res://resources/item_resource/resources/research.tres" id="2_ew2im"]
+[ext_resource type="Script" path="res://resources/expedition_resource/expedition_resource.gd" id="2_vd04c"]
+[ext_resource type="Resource" uid="uid://dx6oq8ikd8vq" path="res://resources/item_resource/resources/wood.tres" id="3_7ht11"]
+
+[resource]
+script = ExtResource("2_vd04c")
+expedition_time = 2400.0
+reward_items = Array[ExtResource("1_8lixr")]([ExtResource("2_ew2im"), ExtResource("3_7ht11")])

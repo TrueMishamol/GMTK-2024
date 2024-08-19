@@ -31,13 +31,18 @@ func try_buy_floor(tower_floor_resource: TowerFloorResource) -> bool:
 	if tower_floor_resource.cost_1 == null and tower_floor_resource.cost_2 and tower_floor_resource.people_cost:
 		return true
 	
+	var items_count: Dictionary = {
+		tower_floor_resource.material_1.id: tower_floor_resource.cost_1,
+		tower_floor_resource.material_2.id: tower_floor_resource.cost_2,
+		"people": tower_floor_resource.people_cost, #! Hardcoded
+	}
+	
 	# If there are enough items
-	if GameInfo.items.try_remove_multiple(tower_floor_resource.material_1.id, tower_floor_resource.cost_1, tower_floor_resource.people_material.id, tower_floor_resource.people_cost, tower_floor_resource.material_2.id, tower_floor_resource.cost_2):
+	if GameInfo.items.try_remove_multiple_item_count(items_count):
 		_build_floor(tower_floor_resource)
 		return true
 	
 	return false
-	
 
 
 ## Builds floor without using items 

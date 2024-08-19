@@ -4,13 +4,15 @@ extends Resource
 
 @export var layer_name: String
 @export_file("*.tscn") var scene_path: String ## Must be TowerFloor
-@export var people_material: ItemResource
+
+@export var build_time: int = 5
+
+@export_group("Material Cost")
 @export var people_cost: int
 @export var material_1: ItemResource
 @export var cost_1: int
 @export var material_2: ItemResource
 @export var cost_2: int
-@export var build_time: int = 5
 
 @export_group("On future updates")
 @export var reseatch_cost: int = 5 ## How many research points to spend to unlock this floor

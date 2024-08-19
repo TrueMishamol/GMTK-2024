@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv0vvki1rl4jn"]
+
+[ext_resource type="Script" path="res://nodes/expedition/expedition.gd" id="1_j3wbo"]
+
+[node name="Expedition" type="Node"]
+script = ExtResource("1_j3wbo")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true

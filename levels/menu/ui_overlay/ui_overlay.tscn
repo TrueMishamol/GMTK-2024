@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2o5t3pqh33ir"]
+[gd_scene load_steps=11 format=3 uid="uid://c2o5t3pqh33ir"]
 
 [ext_resource type="Theme" uid="uid://dd5rl8w6bxi0p" path="res://visuals/tower_of_bagel_ui_theme/tower_of_bagel_ui_theme.tres" id="1_b4oji"]
 [ext_resource type="Script" path="res://levels/menu/ui_overlay/resources.gd" id="2_tifq6"]
 [ext_resource type="Script" path="res://levels/menu/ui_overlay/towers_list.gd" id="3_45jxk"]
 [ext_resource type="Resource" uid="uid://b8kevs8v68fk8" path="res://resources/item_resource/item_resource_list.tres" id="3_llbl2"]
+[ext_resource type="Script" path="res://levels/menu/ui_overlay/start_expedition.gd" id="4_fo8xc"]
 [ext_resource type="Resource" uid="uid://dlvbvkd5c7kk4" path="res://resources/tower_floor_resource/tower_floor_resource_list.tres" id="4_n66nr"]
+[ext_resource type="Resource" uid="uid://8tly5hhp2kgb" path="res://resources/expedition_resource/resources/research.tres" id="5_8afao"]
+[ext_resource type="Resource" uid="uid://duebd1wx784jj" path="res://resources/expedition_resource/resources/metal.tres" id="6_130d4"]
 [ext_resource type="PackedScene" uid="uid://ckp1nuyfbidj3" path="res://ui/controls_label.tscn" id="6_ndq2x"]
+[ext_resource type="Resource" uid="uid://camhggqyyha8g" path="res://resources/expedition_resource/resources/herbs.tres" id="7_c444x"]
 
 [node name="UIOverlay" type="Control"]
 layout_mode = 3
@@ -91,6 +95,134 @@ anchor_bottom = 1.0
 offset_top = -50.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Control/TabContainer/Expedition"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0191667
+anchor_top = 0.0576271
+anchor_right = 0.980833
+anchor_bottom = 0.855932
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Research" type="PanelContainer" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("4_fo8xc")
+_expedition_resource = ExtResource("5_8afao")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Research"]
+layout_mode = 2
+
+[node name="EmptySpaceTop" type="Control" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Research/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Research/VBoxContainer"]
+layout_mode = 2
+text = "Research"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Research/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PeopleLabel" type="Label" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Research/VBoxContainer"]
+layout_mode = 2
+text = "People"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PeopleSlider" type="HSlider" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Research/VBoxContainer"]
+layout_mode = 2
+value = 50.0
+
+[node name="Start" type="Button" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Research/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="EmptySpaceBottom" type="Control" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Research/VBoxContainer"]
+layout_mode = 2
+
+[node name="Metal" type="PanelContainer" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("4_fo8xc")
+_expedition_resource = ExtResource("6_130d4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Metal"]
+layout_mode = 2
+
+[node name="EmptySpaceTop" type="Control" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Metal/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Metal/VBoxContainer"]
+layout_mode = 2
+text = "Metal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Metal/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PeopleLabel" type="Label" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Metal/VBoxContainer"]
+layout_mode = 2
+text = "People"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PeopleSlider" type="HSlider" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Metal/VBoxContainer"]
+layout_mode = 2
+value = 50.0
+
+[node name="Start" type="Button" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Metal/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="EmptySpaceBottom" type="Control" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Metal/VBoxContainer"]
+layout_mode = 2
+
+[node name="Herbs" type="PanelContainer" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("4_fo8xc")
+_expedition_resource = ExtResource("7_c444x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Herbs"]
+layout_mode = 2
+
+[node name="EmptySpaceTop" type="Control" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Herbs/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Herbs/VBoxContainer"]
+layout_mode = 2
+text = "Rare Herbs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Herbs/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PeopleLabel" type="Label" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Herbs/VBoxContainer"]
+layout_mode = 2
+text = "People"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PeopleSlider" type="HSlider" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Herbs/VBoxContainer"]
+layout_mode = 2
+value = 50.0
+
+[node name="Start" type="Button" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Herbs/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="EmptySpaceBottom" type="Control" parent="MarginContainer/Control/TabContainer/Expedition/HBoxContainer/Herbs/VBoxContainer"]
+layout_mode = 2
 
 [node name="Build" type="TabContainer" parent="MarginContainer/Control/TabContainer"]
 visible = false

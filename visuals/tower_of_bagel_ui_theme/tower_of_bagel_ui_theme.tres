@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=25 format=3 uid="uid://dd5rl8w6bxi0p"]
+[gd_resource type="Theme" load_steps=26 format=3 uid="uid://dd5rl8w6bxi0p"]
 
 [ext_resource type="StyleBox" uid="uid://cavp0c160mdas" path="res://visuals/tower_of_bagel_ui_theme/style_boxes/button_normal_style_box.tres" id="1_evc2s"]
 [ext_resource type="StyleBox" uid="uid://25jmwrl552bp" path="res://visuals/tower_of_bagel_ui_theme/style_boxes/button_play_style_box.tres" id="2_5yvxg"]
@@ -105,6 +105,16 @@ spacing_glyph = 6
 base_font = ExtResource("3_minyc")
 variation_embolden = 0.5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42la0"]
+content_margin_left = 40.0
+content_margin_right = 40.0
+content_margin_bottom = 5.0
+bg_color = Color(0.12549, 0.447059, 0.290196, 0.901961)
+corner_radius_top_left = 16
+corner_radius_top_right = 64
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 64
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dl2o7"]
 content_margin_left = 70.0
 content_margin_right = 70.0
@@ -140,6 +150,7 @@ corner_radius_bottom_left = 1024
 [resource]
 default_font = ExtResource("3_minyc")
 default_font_size = 50
+BoxContainer/constants/separation = 32
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
 Button/styles/focus = SubResource("StyleBoxEmpty_ho28w")
@@ -197,6 +208,7 @@ MarginContainer/constants/margin_bottom = 40
 MarginContainer/constants/margin_left = 40
 MarginContainer/constants/margin_right = 40
 MarginContainer/constants/margin_top = 40
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_42la0")
 ProgressBar/styles/background = ExtResource("1_evc2s")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_dl2o7")
 TabContainer/colors/font_unselected_color = Color(1, 1, 1, 1)
@@ -206,7 +218,6 @@ TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_feefh")
 TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_bisi0")
 TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_bisi0")
 TabContainer/styles/tab_unselected = ExtResource("1_evc2s")
-VBoxContainer/constants/separation = 34
 VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_tmi48")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_q5wbi")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_q5wbi")
