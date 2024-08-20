@@ -6,4 +6,4 @@
 script = ExtResource("1_2yt4l")
 id = "onion"
 name = "Onion"
-default_count = 1000
+default_count = 50

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://resources/tower_floor_resource/tower_floor_resource.gd" id="1_osf1t"]
 [ext_resource type="Resource" uid="uid://dlskj338i6sr0" path="res://resources/item_resource/resources/money.tres" id="2_mks0p"]
 [ext_resource type="Resource" uid="uid://cnkux7ni6al2u" path="res://resources/item_resource/resources/people.tres" id="3_2h6tu"]
-[ext_resource type="Resource" uid="uid://dw1g7l2sgo3or" path="res://resources/item_resource/resources/onion.tres" id="5_ginos"]
+[ext_resource type="Resource" uid="uid://eemn4cku0cel" path="res://resources/item_resource/resources/potato.tres" id="5_u18he"]
 
 [resource]
 script = ExtResource("1_osf1t")
@@ -16,10 +16,10 @@ material_1 = ExtResource("1_6ost2")
 cost_1 = 100
 material_2 = ExtResource("2_mks0p")
 cost_2 = 500
-takes_away = ExtResource("5_ginos")
-takes_away_count = 12
+takes_away = ExtResource("5_u18he")
+takes_away_count = 20
 reward = ExtResource("3_2h6tu")
-reward_count = 12
+reward_count = 1
 reseatch_cost = 5
 unlocked_at_beginning = false
 max_part_level = 3

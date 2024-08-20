@@ -6,4 +6,4 @@
 script = ExtResource("1_k5hl6")
 id = "wood"
 name = "Wood"
-default_count = 1000
+default_count = 100

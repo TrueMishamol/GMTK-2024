@@ -6,4 +6,4 @@
 script = ExtResource("1_6yvw3")
 id = "soil"
 name = "Soil"
-default_count = 1000
+default_count = 0

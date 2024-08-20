@@ -6,4 +6,4 @@
 script = ExtResource("1_6y70k")
 id = "potato"
 name = "Potato"
-default_count = 1000
+default_count = 50

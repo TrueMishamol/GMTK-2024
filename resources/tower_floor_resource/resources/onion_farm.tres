@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=5 format=3 uid="uid://b0eqchxvcuv64"]
+[gd_resource type="Resource" script_class="TowerFloorResource" load_steps=6 format=3 uid="uid://b0eqchxvcuv64"]
 
 [ext_resource type="Script" path="res://resources/tower_floor_resource/tower_floor_resource.gd" id="1_klby5"]
 [ext_resource type="Resource" uid="uid://dx6oq8ikd8vq" path="res://resources/item_resource/resources/wood.tres" id="1_q8irm"]
 [ext_resource type="Resource" uid="uid://dlskj338i6sr0" path="res://resources/item_resource/resources/money.tres" id="2_vprtv"]
 [ext_resource type="Resource" uid="uid://dw1g7l2sgo3or" path="res://resources/item_resource/resources/onion.tres" id="3_2pw6y"]
+[ext_resource type="Resource" uid="uid://bsqa4sjnqtj5t" path="res://resources/item_resource/resources/carrot.tres" id="5_h0grt"]
 
 [resource]
 script = ExtResource("1_klby5")
@@ -15,10 +16,10 @@ material_1 = ExtResource("1_q8irm")
 cost_1 = 20
 material_2 = ExtResource("2_vprtv")
 cost_2 = 150
-takes_away = ExtResource("3_2pw6y")
-takes_away_count = 1
+takes_away = ExtResource("5_h0grt")
+takes_away_count = 30
 reward = ExtResource("3_2pw6y")
-reward_count = 2
+reward_count = 100
 reseatch_cost = 5
 unlocked_at_beginning = false
 max_part_level = 3
