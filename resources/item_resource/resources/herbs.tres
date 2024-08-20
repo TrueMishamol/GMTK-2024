@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://f8i31u0grr7o"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://f8i31u0grr7o"]
 
+[ext_resource type="Texture2D" uid="uid://evj0lbu0qrat" path="res://assets/sprites/resource_herb.png" id="1_ks2v3"]
 [ext_resource type="Script" path="res://resources/item_resource/item_resource.gd" id="1_m8fvb"]
 
 [resource]
 script = ExtResource("1_m8fvb")
 id = "herbs"
 name = "Herbs"
+item_texture = ExtResource("1_ks2v3")
 default_count = 0

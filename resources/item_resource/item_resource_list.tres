@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ItemResource_List" load_steps=13 format=3 uid="uid://b8kevs8v68fk8"]
+[gd_resource type="Resource" script_class="ItemResource_List" load_steps=12 format=3 uid="uid://b8kevs8v68fk8"]
 
 [ext_resource type="Script" path="res://resources/item_resource/item_resource.gd" id="1_u1hpi"]
 [ext_resource type="Script" path="res://resources/item_resource/item_resource_list.gd" id="2_aals3"]
@@ -10,9 +10,8 @@
 [ext_resource type="Resource" uid="uid://cnkux7ni6al2u" path="res://resources/item_resource/resources/people.tres" id="7_1wnpi"]
 [ext_resource type="Resource" uid="uid://eemn4cku0cel" path="res://resources/item_resource/resources/potato.tres" id="8_ajl5p"]
 [ext_resource type="Resource" uid="uid://bj23y50clpt7q" path="res://resources/item_resource/resources/research.tres" id="9_mkn36"]
-[ext_resource type="Resource" uid="uid://batkxr5vmri5h" path="res://resources/item_resource/resources/soil.tres" id="10_r15p7"]
 [ext_resource type="Resource" uid="uid://dx6oq8ikd8vq" path="res://resources/item_resource/resources/wood.tres" id="11_q6qpd"]
 
 [resource]
 script = ExtResource("2_aals3")
-item_resource_list = Array[ExtResource("1_u1hpi")]([ExtResource("2_bx1mp"), ExtResource("3_gho6w"), ExtResource("4_f7q83"), ExtResource("5_0mx2v"), ExtResource("6_sju3p"), ExtResource("7_1wnpi"), ExtResource("8_ajl5p"), ExtResource("9_mkn36"), ExtResource("10_r15p7"), ExtResource("11_q6qpd")])
+item_resource_list = Array[ExtResource("1_u1hpi")]([ExtResource("2_bx1mp"), ExtResource("3_gho6w"), ExtResource("4_f7q83"), ExtResource("5_0mx2v"), ExtResource("6_sju3p"), ExtResource("7_1wnpi"), ExtResource("8_ajl5p"), ExtResource("9_mkn36"), ExtResource("11_q6qpd")])

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://cnkux7ni6al2u"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://cnkux7ni6al2u"]
 
 [ext_resource type="Script" path="res://resources/item_resource/item_resource.gd" id="1_mjfco"]
+[ext_resource type="Texture2D" uid="uid://pgx835e53yp4" path="res://assets/sprites/resource_people.png" id="1_ylfli"]
 
 [resource]
 script = ExtResource("1_mjfco")
 id = "people"
 name = "People"
+item_texture = ExtResource("1_ylfli")
 default_count = 10

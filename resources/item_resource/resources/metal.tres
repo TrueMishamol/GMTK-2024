@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://ck7s8vhggqbu3"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://ck7s8vhggqbu3"]
 
+[ext_resource type="Texture2D" uid="uid://rwqtde12awkl" path="res://assets/sprites/resource_metal.png" id="1_1jo43"]
 [ext_resource type="Script" path="res://resources/item_resource/item_resource.gd" id="1_5boyh"]
 
 [resource]
 script = ExtResource("1_5boyh")
 id = "metal"
 name = "Metal"
+item_texture = ExtResource("1_1jo43")
 default_count = 0

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://eemn4cku0cel"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://eemn4cku0cel"]
 
 [ext_resource type="Script" path="res://resources/item_resource/item_resource.gd" id="1_6y70k"]
+[ext_resource type="Texture2D" uid="uid://d1oeqjjcqn8xg" path="res://assets/sprites/resource_potato.png" id="1_lcpft"]
 
 [resource]
 script = ExtResource("1_6y70k")
 id = "potato"
 name = "Potato"
+item_texture = ExtResource("1_lcpft")
 default_count = 50

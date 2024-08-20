@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://dx6oq8ikd8vq"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://dx6oq8ikd8vq"]
 
 [ext_resource type="Script" path="res://resources/item_resource/item_resource.gd" id="1_k5hl6"]
+[ext_resource type="Texture2D" uid="uid://c2l26vncd1v1o" path="res://assets/sprites/resource_wood.png" id="1_yv285"]
 
 [resource]
 script = ExtResource("1_k5hl6")
 id = "wood"
 name = "Wood"
+item_texture = ExtResource("1_yv285")
 default_count = 100

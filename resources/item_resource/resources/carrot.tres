@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://bsqa4sjnqtj5t"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bsqa4sjnqtj5t"]
 
 [ext_resource type="Script" path="res://resources/item_resource/item_resource.gd" id="1_imms8"]
+[ext_resource type="Texture2D" uid="uid://cohf0i2cmeyck" path="res://assets/sprites/resource_carrot.png" id="1_s43yx"]
 
 [resource]
 script = ExtResource("1_imms8")
 id = "carrot"
 name = "Carrot"
+item_texture = ExtResource("1_s43yx")
 default_count = 50

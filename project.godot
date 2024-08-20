@@ -19,7 +19,7 @@ run/main_scene="res://levels/main_scene.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/bg_color=Color(0.305806, 0.529549, 0.242786, 1)
 boot_splash/show_image=false
-config/icon="res://assets/app_icons/appicon.png"
+config/icon="res://assets/app_icons/appicon_512.png"
 
 [autoload]
 
