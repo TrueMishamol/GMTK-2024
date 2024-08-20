@@ -36,6 +36,7 @@ func on_start_pressed() -> void:
 		return
 	GameInfo.expedition.expedition.try_start_expedition_and_remove_people(_expedition_resource, _people_slider.value)
 
+
 func _on_expedition_start():
 	_start.visible = false
 	

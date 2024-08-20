@@ -46,13 +46,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 0
+current_tab = 2
 clip_tabs = false
 deselect_enabled = true
 
 [node name="Build" type="HSplitContainer" parent="MarginContainer/Control/TabContainer"]
+visible = false
 layout_mode = 2
-split_offset = 256
+split_offset = 312
 metadata/_tab_index = 0
 
 [node name="Items" type="VBoxContainer" parent="MarginContainer/Control/TabContainer/Build"]
@@ -329,9 +330,29 @@ text = "Start"
 layout_mode = 2
 
 [node name="Help" type="Control" parent="MarginContainer/Control/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="ControlsLabel" parent="MarginContainer/Control/TabContainer/Help" instance=ExtResource("6_ndq2x")]
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/Control/TabContainer/Help"]
 layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -322.0
+offset_right = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 1
+current_tab = 0
+tabs_position = 1
+
+[node name="Controls" parent="MarginContainer/Control/TabContainer/Help/TabContainer" instance=ExtResource("6_ndq2x")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="About" parent="MarginContainer/Control/TabContainer/Help/TabContainer" instance=ExtResource("6_ndq2x")]
+visible = false
+layout_mode = 2
+text = "Buy floors, build the tower"
+metadata/_tab_index = 1
