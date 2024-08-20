@@ -354,5 +354,9 @@ metadata/_tab_index = 0
 [node name="About" parent="MarginContainer/Control/TabContainer/Help/TabContainer" instance=ExtResource("6_ndq2x")]
 visible = false
 layout_mode = 2
-text = "Buy floors, build the tower"
+text = "Buy floors, manage your resources, 
+send people on expeditions and
+make the tower bigger and bigger! 
+
+Made for the 2024 GMTK Game Jam"
 metadata/_tab_index = 1
