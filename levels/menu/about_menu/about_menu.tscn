@@ -33,17 +33,17 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
 text = "[center][color=eedc54]Tower of Bagels[/color] [/center]
-It is a Godot 4 game, crafted for Game Jam!
+It is a Godot 4 game, crafted for the 2024 GMTK Game Jam
 
 [center][color=eedc54]Game Identity[/color] [/center]
 A slow-paced strategy game where the player builds and manages the Tower of Bagel. Players must carefully plan each layer’s purpose and resource allocation while defending against external threats during the night.
 
 [center][color=eedc54]Autors[/color] [/center]
-Andreway - gamedesigner
-Mishamol - game developer & UI designer
-WatermelonFroggy - an aspiring godot game developer!
-GhoulMage - music, art and lazy
-spdy4 - an Artist/Youtuber trying to make enjoyable content
+[color=eedc54]Andreway[/color] - gamedesigner 
+[color=eedc54]Mishamol[/color] - game developer & UI designer. Web site: http://mishamol.ru/
+[color=eedc54]WatermelonFroggy[/color] - an aspiring godot game developer!s
+[color=eedc54]GhoulMage[/color] - music, art and lazy
+[color=eedc54]spdy4[/color] - an Artist/Youtuber trying to make enjoyable content Youtube: https://www.youtube.com/@Modtro64 
 
 [center][color=eedc54]Prologue of being sus[/color] [/center]
 Chapter 1: It all begins when a spaceship...
